@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>SpringMVCDemo</display-name>
+
+  
+ 
+  	 <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>classpath:springmvc.xml</param-value>
+  </context-param>
+  
+  <servlet>
+  
+  <!--  注册中央处理器  -->
+  	<servlet-name>springmvc</servlet-name>
+  	<servlet-class>
+  		org.springframework.web.servlet.DispatcherServlet
+  	</servlet-class>
+  	<!-- 服务器启动时，就会创建Servlet  -->
+  
+  	
+  		<init-param>
+  			<param-name>contextConfigLocation</param-name>
+  			<param-value>classpath:springmvc.xml</param-value>
+  		</init-param>
+  		<load-on-startup>1</load-on-startup>
+  	</servlet>
+  	
+  <servlet-mapping>
+  	<servlet-name>springmvc</servlet-name>
+  	
+  	<!--
+  		让中央处理器拦截所有请求,中央处理器会将请求最终传入到Controller
+  		URL的写法有两种
+  			1. / , 会导致静态资源，无法访问
+  			2. *.do  *.action 
+  			/xxxx/xx/x.do	
+  	  -->
+  	 <url-pattern>*.do</url-pattern>
+  	<!-- <url-pattern>/</url-pattern> -->
+  </servlet-mapping>
+  
+  
+    <filter>
+    <filter-name>filter</filter-name>
+    <filter-class>com.hk.filter.filter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  
+  
+</web-app>

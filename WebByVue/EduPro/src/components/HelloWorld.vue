@@ -1,17 +1,16 @@
 <template>
   <div class="hello">
     <button @click="a()">aaa</button>
-    <a href="#">123</a>
+    <!-- <a href="#">123</a>
     <ul>
       <li>{{results.name}}</li>
       <li>{{results.id}}</li>
       <li></li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   name: 'HelloWorld',
   data () {
@@ -23,10 +22,7 @@ export default {
   methods: {
     a () {
       let url = '/api/EduPro/test'
-      // axios.get('/api/EduPro/test').then(response) => {
-
-      // };
-      axios.get(url).then((response) => {
+      this.$ajax.get(url).then((response) => {
         this.results = response.data
         console.log(this.results)
       }).catch(error => { console.log(error) })

@@ -3,6 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios'
+Vue.prototype.$ajax = axios
+// import $ from 'jquery'
+// import 'bootstrap/js/bootstrap.min.js'
+// import 'bootstrap/css/bootstrap.min.css'
 // QS是axios库中带的，不需要我们再npm安装一个
 
 /* eslint-disable no-new */
