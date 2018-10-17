@@ -27,6 +27,7 @@ export default {
         console.log(this.results)
       }).catch(error => { console.log(error) })
     }
+
   }
 }
 </script>
