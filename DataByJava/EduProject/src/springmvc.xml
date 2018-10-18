@@ -14,7 +14,7 @@
 		
 		<!--  配置springmvc到哪个包扫描注解  -->
 		<context:component-scan base-package="com.hk.controller"></context:component-scan>
-	
+		<context:component-scan base-package="com.hk.service"></context:component-scan>
 		
 		<!-- 视图解析器  -->
 		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -25,7 +25,7 @@
 			<!-- 配置数据源  -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-		<property name="jdbcUrl" value="jdbc:mysql:///mybatis"></property>
+		<property name="jdbcUrl" value="jdbc:mysql:///myssm"></property>
 		<property name="user" value="root"></property>
 		<property name="password" value="wenqin5201314"></property>
 	</bean>
@@ -48,9 +48,9 @@
 	 </bean>
 	 
 	 <!--  配置service -->
-	<bean id="stuService" class="com.hk.service.StudentServiceImpl">
+	<!-- <bean id="stuService" class="com.hk.service.StudentServiceImpl">
 		<property name="dao" ref="studentDao"></property>
-	</bean>
+	</bean> -->
 		
 		
 </beans>
