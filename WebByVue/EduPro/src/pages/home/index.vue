@@ -1,10 +1,8 @@
 <template>
-<div>
+<div style="" id="fullScreen">
     <holder>
     </holder>
-     <router-link to="/class">
-        <el-button type="primary" round>点击跳转到教育课程页面！</el-button>
-      </router-link>
+    <div class="body">asdasdsadsa</div>
 </div>
 </template>
 
@@ -15,13 +13,26 @@ import { Button } from 'element-ui'
 Vue.use(Button)
 export default {
   name: 'index',
+  data () {
+    return {
+    }
+  },
   components: {
     holder
+  },
+  methods: {
   }
-
 }
 </script>
 
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .body{
+    height: 2000px;
+    width: 100%;
+  }
 
 </style>
