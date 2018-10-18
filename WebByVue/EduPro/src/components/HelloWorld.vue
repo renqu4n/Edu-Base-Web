@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <button @click="a()">aaa</button>
+    <!-- <button @click="a()">aaa</button> -->
     <!-- <a href="#">123</a>
     <ul>
       <li>{{results.name}}</li>
@@ -20,13 +20,13 @@ export default {
     }
   },
   methods: {
-    a () {
-      let url = '/api/EduPro/test'
-      this.$ajax.get(url).then((response) => {
-        this.results = response.data
-        console.log(this.results)
-      }).catch(error => { console.log(error) })
-    }
+    // a () {
+    //   let url = '/api/EduPro/test'
+    //   this.$ajax.get(url).then((response) => {
+    //     this.results = response.data
+    //     console.log(this.results)
+    //   }).catch(error => { console.log(error) })
+    // }
 
   }
 }
