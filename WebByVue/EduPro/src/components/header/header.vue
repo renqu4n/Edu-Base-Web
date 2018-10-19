@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="head" id="headNav">
+    <div class="head head-show" id="headNav">
       <div class="head-box" >
         <div class="logo">
-          <img src="http://p6alxlphh.bkt.clouddn.com/logo1.png">
+          <img src="..\..\assets\logo.png">
         </div>
         <ul class="header-right" id="wrapNav">
           <li class="header-li"><a><span>新闻资讯</span></a></li>
@@ -13,8 +13,9 @@
           <li class="header-li"><a><span>学员心声</span></a></li>
           <li class="header-li"><a><span>登录</span></a></li>
         </ul>
-        <button id="menuBtn" class="menuBtn" @click="hiddenBtn()">菜单</button>
+
       </div>
+      <button id="menuBtn" class="menuBtn" @click="hiddenBtn()">菜单</button>
     </div>
   </div>
 </template>
@@ -28,6 +29,7 @@ export default {
     }
   },
   mounted () {
+    // 控制当屏幕滚动超过90px时，隐藏菜单栏
     window.addEventListener('scroll', () => {
       this.scrollTop = document.documentElement.scrollTop
       // 控制滚动按钮的隐藏或显示
@@ -41,18 +43,20 @@ export default {
     }, true)
   },
   methods: {
-    // 隐藏按钮
+    // 隐藏按钮、显示导航栏
     hiddenBtn () {
       this.$get('menuBtn').style.opacity = 0
       this.$get('menuBtn').style.visibility = 'hidden'
       this.$get('menuBtn').style.position = 'absolute'
-      this.$get('menuBtn').style.right = 500 + 'px'
+      this.$get('menuBtn').style.right = 700 + 'px'
       this.$get('menuBtn').style.transform = 'rotate(-45deg)'
       this.$get('headNav').style.position = 'fixed'
+      // this.$get('headNav').className = 'head head-show'
+      // this.$get('headNav').style.width = '100%'
       this.$get('wrapNav').style.right = 50 + 'px'
       this.$get('wrapNav').style.transform = 'rotate(0deg)'
     },
-    // 显示按钮
+    // 显示按钮、隐藏顶部导航栏
     showBtn () {
       this.$get('menuBtn').style.opacity = 1
       this.$get('menuBtn').style.visibility = 'visible'
@@ -61,6 +65,8 @@ export default {
       this.$get('menuBtn').style.outline = 'none'
       this.$get('menuBtn').style.transform = 'rotate(0deg)'
       this.$get('headNav').style.position = 'absolute'
+      // this.$get('headNav').className = 'head head-hidden'
+      // this.$get('headNav').style.width = 0
       this.$get('wrapNav').style.right = 200 + 'px'
       this.$get('wrapNav').style.transform = 'rotate(1deg)'
     }
@@ -84,10 +90,16 @@ export default {
     left: 0;
     right: 0;
     font-size: 16px;
-    transition: all 2s;
-    visibility:visible;
-    opacity: 1;
+    transition: all .8s;
   }
+  /* .head-show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .head-hidden {
+    opacity: 0;
+    visibility: hidden;
+  } */
     .head-box {
       margin: 0 58px 0 380px;
 
@@ -107,8 +119,8 @@ export default {
         padding-right:150px;
         /* display: inline-block; */
         transition: all 2.3s;
-        visibility:visible;
-        opacity: 1;
+        /* visibility:visible;
+        opacity: 1; */
         right: 50px;
         transform: rotate(0deg);
       }
@@ -118,14 +130,33 @@ export default {
           margin-right: 35px;
           line-height: 90px;
           white-space: nowrap;
-          transition: all 1s;
+          /* transition: all 1s; */
           color:#fff;
         }
-        .header-li:hover {
+        /* .header-li:hover {
           background: #fff;
           color: #222;
           height: 90px;
+        } */
+         .header-li::after {
+          content: "";
+          width: 0;
+          height:2px;
+          background-color: #fff;
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          transition: width .4s;
+          /* box-sizing: border-box; */
         }
+        .header-li:hover::after {
+          width: 100%;
+          transition: width .4s easy-in-out 1s;
+        }
+        /* .header-li::after :hover {
+          width: 20px;
+          border-color: black;
+        } */
         .header-li a {
           height: 100%;
           position: relative;
@@ -139,7 +170,7 @@ export default {
         }
       .menuBtn {
         position:absolute;
-        right: 500px;
+        right: 700px;
         opacity: 0;
         top: 10px;
         visibility: hidden;
@@ -154,4 +185,5 @@ export default {
         border: 0;
         text-align: center;
       }
+
 </style>

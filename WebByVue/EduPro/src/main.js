@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 Vue.prototype.$ajax = axios
+// 封装通过id操作dom
 Vue.prototype.$get = function (id) {
   return document.getElementById(id)
 }
