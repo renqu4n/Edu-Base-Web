@@ -1,16 +1,15 @@
 <template>
 <div style="" id="fullScreen">
-    <holder>
-    </holder>
-    <div class="body">asdasdsadsa</div>
+    <holder></holder>
+    <div class="body"></div>
+    <foot></foot>
 </div>
 </template>
 
 <script>
-import Vue from 'Vue'
 import holder from '@/components/header/header'
-import { Button } from 'element-ui'
-Vue.use(Button)
+import foot from '@/components/foot/foot'
+
 export default {
   name: 'index',
   data () {
@@ -18,7 +17,8 @@ export default {
     }
   },
   components: {
-    holder
+    holder,
+    foot
   },
   methods: {
   }

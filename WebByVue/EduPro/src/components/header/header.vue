@@ -118,7 +118,7 @@ export default {
         height: 90px;
         padding-right:150px;
         /* display: inline-block; */
-        transition: all 2.3s;
+        transition: all 1.5s;
         /* visibility:visible;
         opacity: 1; */
         right: 50px;
@@ -177,7 +177,7 @@ export default {
         height: 70px;
         width: 70px;
         transform: rotate(-45deg);
-        transition: all 1.2s;
+        transition: all .8s;
         border-radius: 50%;
         cursor: pointer;
         background: #fff;
