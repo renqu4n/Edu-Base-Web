@@ -1,21 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Hello from '@/components/Hello'
-
+import index from '@/pages/home/index'
+import educlass from '@/pages/eduClass/class'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'index',
+      component: index
     },
     {
-      path: '/test',
-      name: 'Hello',
-      component: Hello
+      path: '/class',
+      name: 'eduClass',
+      component: educlass
     }
   ]
 })
