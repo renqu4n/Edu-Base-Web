@@ -121,6 +121,7 @@ a {
                 .qrcode img {
                     width: 140px;
                     height: 140px;
+                    cursor: pointer;
                 }
                     .leftqr {
                         position: absolute;

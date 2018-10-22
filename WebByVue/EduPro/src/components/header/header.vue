@@ -5,11 +5,16 @@
         <div class="logo">
           <img src="..\..\assets\logo.png">
         </div>
-        <ul class="header-right" id="wrapNav">
+        <ul class="header-right" id="wrapNav" >
           <li class="header-li"><a><span>新闻资讯</span></a></li>
           <li class="header-li"><a><span>中心简介</span></a></li>
-          <li class="header-li"><a><span>培训课程</span></a></li>
-          <li class="header-li"><a><span>培训动态</span></a></li>
+          <li class="selected" id="selectCtrl" @mouseover="showSelect()" @mouseout="hiddenSelect()">
+            <a><span>教学资源</span></a>
+            <div id="select">
+              <a class="options" href="#" title="跳转到师资力量页面">师资力量</a>
+              <a class="options" href="#" title="跳转到培训资源页面">培训资源</a>
+            </div>
+          </li>
           <li class="header-li"><a><span>学员心声</span></a></li>
           <li class="header-li"><a><span>登录</span></a></li>
         </ul>
@@ -45,30 +50,35 @@ export default {
   methods: {
     // 隐藏按钮、显示导航栏
     hiddenBtn () {
-      this.$get('menuBtn').style.opacity = 0
-      this.$get('menuBtn').style.visibility = 'hidden'
-      this.$get('menuBtn').style.position = 'absolute'
-      this.$get('menuBtn').style.right = 700 + 'px'
-      this.$get('menuBtn').style.transform = 'rotate(-45deg)'
+      var menuBtn = this.$get('menuBtn')
+      menuBtn.style.opacity = 0
+      menuBtn.style.visibility = 'hidden'
+      menuBtn.style.position = 'absolute'
+      menuBtn.style.right = 700 + 'px'
+      menuBtn.style.transform = 'rotate(-45deg)'
       this.$get('headNav').style.position = 'fixed'
-      // this.$get('headNav').className = 'head head-show'
-      // this.$get('headNav').style.width = '100%'
       this.$get('wrapNav').style.right = 50 + 'px'
       this.$get('wrapNav').style.transform = 'rotate(0deg)'
     },
     // 显示按钮、隐藏顶部导航栏
     showBtn () {
-      this.$get('menuBtn').style.opacity = 1
-      this.$get('menuBtn').style.visibility = 'visible'
-      this.$get('menuBtn').style.position = 'fixed'
-      this.$get('menuBtn').style.right = 170 + 'px'
-      this.$get('menuBtn').style.outline = 'none'
-      this.$get('menuBtn').style.transform = 'rotate(0deg)'
+      var menuBtn = this.$get('menuBtn')
+      menuBtn.style.opacity = 1
+      menuBtn.style.visibility = 'visible'
+      menuBtn.style.position = 'fixed'
+      menuBtn.style.right = 170 + 'px'
+      menuBtn.style.outline = 'none'
+      menuBtn.style.transform = 'rotate(0deg)'
       this.$get('headNav').style.position = 'absolute'
-      // this.$get('headNav').className = 'head head-hidden'
-      // this.$get('headNav').style.width = 0
       this.$get('wrapNav').style.right = 200 + 'px'
       this.$get('wrapNav').style.transform = 'rotate(1deg)'
+    },
+    // 教学资源下的下拉框显示隐藏功能
+    showSelect () {
+      this.$get('select').style.height = 100 + 'px'
+    },
+    hiddenSelect () {
+      this.$get('select').style.height = 0 + 'px'
     }
   }
 }
@@ -133,11 +143,40 @@ export default {
           /* transition: all 1s; */
           color:#fff;
         }
-        /* .header-li:hover {
-          background: #fff;
-          color: #222;
-          height: 90px;
-        } */
+
+        /* 这里是实现教学资源的下拉框 */
+        /* start */
+        .selected {
+          position: relative;
+          float: left;
+          margin-right: 35px;
+          line-height: 90px;
+          /* white-space: nowrap; */
+          cursor: pointer;
+          color:#fff;
+          overflow: hidden;
+        }
+        .selected div {
+          height: 0;
+          width: 64px;
+          background: #222;
+          transition: all .8s;
+          line-height: 20px;
+          font-size: 13px;
+          line-height: 50px;
+          text-align: center;
+        }
+        .options {
+            display: inline-block;
+            height: 50px;
+            width: 100%;
+            color: #fff;
+        }
+        .options:hover {
+            background:#555;
+        }
+        /* End  */
+
          .header-li::after {
           content: "";
           width: 0;
@@ -151,7 +190,7 @@ export default {
         }
         .header-li:hover::after {
           width: 100%;
-          transition: width .4s easy-in-out 1s;
+          transition: width .4s;
         }
         /* .header-li::after :hover {
           width: 20px;
