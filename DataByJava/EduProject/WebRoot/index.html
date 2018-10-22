@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Purple_loginform Website Template | Home :: w3layouts</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<!-- -->
+<script>var __links = document.querySelectorAll('a');function __linkClick(e) { parent.window.postMessage(this.href, '*');} ;for (var i = 0, l = __links.length; i < l; i++) {if ( __links[i].getAttribute('data-t') == '_blank' ) { __links[i].addEventListener('click', __linkClick, false);}}</script>
+<script src="js/jquery.min.js"></script>
+<script>$(document).ready(function(c) {
+	$('.alert-close').on('click', function(c){
+		$('.message').fadeOut('slow', function(c){
+	  		$('.message').remove();
+		});
+	});	  
+});
+
+
+
+
+
+
+
+function get_length(str) {
+	return str.replace(/[^\x00-\xff]/g,"xx").length;
+}
+window.onload=function(){
+var ainput=document.getElementsByTagName("input");
+	var user=ainput[0];
+	var pwd= ainput[1];
+var aspan = document.getElementsByTagName("p");
+	var user_p = aspan[0];
+	
+	
+	var pwd_p = aspan[1];
+	
+	
+
+
+
+user.onfocus = function(){
+		user_p.style.disply = "block";
+		user_p.innerHTML = '5-25个字母，汉子，字母或数字';
+		user_p.style.color = "#4c2a4d";
+
+	}
+
+user.onkeyup = function(){
+		count.style.visibility = "visible";
+		//user_length = get_length(this.value);
+		//count.innerHTML = user_length+"个字符";
+		
+		
+
+	}
+
+
+
+
+
+
+user.onblur = function () {
+		var re = /[^\w\u400-\u9fa5]/g;
+
+		if (re.test(this.value)) {
+
+			user_p.innerHTML = "含有非法字符！";
+			user_p.style.color = "red";
+			return ;
+
+		}
+		else if (this.value=="") {
+			user_p.innerHTML = "不能为空！";
+			user_p.style.color = "red";
+			return ;
+		}
+		
+		else if (this.value.length<6) {
+			user_p.innerHTML = "长度小于6个字符";
+			user_p.style.color = "red";
+			return ;
+		}
+		else if (this.value.length>25) {
+			user_p.innerHTML = "长度超过25个字符";
+			user_p.style.color = "red";
+		}
+		else{
+			user_p.innerHTML = '';
+			//user_p.style.color = "green";
+		}
+
+	
+	}
+
+
+pwd.onfocus = function (){
+ 		pwd_p.style.disply = "block";
+		pwd_p.innerHTML = '请输出密码';
+		pwd_p.style.color = "#4c2a4d";
+ }
+pwd.onkeyup = function (){
+
+}
+pwd.onblur = function (){
+		if (this.value=="") {
+
+			pwd_p.innerHTML = "密码不能为空";
+			pwd_p.style.color = "red";
+		}
+		
+		 else if (this.value.length<6) {
+
+		 pwd_p.innerHTML = "密码长度小于6";
+		 pwd_p.style.color = "red";
+		 } else{
+			pwd_p.innerHTML = '';
+			//user_p.style.color = "green";
+		}
+}
+
+	
+
+
+}
+</script>
+</head>
+<body>
+<!-- contact-form -->	
+<div class="message warning">
+<div class="inset">
+	<div class="login-head">
+		<h1>Login Form</h1>
+		 <div class="alert-close"> </div> 			
+	</div>
+		<form action="checkAdmin.do" method="get">
+			<p></p>
+			<li>
+				<input type="text" class="text" placeholder="Adminname" name="admin"   >
+				<a href="#" class=" icon user"></a>
+			</li>
+			
+			
+				<div class="clear"> </div>
+			<li>
+				<input type="password" placeholder="Password"  name="password" > 
+				<a href="#" class="icon lock"></a>
+			</li>
+			<p></p>
+			<div class="clear"> </div>
+			<div class="submit">
+				<input type="submit"  value="Sign in" >
+				<h4><a href="#">Lost your Password ?</a></h4>
+						  <div class="clear">  </div>	
+			</div>
+				
+		</form>
+		</div>					
+	</div>
+	</div>
+	<div class="clear"> </div>
+<!--- footer --->
+
+<div class="footer">
+	<p>教育网.@小队</p>
+</div>
+
+</body>
+</html>
