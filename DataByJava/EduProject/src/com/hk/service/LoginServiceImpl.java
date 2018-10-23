@@ -6,11 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hk.bean.Admin;
-import com.hk.dao.AdminDao;
+import com.hk.bean.Regist;
+import com.hk.dao.LoginDao;
 @Service
-public class AdminServiceImpl implements AdminService{
+public class LoginServiceImpl implements LoginService{
 	@Autowired
-	private AdminDao dao;
+	private LoginDao dao;
 	
 	@Override
 	public List<Admin> findAdmin() {
@@ -26,6 +27,19 @@ public class AdminServiceImpl implements AdminService{
 		
 		
 		
+	}
+
+	@Override
+	public boolean addUser(Regist regist) {
+		
+	int	r =  dao.addUser(regist);
+		return r>0;
+	}
+
+	@Override
+	public Regist userLogin(String user, String pwd) {
+		Regist regist = dao.userLogin(user, pwd);
+		return regist;
 	}
 
 

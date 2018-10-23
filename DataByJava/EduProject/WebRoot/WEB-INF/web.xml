@@ -66,6 +66,14 @@
   </filter-mapping>
   
   
+    <filter>
+    <filter-name>filter</filter-name>
+    <filter-class>com.xxx.filter.filter</filter-class>
+  </filter>
   
+  <filter-mapping>
+    <filter-name>filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
   
 </web-app>

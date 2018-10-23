@@ -17,19 +17,45 @@
 	});	  
 });
 
+	function printOut()
+	{
+	//获取radio的值
+	  var list = document.getElementsByName("abc");
+	  for( i =0 ; i<list.length; i++ )
+	  {
+		if( list[i].checked == true )
+		{
+		  //如果选择OA办公登录
+		  if(list[i].value=="用户")
+			{
+			  
+			  document.form1.action="userLogin.do"; 
+			  document.form1.submit(); 
+			  break;
+			}
+		 //如果选择登录邮箱
+		  if(list[i].value=="管理员")
+			{
+			  document.form1.action="checkAdmin.do"; 
+			  document.form1.submit(); 	
+			  break;
+			}
+		 }
+	
+	  }
+	}
 
 
 
 
 
-
-function get_length(str) {
+/*function get_length(str) {
 	return str.replace(/[^\x00-\xff]/g,"xx").length;
 }
 window.onload=function(){
 var ainput=document.getElementsByTagName("input");
-	var user=ainput[0];
-	var pwd= ainput[1];
+	var user=ainput[2];
+	var pwd= ainput[3];
 var aspan = document.getElementsByTagName("p");
 	var user_p = aspan[0];
 	
@@ -118,39 +144,45 @@ pwd.onblur = function (){
 			pwd_p.innerHTML = '';
 			//user_p.style.color = "green";
 		}
-}
+}*/
 
 	
 
 
-}
+
 </script>
 </head>
 <body>
+<a href=""><span style="color: white;font-size:20px;">首页</span></a>
+<a href="regist.html"><span style="color: white;font-size:20px;margin-left: 1%">注册</span></a>
 <!-- contact-form -->	
 <div class="message warning">
 <div class="inset">
 	<div class="login-head">
 		<h1>Login Form</h1>
-		 <div class="alert-close"> </div> 			
+		 
+		<span style="color: white;font-size:20px;">用户</span><input name="abc" type="radio" value="用户" checked>   
+		<span style="color: white;font-size:20px;">管理员</span><input name="abc" type="radio" value="管理员"><br>
+		  
+
 	</div>
-		<form action="checkAdmin.do" method="get">
+		<form name="form1" method="get">
 			<p></p>
 			<li>
-				<input type="text" class="text" placeholder="Adminname" name="admin"   >
+				<input type="text" class="text" placeholder="name" name="admin"  autocomplete="off" required>
 				<a href="#" class=" icon user"></a>
 			</li>
 			
 			
 				<div class="clear"> </div>
 			<li>
-				<input type="password" placeholder="Password"  name="password" > 
+				<input type="password" placeholder="Password"  name="password" autocomplete="off" required> 
 				<a href="#" class="icon lock"></a>
 			</li>
 			<p></p>
 			<div class="clear"> </div>
 			<div class="submit">
-				<input type="submit"  value="Sign in" >
+				<input type="submit" onclick=javascript:printOut() value="Sign in" >
 				<h4><a href="#">Lost your Password ?</a></h4>
 						  <div class="clear">  </div>	
 			</div>

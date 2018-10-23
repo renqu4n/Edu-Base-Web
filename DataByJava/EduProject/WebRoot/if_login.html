@@ -1,0 +1,37 @@
+<script type="text/javascript"> 
+	function printOut()
+	{
+	//获取radio的值
+	  var list = document.getElementsByName("abc");
+	  for( i =0 ; i<list.length; i++ )
+	  {
+		if( list[i].checked == true )
+		{
+		  //如果选择OA办公登录
+		  if(list[i].value=="教师")
+			{
+			  document.getElementById("UNAME").value = document.getElementById("username").value;
+			  document.getElementById("PASSWORD").value = document.getElementById("password").value;
+			  document.form1.action="http://222.88.69.37:9999/logincheck.php"; 
+			  document.form1.submit(); 
+			  break;
+			}
+		 //如果选择登录邮箱
+		  if(list[i].value=="学生")
+			{
+			  document.form1.action="http://222.88.69.37:9999/general/EDU/Student/processcheck.php"; 
+			  document.form1.submit(); 	
+			  break;
+			}
+		 }
+	
+	  }
+	}
+</script> 
+<form name="form1" method="post"> 
+	教师<input name="abc" type="radio" value="教师" checked>   
+	学生<input name="abc" type="radio" value="学生"><br>
+	<INPUT type=text id=username value="" name=username><INPUT type=hidden id=UNAME value="" name=UNAME><br>
+	<INPUT type=password id=password value="" name=password><INPUT type=hidden id=PASSWORD value="" name=PASSWORD><br>
+	<INPUT onclick=javascript:printOut(); align=absMiddle type=button value=登录> 
+</form>
