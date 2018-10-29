@@ -1,7 +1,10 @@
 <template>
 <div style="" id="fullScreen">
-    <holder></holder>
-    <div class="body"></div>
+    <holder style="position:absolute;z-index:2;"></holder>
+    <swiper style="position:absolute;z-index:1;"></swiper>
+    <div class="body">
+
+    </div>
     <foot></foot>
 </div>
 </template>
@@ -9,7 +12,7 @@
 <script>
 import holder from '@/components/header/header'
 import foot from '@/components/foot/foot'
-
+import swiper from './homeSwiper'
 export default {
   name: 'index',
   data () {
@@ -18,7 +21,8 @@ export default {
   },
   components: {
     holder,
-    foot
+    foot,
+    swiper
   },
   methods: {
   }
@@ -26,13 +30,12 @@ export default {
 </script>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  .body{
-    height: 2000px;
-    width: 100%;
-  }
-
+* {
+  margin: 0;
+  padding: 0;
+}
+.body {
+  height: 2000px;
+  width: 100%;
+}
 </style>

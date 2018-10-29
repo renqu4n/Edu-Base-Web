@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <div class="head head-show" id="headNav">
       <div class="head-box" >
         <div class="logo">
@@ -90,10 +90,11 @@ export default {
   padding: 0;
   list-style: none;
 }
+
   .head {
     width: 100%;
     height: 90px;
-    min-width: 1300px;
+    min-width: 1920px;
     background:#222;
     position: absolute;
     top: 0;
