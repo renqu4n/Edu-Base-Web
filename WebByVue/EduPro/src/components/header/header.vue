@@ -94,7 +94,7 @@ export default {
   .head {
     width: 100%;
     height: 90px;
-    min-width: 1920px;
+    min-width: 1900px;
     background:#222;
     position: absolute;
     top: 0;
@@ -153,9 +153,10 @@ export default {
           margin-right: 35px;
           line-height: 90px;
           /* white-space: nowrap; */
-          cursor: pointer;
+          /* cursor: pointer; */
           color:#fff;
           overflow: hidden;
+          cursor: default;
         }
         .selected div {
           height: 0;
@@ -166,6 +167,7 @@ export default {
           font-size: 13px;
           line-height: 50px;
           text-align: center;
+
         }
         .options {
             display: inline-block;
