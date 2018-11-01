@@ -94,7 +94,7 @@ export default {
   .head {
     width: 100%;
     height: 90px;
-    min-width: 1900px;
+    min-width: 1903px;
     background:#222;
     position: absolute;
     top: 0;
