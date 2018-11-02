@@ -1,11 +1,13 @@
 <template>
 <div style="" id="fullScreen">
-    <holder style="position:absolute;z-index:2;"></holder>
-
+    <!-- 头部 -->
+    <holder style="position:absolute;z-index:3;"></holder>
     <div class="body">
       <swiper style="position:absolute;z-index:1;"></swiper>
       <student></student>
+      <cooperation></cooperation>
     </div>
+    <!-- 底部 -->
     <foot></foot>
 </div>
 </template>
@@ -15,6 +17,7 @@ import holder from '@/components/header/header'
 import foot from '@/components/foot/foot'
 import swiper from './components/homeSwiper'
 import student from './components/greatStu'
+import cooperation from './components/cooperation'
 export default {
   name: 'index',
   data () {
@@ -25,7 +28,8 @@ export default {
     holder,
     foot,
     swiper,
-    student
+    student,
+    cooperation
   },
   methods: {
   }
@@ -38,9 +42,9 @@ export default {
   padding: 0;
 }
 .body {
-  height: 3000px;
+  height: 3165px;
   width: 100%;
-  position: flex;
+  /* position: flex; */
 }
 
 </style>
