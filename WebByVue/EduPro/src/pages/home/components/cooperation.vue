@@ -8,9 +8,10 @@
         </div>
         <div class="picCoo">
             <ul class="picTable" >
-                <li v-for="item of cooList" :key="item.id"  :index="item.id">
+                <li v-for="item of cooList" :key="item.id" >
                     <a href=""></a>
-                    <img :src="item.cooImgUrl1" ref="cooImg" alt="" @mouseover="changeImg()">
+                    <img :src="item.cooImgUrl1" alt="" @mouseover="changeImg(item)" >
+                    <!-- <img :src="item.cooImgUrl2" alt="" v-if="light" > -->
                 </li>
             </ul>
         </div>
@@ -54,7 +55,7 @@ export default {
         }, {
           'id': 7,
           cooImgUrl1: 'http://p6alxlphh.bkt.clouddn.com/company/e/dark/58%E5%90%8C.png',
-          cooImgUrl2: 'http://p6alxlphh.bkt.clouddn.com/company/e/light/%E6%96%B0%E6%B5%AA.png'
+          cooImgUrl2: 'http://p6alxlphh.bkt.clouddn.com/company/e/light/58%E5%90%8C.png'
         }, {
           'id': 8,
           cooImgUrl1: 'http://p6alxlphh.bkt.clouddn.com/company/e/dark/%E6%BB%B4%E6%BB%B4%E5%87%BA%E8%A1%8C.png',
@@ -79,12 +80,11 @@ export default {
         }
       ],
       flag: false
-
     }
   },
   methods: {
-    changeImg () {
-      console.log()
+    changeImg (item) {
+      item.cooImgUrl1 = item.cooImgUrl2
     }
   }
 }
@@ -144,6 +144,7 @@ export default {
                 margin: 0 auto;
                 width: 1225px;
                 height: 648px;
+                left: -38px;
                 /* background: lightgreen; */
                 position: relative;
             }
