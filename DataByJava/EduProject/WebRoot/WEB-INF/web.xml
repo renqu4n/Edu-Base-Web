@@ -76,4 +76,28 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
   
+  
+  <!-- 配置session 有效时间，单位是分钟 ，连续30分钟不使用session就会销毁 -->
+  <session-config>
+  	<session-timeout>30</session-timeout>
+  </session-config>		
+	
+
+<servlet>
+    <servlet-name>CheckcodeServlet</servlet-name>
+    <servlet-class>com.hk.controller.CheckcodeServlet</servlet-class>
+</servlet>
+
+  <servlet-mapping>
+    <servlet-name>CheckcodeServlet</servlet-name>
+    <url-pattern>/CheckcodeServlet</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+  </welcome-file-list>
+  
+  
+  
+  
 </web-app>
