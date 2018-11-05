@@ -11,7 +11,7 @@
                 <li v-for="item of cooList" :key="item.id" >
                     <a href=""></a>
                     <img :src="item.cooImgUrl1" alt="" @mouseover="changeImg(item)" >
-                    <!-- <img :src="item.cooImgUrl2" alt="" v-if="light" > -->
+                    <img :src="item.cooImgUrl2" alt=""  >
                 </li>
             </ul>
         </div>
@@ -137,13 +137,13 @@ export default {
             }
         .picCoo {
             width: 100%;
-            height: 674px;
+            height: 366px;
             /* background: skyblue; */
         }
             .picTable {
                 margin: 0 auto;
                 width: 1225px;
-                height: 648px;
+                height: 366px;
                 left: -38px;
                 /* background: lightgreen; */
                 position: relative;
