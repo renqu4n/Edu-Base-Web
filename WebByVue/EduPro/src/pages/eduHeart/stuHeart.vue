@@ -1,6 +1,6 @@
 <template>
     <div>
-    <holder></holder>
+    <holder ></holder>
     成功跳转！
     </div>
 </template>
@@ -17,5 +17,8 @@ export default {
 </script>
 
 <style>
-
+* {
+  padding: 0;
+  margin: 0;
+}
 </style>
