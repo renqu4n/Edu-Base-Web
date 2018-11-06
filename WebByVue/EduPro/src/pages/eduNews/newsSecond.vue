@@ -9,6 +9,12 @@
                     <span>了解教育新闻资讯</span>
                 </div>
                 <div class="newsTable">
+                    <div class="newsHome">
+                        <a>首页</a>
+                        >
+                        <a>新闻资讯</a>
+
+                    </div>
                     <ul>
                         <li v-for="item of newsList" :key="item.id">
                             <a href="#" title="新闻名称">
@@ -98,6 +104,7 @@ export default {
 * {
     padding: 0;
     margin: 0;
+    /* list-style-image: url(../../assets/news-li.png); */
 }
     .body {
         height:2165px;
@@ -139,8 +146,31 @@ export default {
                 position: relative;
 
             }
-            .newsTable a {
-                   color:#888;
+            .newsHome {
+                line-height: 40px;
+                border-bottom: 1px solid #999;
+            }
+                .newsHomeImg {
+                    display: inline-block;
+                    background: url(../../assets/news-home.png)
+                }
+                .newsHome a {
+                    color: black;
+                    cursor: pointer;
+                }
+                .newsHome a:hover {
+                    color: rgb(255, 128, 0);
+                    text-decoration: underline;
+                }
+            .newsTable ul {
+                margin-top: 30px;
+            }
+            .newsTable ul li a {
+                color: #888;
+            }
+            .newsTable ul li a:hover {
+                color: rgb(255, 128, 0);
+                text-decoration: underline;
             }
             .newsTable li {
                 line-height: 40px;
@@ -148,10 +178,7 @@ export default {
                 padding-left:20px;
                 box-sizing: border-box;
             }
-            .newsTable a:hover{
-                color: rgb(255, 128, 0);
-                text-decoration: underline;
-            }
+
             .newsMenu {
                 position: absolute;
                 width: 200px;
@@ -160,12 +187,15 @@ export default {
             }
             .newsMenu a {
                 margin-left: 5px;
+                 color: black;
+            }
+            .newsMenu a:hover {
+                text-decoration: underline;
             }
             .newsIndex {
                 display: inline-block;
                 width: 22px;
                 height: 22px;
-                margin-left: 10px;
                 background: rgb(255, 128, 0);
                 text-align: center;
             }

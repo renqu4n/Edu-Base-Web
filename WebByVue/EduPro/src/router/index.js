@@ -30,7 +30,7 @@ export default new Router({
       component: edunews2
     },
     {
-      path: '/eduNewsDetail',
+      path: '/eduNews/eduNewsDetail',
       name: 'eduNewsDetail',
       component: edunewsdetail
     },
