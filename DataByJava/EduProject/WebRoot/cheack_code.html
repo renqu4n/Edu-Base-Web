@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+    <script src="jquery-2.1.1.js"></script>
+    <script src="api.js"></script>
+    <script src="login.js"></script>
+
+</head>
+
+<body>
+<p>name:<input type="text" id="loginname"/></p>
+<p>pwd:<input type="text" id="Password"/></p>
+<p>code:
+    <img id="codeImg" alt="点击更换" title="点击更换" src=""/>
+
+</p>
+<button type="button" class="login_btn">登录</button>
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+       changeCode();
+       //bind绑定事件
+       $("#codeImg").bind("click",changeCode);
+
+
+    })
+    //验证码
+    function changeCode(){
+        console.log(genTimestamp());
+        $("#codeImg").attr("src",api.imgApi+"?t="+genTimestamp());
+    }
+    function genTimestamp(){
+        var time = new Date();
+        return time.getTime();
+    }
+
+    
+</script>
+</body>
+</html>
+var root="http://localhost:8080/healthcopy";
+var api={
+    loginApi:root+"/clogin",
+    imgApi:root+"/code",
+}
+--------------------- 
+作者：ruiguang21 
+来源：CSDN 
+原文：https://blog.csdn.net/ruiguang21/article/details/79399172 
+版权声明：本文为博主原创文章，转载请附上博文链接！
