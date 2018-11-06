@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>登录页面</title>
+<title>找回账户页面</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -9,6 +9,17 @@
 <!-- -->
 <script>var __links = document.querySelectorAll('a');function __linkClick(e) { parent.window.postMessage(this.href, '*');} ;for (var i = 0, l = __links.length; i < l; i++) {if ( __links[i].getAttribute('data-t') == '_blank' ) { __links[i].addEventListener('click', __linkClick, false);}}</script>
 <script src="js/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+	function change(){
+		//切换验证码
+		document.getElementById("myimg").src="/Login/checkcode?"+new Date().getTime();
+	}
+</script>
+
+
+
 <script>$(document).ready(function(c) {
 	$('.alert-close').on('click', function(c){
 		$('.message').fadeOut('slow', function(c){
@@ -159,32 +170,35 @@ pwd.onblur = function (){
 <div class="message warning">
 <div class="inset">
 	<div class="login-head">
-		<h1>Login Form</h1>
+		<h1>Find Password</h1>
 		 
 		<!-- <span style="color: white;font-size:20px;">用户</span><input name="abc" type="radio" value="用户" checked>   
 		<span style="color: white;font-size:20px;">管理员</span><input name="abc" type="radio" value="管理员"><br> -->
 		  
 
 	</div>
-		<form name="form1" method="post" action="userLogin.do">
-			<p></p>
+		<form name="form1" method="post" action="#">
+			
 			<li>
 				<input type="text" class="text" placeholder="name" name="admin"  autocomplete="off" required>
-				<a href="#" class=" icon user"></a>
+				
 			</li>
-			
+			<li>
+				<input type="text" class="text" placeholder="e_mail" name="admin"  autocomplete="off" required>
+				
+			</li>
 			
 				
 			<li>
-				<input type="password" placeholder="Password"  name="password" autocomplete="off" required="required"> 
-				<a href="#" class="icon lock"></a>
+				<input type="text"  placeholder="code" class="input" name="checkcode" autocomplete="off" required="required"> 
+				<input type="button" value="获取验证码" class="getSecurityCode" name="">
 			</li>
-			<p></p>
+			
 			
 			<div class="submit">
 				<input type="submit" onclick=javascript:printOut() value="Sign in" >
-				<h4><a href="findUser.html">Lost your Password ?</a></h4>
-						  <div class="clear">  </div>	
+				<h4><a href="login.html">Login ?</a></h4>
+						  	
 			</div>
 				
 		</form>

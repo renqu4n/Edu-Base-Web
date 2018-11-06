@@ -22,10 +22,10 @@ export default {
   methods: {
     // a () {
     //   let url = '/api/EduPro/test'
-    //   this.$ajax.get(url).then((response) => {
-    //     this.results = response.data
-    //     console.log(this.results)
-    //   }).catch(error => { console.log(error) })
+    // this.$ajax.get(url).then((response) => {
+    //   this.results = response.data
+    //   console.log(this.results)
+    // }).catch(error => { console.log(error) })
     // }
 
   }

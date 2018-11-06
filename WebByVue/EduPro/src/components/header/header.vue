@@ -1,21 +1,21 @@
 <template>
-  <div>
+  <div class="wrapper">
     <div class="head head-show" id="headNav">
       <div class="head-box" >
         <div class="logo">
-          <img src="..\..\assets\logo.png">
+          <router-link to="/"><img src="..\..\assets\logo.png"></router-link>
         </div>
         <ul class="header-right" id="wrapNav" >
-          <li class="header-li"><a><span>新闻资讯</span></a></li>
-          <li class="header-li"><a><span>中心简介</span></a></li>
+          <li class="header-li"><router-link to="/eduNews"><a><span>新闻资讯</span></a></router-link></li>
+          <li class="header-li"><router-link to="/eduCenter"><a><span>中心简介</span></a></router-link></li>
           <li class="selected" id="selectCtrl" @mouseover="showSelect()" @mouseout="hiddenSelect()">
             <a><span>教学资源</span></a>
             <div id="select">
-              <a class="options" href="#" title="跳转到师资力量页面">师资力量</a>
-              <a class="options" href="#" title="跳转到培训资源页面">培训资源</a>
+              <router-link to="/eduRes/eduTeac"><a class="options" href="#" title="师资力量">师资力量</a></router-link>
+              <router-link to="/eduRes/eduReso"><a class="options" href="#" title="培训资源">培训资源</a></router-link>
             </div>
           </li>
-          <li class="header-li"><a><span>学员心声</span></a></li>
+          <router-link to="/eduHeart"><li class="header-li"><a><span>学员心声</span></a></li></router-link>
           <li class="header-li"><a><span>登录</span></a></li>
         </ul>
 
@@ -89,11 +89,16 @@ export default {
   margin: 0;
   padding: 0;
   list-style: none;
+  text-decoration: none;
 }
+a {
+  color: #fff
+}
+
   .head {
     width: 100%;
     height: 90px;
-    min-width: 1300px;
+    min-width: 1903px;
     background:#222;
     position: absolute;
     top: 0;
@@ -152,9 +157,10 @@ export default {
           margin-right: 35px;
           line-height: 90px;
           /* white-space: nowrap; */
-          cursor: pointer;
+          /* cursor: pointer; */
           color:#fff;
           overflow: hidden;
+          cursor: default;
         }
         .selected div {
           height: 0;
@@ -165,6 +171,7 @@ export default {
           font-size: 13px;
           line-height: 50px;
           text-align: center;
+
         }
         .options {
             display: inline-block;
@@ -222,7 +229,7 @@ export default {
         background: #fff;
         box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         border: 0;
-        text-align: center;
+        text-align: center
       }
 
 </style>

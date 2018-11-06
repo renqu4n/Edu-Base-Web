@@ -9,7 +9,8 @@
                         <br>我们的介绍
                         <div class="culture-intro">我们不会辜负时代赋予我们的历史性机遇，为构建技术互联的超科技世界，一往无前。在这里，愿我们拥有更多可能，也期待你们脚下有风，各自灿烂。</div>
                     </div>
-                    <div class="categoris">CATEGORIS
+                    <div class="categoris">
+                        CATEGORIS
                         <ul class="categoris-table">
                           <li><a href="">Bootstrap官网</a></li>
                           <li><a href="">JQuery官网</a></li>
@@ -106,7 +107,7 @@ a {
                     .categoris-table li {
                         margin-top: 10px;
                     }
-                .categoris a {
+                .categoris .categoris-table a {
                     text-decoration: none;
                     color: #fff;
                 }
