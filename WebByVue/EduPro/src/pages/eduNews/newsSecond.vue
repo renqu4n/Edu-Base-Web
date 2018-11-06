@@ -16,10 +16,10 @@
                         </li></a>
                     </ul>
                     <div class="newsMenu">
-                        <span class="newsIndex">1</span>
-                        <router-link to="/eduNews2"><a href="newsSecond" title="第二页">2</a></router-link>
-                        <router-link to="/eduNews2"><a href="" title="下一页">下一页</a></router-link>
-                        <router-link to="/eduNews2"><a href="" title="最后一页">最后</a></router-link>
+                        <router-link to="/eduNews"><a href="" title="上一页">上一页</a></router-link>
+                        <router-link to="/eduNews"><a href="" title="第一页">最前</a></router-link>
+                        <router-link to="/eduNews"><a href="" title="第一页">1</a></router-link>
+                        <span class="newsIndex">2</span>
                     </div>
                 </div>
             </div>
@@ -75,26 +75,6 @@ export default {
           'time': '2018-11-5'
         }, {
           'id': 10,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 11,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 12,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 13,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 14,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 15,
           'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
           'time': '2018-11-5'
         }
@@ -166,7 +146,6 @@ export default {
             }
             .newsTable li:hover{
                 color: rgb(255, 128, 0);
-                text-decoration: underline;
             }
             .newsMenu {
                 position: absolute;
@@ -181,6 +160,7 @@ export default {
                 display: inline-block;
                 width: 22px;
                 height: 22px;
+                margin-left: 10px;
                 background: rgb(255, 128, 0);
                 text-align: center;
             }

@@ -1,6 +1,6 @@
 <template>
     <div>
-    <holder ></holder>
+    <holder></holder>
     成功跳转！
     </div>
 </template>
