@@ -2,27 +2,13 @@
     <div>
         <holder style="position:absolute;z-index:3;"></holder>
         <div class="body">
-            <swiper style="position:absolute;z-index:1;"></swiper>
             <div class="newsPage">
                 <div class="newsTitle">
                     <p>新闻中心</p>
                     <span>了解教育新闻资讯</span>
                 </div>
                 <div class="newsTable">
-                    <ul>
-                        <li v-for="item of newsList" :key="item.id">
-                            <a href="#" title="新闻名称">
-                            <span style="background:url(../../assets/news-li.png)">{{item.content}}</span>
-                            <span style="position:absolute;right:0">{{item.time}}</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="newsMenu">
-                        <router-link to="/eduNews"><a href="" title="上一页">上一页</a></router-link>
-                        <router-link to="/eduNews"><a href="" title="第一页">最前</a></router-link>
-                        <router-link to="/eduNews"><a href="" title="第一页">1</a></router-link>
-                        <span class="newsIndex">2</span>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -33,7 +19,6 @@
 <script>
 import holder from '@/components/header/header'
 import foot from '@/components/foot/foot'
-import swiper from './components/newsSwiper'
 export default {
   name: 'eduClass',
   data () {
@@ -86,8 +71,7 @@ export default {
   },
   components: {
     holder,
-    foot,
-    swiper
+    foot
   }
 
 }
@@ -144,7 +128,7 @@ export default {
             }
             .newsTable li {
                 line-height: 40px;
-                background: url(../../assets/news-li.png) no-repeat left center;
+                background: url(../../../assets/news-li.png) no-repeat left center;
                 padding-left:20px;
                 box-sizing: border-box;
             }

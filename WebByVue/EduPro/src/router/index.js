@@ -3,10 +3,12 @@ import Router from 'vue-router'
 import index from '@/pages/home/index'
 import edunews from '@/pages/eduNews/news'
 import edunews2 from '@/pages/eduNews/newsSecond'
+import edunewsdetail from '@/pages/eduNews/newsDetail/newsDetail'
 import eduabout from '@/pages/eduAbout/center'
 import eduteac from '@/pages/eduRes/eduTeac/teachers'
 import edureso from '@/pages/eduRes/eduReso/resour'
 import eduheart from '@/pages/eduHeart/stuHeart'
+
 Vue.use(Router)
 
 export default new Router({
@@ -26,6 +28,11 @@ export default new Router({
       path: '/eduNews2',
       name: 'eduNews2',
       component: edunews2
+    },
+    {
+      path: '/eduNewsDetail',
+      name: 'eduNewsDetail',
+      component: edunewsdetail
     },
     // 中心简介router
     {

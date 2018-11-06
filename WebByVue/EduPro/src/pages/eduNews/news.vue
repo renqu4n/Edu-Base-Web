@@ -7,13 +7,21 @@
                 <div class="newsTitle">
                     <p>新闻中心</p>
                     <span>了解教育新闻资讯</span>
-                </div>
+            </div>
                 <div class="newsTable">
+                    <div class="newsHome">
+                        <a style="color:black;cursor:pointer;">首页</a>
+                        >
+                        <a style="color:black;cursor:pointer">新闻资讯</a>
+
+                    </div>
                     <ul>
-                        <a href="#" title="新闻名称"><li v-for="item of newsList" :key="item.id">
-                            <span style="background:url(../../assets/news-li.png)">{{item.content}}</span>
+                        <li v-for="item of newsList" :key="item.id">
+                            <a href="#" title="新闻名称">
+                            <span>{{item.content}}</span>
                             <span style="position:absolute;right:0">{{item.time}}</span>
-                        </li></a>
+                            </a>
+                        </li>
                     </ul>
                     <div class="newsMenu">
                         <span class="newsIndex">1</span>
@@ -32,6 +40,7 @@
 import holder from '@/components/header/header'
 import foot from '@/components/foot/foot'
 import swiper from './components/newsSwiper'
+// import func from './vue-temp/vue-editor-bridge'
 export default {
   name: 'eduClass',
   data () {
@@ -108,15 +117,34 @@ export default {
     swiper
   }
 
-}
+//   mounted () {
+//     let url = ''
+//     this.$ajax({
+//       type: 'get',
+//       url: url,
+//       dataType: 'json',
+//       success: function (data) {
+//         if (data.status === 0) {
+//           var a = data.data.list
+//           func(a)
+//         } else {
+//           alert('接口调用失败')
+//         }
+//       },
+//       error: function (data) {
+//         alert(JSON.stringify(data))
+//       }
 
+//     })
+//   }
+}
 </script>
 
 <style scoped>
 * {
     padding: 0;
     margin: 0;
-    list-style-image: url(../../assets/news-li.png);
+    /* list-style-image: url(../../assets/news-li.png); */
 }
     .body {
         height:2165px;
@@ -158,15 +186,26 @@ export default {
                 position: relative;
 
             }
+            .newsHome {
+                line-height: 40px;
+                border-bottom: 1px solid #999;
+            }
+                .newsHomeImg {
+                    display: inline-block;
+                    background: url(../../assets/news-home.png)
+                }
             .newsTable a {
-                color: black;
+                color: #888;
             }
-            .newsTable li {
-                line-height: 40px
-            }
-            .newsTable li:hover{
+            .newsTable a:hover {
                 color: rgb(255, 128, 0);
                 text-decoration: underline;
+            }
+            .newsTable li {
+                line-height: 40px;
+                background: url(../../assets/news-li.png) no-repeat left center;
+                padding-left:20px;
+                box-sizing: border-box;
             }
             .newsMenu {
                 position: absolute;
