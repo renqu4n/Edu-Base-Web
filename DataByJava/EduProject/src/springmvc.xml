@@ -27,7 +27,7 @@
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
 		<property name="jdbcUrl" value="jdbc:mysql:///myssm"></property>
 		<property name="user" value="root"></property>
-		<property name="password" value="wenqin5201314"></property>
+		<property name="password" value="lmy19970219"></property>
 	</bean>
 	
 	<!-- 配置SqlSessionFactoryBean，用于创建SqlSessionFactory 
@@ -52,5 +52,6 @@
 		<property name="dao" ref="studentDao"></property>
 	</bean> -->
 		
-		
+		<!--注解的驱动  -->
+	<mvc:annotation-driven></mvc:annotation-driven>
 </beans>
