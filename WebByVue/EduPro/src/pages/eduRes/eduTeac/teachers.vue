@@ -12,8 +12,8 @@
                     <div class="teacher" v-for="teacitem of teacherList" :key="teacitem.id">
                         <div class="teacherBox">
                             <div class="teacherPhoto">
-                                <span class="teacherFrame"></span>
-                                <img class="teacherImg" :src='teacitem.teacImg'>
+                                <span class="teacherFrame" id="teacherFrame"></span>
+                                <img class="teacherImg" :src='teacitem.teacImg' >
                             </div>
                             <div class="teacherInfo">
                                 <p>
@@ -101,11 +101,22 @@ export default {
     holder,
     foot
   },
-  mounted () {
-    var teacherF = document.getElementsByClassName('teacherFrame')[0]
-    var teacherP = document.getElementsByClassName('teacherImg')[0]
-    teacherF.addEventListener('')
-    teacherP.addEventListener('')
+  methods: {
+    getX () {
+      return Math.random() * 10
+    },
+    getY () {
+      return Math.random() * 10
+    }
+  },
+  mounted: function () {
+    var teacherP = document.getElementsByClassName('teacher')
+    for (let i = 0; i < teacherP.length; i++) {
+      teacherP[i].addEventListener('mouseover', () => {
+        document.getElementsByClassName('teacherFrame')[i].style.transform = 'translate3d(' + -this.getX() + 'px,' + -this.getY() + 'px,0px)'
+        document.getElementsByClassName('teacherImg')[i].style.transform = 'translate3d(' + this.getX() + 'px,' + this.getY() + 'px,0px)'
+      }, true)
+    }
   }
 }
 
@@ -187,11 +198,13 @@ export default {
                         border: 2px solid #c8c8c8;
                         box-sizing: border-box;
                         z-index: 2;
+                        transition: transform .57s;
                     }
                     .teacherImg {
                         width: 288px;
                         height: 346px;
                         transition: none;
+                        transition: transform .57s;
                     }
                 .teacherInfo {
                     position: relative;
