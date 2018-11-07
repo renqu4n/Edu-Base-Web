@@ -142,10 +142,9 @@ a {
         .header-li {
           position: relative;
           float: left;
-          margin-right: 35px;
+          margin-right:35px;
           line-height: 90px;
           white-space: nowrap;
-          /* transition: all 1s; */
           color:#fff;
         }
 
@@ -156,8 +155,6 @@ a {
           float: left;
           margin-right: 35px;
           line-height: 90px;
-          /* white-space: nowrap; */
-          /* cursor: pointer; */
           color:#fff;
           overflow: hidden;
           cursor: default;

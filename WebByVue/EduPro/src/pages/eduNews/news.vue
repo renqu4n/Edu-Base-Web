@@ -5,8 +5,8 @@
             <swiper style="position:absolute;z-index:1;"></swiper>
             <div class="newsPage">
                 <div class="newsTitle">
-                    <p>新闻中心</p>
-                    <span>了解教育新闻资讯</span>
+                    <p>新闻资讯</p>
+                    <span>了解最新教育新闻资讯</span>
             </div>
                 <div class="newsTable">
                     <div class="newsHome">
@@ -42,7 +42,7 @@ import foot from '@/components/foot/foot'
 import swiper from './components/newsSwiper'
 // import func from './vue-temp/vue-editor-bridge'
 export default {
-  name: 'eduClass',
+  name: 'eduNews',
   data () {
     return {
       newsList: [
@@ -216,7 +216,11 @@ export default {
                 line-height: 40px;
                 background: url(../../assets/news-li.png) no-repeat left center;
                 padding-left:20px;
+                width: 900px;
                 box-sizing: border-box;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
             }
 
             .newsMenu {

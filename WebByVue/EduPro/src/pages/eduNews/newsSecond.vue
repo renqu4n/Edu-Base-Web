@@ -5,8 +5,8 @@
             <swiper style="position:absolute;z-index:1;"></swiper>
             <div class="newsPage">
                 <div class="newsTitle">
-                    <p>新闻中心</p>
-                    <span>了解教育新闻资讯</span>
+                    <p>新闻资讯</p>
+                    <span>了解最新教育新闻资讯</span>
                 </div>
                 <div class="newsTable">
                     <div class="newsHome">
@@ -41,7 +41,7 @@ import holder from '@/components/header/header'
 import foot from '@/components/foot/foot'
 import swiper from './components/newsSwiper'
 export default {
-  name: 'eduClass',
+  name: 'eduNews2',
   data () {
     return {
       newsList: [
