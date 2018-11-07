@@ -6,6 +6,7 @@
           <router-link to="/"><img src="..\..\assets\logo.png"></router-link>
         </div>
         <ul class="header-right" id="wrapNav" >
+          <li class="header-li"><router-link to="/"><a><span>首页</span></a></router-link></li>
           <li class="header-li"><router-link to="/eduNews"><a><span>新闻资讯</span></a></router-link></li>
           <li class="header-li"><router-link to="/eduCenter"><a><span>中心简介</span></a></router-link></li>
           <li class="selected" id="selectCtrl" @mouseover="showSelect()" @mouseout="hiddenSelect()">

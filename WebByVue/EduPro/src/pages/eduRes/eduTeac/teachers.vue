@@ -2,8 +2,8 @@
     <div>
         <holder style="position:absolute;z-index:3;"></holder>
         <div class="body">
-            <div class="newsPage">
-                <div class="newsTitle">
+            <div class="teacPage">
+                <div class="teacTitle">
                     <p>业界名师 卓尔不凡</p>
                     <span>互联网一线大咖亲授 祝您圆梦IT</span>
                 </div>
@@ -103,10 +103,10 @@ export default {
   },
   methods: {
     getX () {
-      return Math.random() * 10
+      return Math.random() * 7
     },
     getY () {
-      return Math.random() * 10
+      return Math.random() * 7
     }
   },
   mounted: function () {
@@ -128,18 +128,18 @@ export default {
     margin: 0;
 }
     .body {
-        height:2565px;
+        height:2265px;
         width: 100%;
         min-width: 1903px;
     }
-        .newsPage {
+        .teacPage {
             position: absolute;
             width: 100%;
             height: 1000px;
             top: 90px;
             z-index: 2;
         }
-            .newsTitle {
+            .teacTitle {
                 height: 170px;
                 width: 100%;
                 padding-top: 90px;
@@ -148,11 +148,11 @@ export default {
                 text-align: center;
                 font-size: 40px;
             }
-            .newsTitle span {
+            .teacTitle span {
                 font-size: 20px;
                 color: #666;
             }
-            .newsTitle span::after {
+            .teacTitle span::after {
                 content: "";
                 display: block;
                 margin: 30px auto 0;
@@ -198,13 +198,13 @@ export default {
                         border: 2px solid #c8c8c8;
                         box-sizing: border-box;
                         z-index: 2;
-                        transition: transform .57s;
+                        transition: transform .8s;
                     }
                     .teacherImg {
                         width: 288px;
                         height: 346px;
                         transition: none;
-                        transition: transform .57s;
+                        transition: transform .8s;
                     }
                 .teacherInfo {
                     position: relative;
