@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="head head-show" id="headNav">
+    <div class="head head-show" id="headNav"  style="z-index:998">
       <div class="head-box" >
         <div class="logo">
           <router-link to="/"><img src="..\..\assets\logo.png"></router-link>
@@ -21,7 +21,7 @@
         </ul>
 
       </div>
-      <button id="menuBtn" class="menuBtn" @click="hiddenBtn()">菜单</button>
+      <button id="menuBtn" class="menuBtn" @click="hiddenBtn()"  style="z-index:999">菜单</button>
     </div>
   </div>
 </template>
