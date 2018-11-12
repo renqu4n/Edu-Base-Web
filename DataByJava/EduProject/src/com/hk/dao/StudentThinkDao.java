@@ -8,4 +8,5 @@ public interface StudentThinkDao {
 
 	
 	List<StudentsThink> selectstudent();
+	int insermessage(StudentsThink stk);
 }
