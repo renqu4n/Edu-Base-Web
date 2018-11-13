@@ -8,4 +8,5 @@ public interface StudentThinkService {
 
 	
 	List<StudentsThink> findStudent();
+	boolean insertmessage(StudentsThink stk);
 }

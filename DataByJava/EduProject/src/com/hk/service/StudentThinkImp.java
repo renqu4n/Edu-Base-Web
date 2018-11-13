@@ -11,7 +11,8 @@ import com.hk.dao.StudentThinkDao;
 
 @Service
 public class StudentThinkImp  implements StudentThinkService{
-      @Autowired
+
+	@Autowired
       private StudentThinkDao dao;
       
   	@Override
@@ -19,6 +20,18 @@ public class StudentThinkImp  implements StudentThinkService{
   		
   		return dao.selectstudent();
   	}
+
+	@Override
+	public boolean insertmessage(StudentsThink stk) {
+		
+		int x=dao.insermessage(stk);
+		if (x>0) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
       
       
       
