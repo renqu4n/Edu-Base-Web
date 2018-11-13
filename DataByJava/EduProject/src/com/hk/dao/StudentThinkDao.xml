@@ -9,7 +9,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select *
         from user u join message m
         WHERE m.role_id=u.role_id and m.student_id=u.id
+        order by data  DESC
 	</select>
 	
+	<insert id="insermessage">
+	     insert into message (message_content,data,student_name) values (#{message_content},#{data},#{student_name})
+	</insert>
      
 </mapper>

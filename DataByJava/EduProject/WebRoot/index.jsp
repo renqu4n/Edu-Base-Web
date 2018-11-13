@@ -20,10 +20,33 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 
+  <script type="text/javascript">
+    function chkinput(form)
+    {  
+        
+       if(form.input.value==""){
+        alert("输入内容不能为空");
+        form.input.focus();
+        return false;
+       }
+      return ture;
+    }
+    
+    function loginConfirm() {
+		var user='<%=session.getAttribute("users")%>';
+		if (user=="null"||user=="") {
+			alert("您还没有登录！！！！！！！！滚回去登陆！！");
+			return false;
+		} 
+	}
+  </script>
   </head>
   
   <body>
-    This is my JSP page. <br>
-    <a href="getStudentThink.do">hghhhh</a>
+   
+    <form action="insertMessage.do" onsubmit=" return chkinput(this)" method="post">
+       <input type="text" placeholder="请输入你的留言" name="input">
+       <input type="submit" value="提交" name="submit">
+    </form>
   </body>
 </html>
