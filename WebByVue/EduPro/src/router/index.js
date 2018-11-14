@@ -42,12 +42,12 @@ export default new Router({
     },
     // 教学资源相关router
     {
-      path: '/res/eduTeac',
+      path: '/eduRes/eduTeac',
       name: 'eduTeac',
       component: eduteac
     },
     {
-      path: '/res/eduReso',
+      path: '/eduRes/eduReso',
       name: 'eduReso',
       component: edureso
     },

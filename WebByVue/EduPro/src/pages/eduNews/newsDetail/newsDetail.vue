@@ -36,7 +36,7 @@ import holder from '@/components/header/header'
 import foot from '@/components/foot/foot'
 import swiper from '../components/newsSwiper'
 export default {
-  name: 'eduClass',
+  name: 'eduNewsDetail',
   data () {
     return {
 

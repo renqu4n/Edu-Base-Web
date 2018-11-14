@@ -1,11 +1,12 @@
 <template>
   <div class="wrapper">
-    <div class="head head-show" id="headNav">
+    <div class="head head-show" id="headNav"  style="z-index:998">
       <div class="head-box" >
         <div class="logo">
           <router-link to="/"><img src="..\..\assets\logo.png"></router-link>
         </div>
         <ul class="header-right" id="wrapNav" >
+          <li class="header-li"><router-link to="/"><a><span>首页</span></a></router-link></li>
           <li class="header-li"><router-link to="/eduNews"><a><span>新闻资讯</span></a></router-link></li>
           <li class="header-li"><router-link to="/eduCenter"><a><span>中心简介</span></a></router-link></li>
           <li class="selected" id="selectCtrl" @mouseover="showSelect()" @mouseout="hiddenSelect()">
@@ -20,7 +21,7 @@
         </ul>
 
       </div>
-      <button id="menuBtn" class="menuBtn" @click="hiddenBtn()">菜单</button>
+      <button id="menuBtn" class="menuBtn" @click="hiddenBtn()"  style="z-index:999">菜单</button>
     </div>
   </div>
 </template>
@@ -142,10 +143,9 @@ a {
         .header-li {
           position: relative;
           float: left;
-          margin-right: 35px;
+          margin-right:35px;
           line-height: 90px;
           white-space: nowrap;
-          /* transition: all 1s; */
           color:#fff;
         }
 
@@ -156,8 +156,6 @@ a {
           float: left;
           margin-right: 35px;
           line-height: 90px;
-          /* white-space: nowrap; */
-          /* cursor: pointer; */
           color:#fff;
           overflow: hidden;
           cursor: default;
