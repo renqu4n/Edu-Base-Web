@@ -25,9 +25,9 @@
 			<!-- 配置数据源  -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-		<property name="jdbcUrl" value="jdbc:mysql:///myssm"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/myssm"></property>
 		<property name="user" value="root"></property>
-		<property name="password" value="lmy19970219"></property>
+		<property name="password" value=""></property>
 	</bean>
 	
 	<!-- 配置SqlSessionFactoryBean，用于创建SqlSessionFactory 
