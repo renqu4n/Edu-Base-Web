@@ -103,10 +103,10 @@ export default {
   },
   methods: {
     getX () {
-      return Math.random() * 7
+      return Math.random() * 30
     },
     getY () {
-      return Math.random() * 7
+      return Math.random() * 30
     }
   },
   mounted: function () {
@@ -198,13 +198,13 @@ export default {
                         border: 2px solid #c8c8c8;
                         box-sizing: border-box;
                         z-index: 2;
-                        transition: transform .8s;
+                        transition: transform 2s;
                     }
                     .teacherImg {
                         width: 288px;
                         height: 346px;
                         transition: none;
-                        transition: transform .8s;
+                        transition: transform 2s;
                     }
                 .teacherInfo {
                     position: relative;
