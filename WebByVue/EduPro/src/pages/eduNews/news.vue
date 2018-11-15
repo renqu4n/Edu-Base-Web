@@ -7,7 +7,7 @@
                 <div class="newsTitle">
                     <p>新闻资讯</p>
                     <span>了解最新教育新闻资讯</span>
-            </div>
+                </div>
                 <div class="newsTable">
                     <div class="newsHome">
                         <a  >首页</a>

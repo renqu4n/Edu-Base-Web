@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//HTML HTML 4.01 Transitional//EN">
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
@@ -7,6 +12,7 @@
 <!-- BEGIN HEAD -->
 
 <head>
+
     <meta charset="utf-8" />
     <title>后台管理</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -57,6 +63,8 @@
     <script src="public/media/js/bootstrap-modal.js" type="text/javascript"></script>
     <script src="public/media/js/bootstrap-modalmanager.js" type="text/javascript"></script>
     <script src="public/media/js/ui-modals.js"></script>
+
+
 </head>
 <!-- END HEAD -->
 <!-- BEGIN PAGE LEVEL STYLES -->
@@ -74,6 +82,9 @@
 </style>
 
 <body class="page-header-fixed">
+
+
+
     <!-- BEGIN HEADER -->
     <div class="header navbar navbar-inverse navbar-fixed-top">
         <!-- BEGIN TOP NAVIGATION BAR -->
@@ -159,7 +170,7 @@
                         <li>
                             <a href="addnew.html">优秀学员管理</a>
                             <a href="">学院心声管理</a>
-                            <a href="">添加学员</a>
+                            <a href="addStudents.jsp">添加学员</a>
                             
                         </li>
                     </ul>
@@ -174,7 +185,7 @@
                         <li>
                             
                             <a href="">教师管理</a>
-                            <a href="">添加教师</a>
+                            <a href="addTeacher.jsp">添加教师</a>
                             
                         </li>
                     </ul>
@@ -189,7 +200,7 @@
                     <ul class="sub-menu">
                         <li>
                             <a href="addnew.html">课程管理</a>
-                            <a href="">添加课程</a>
+                            <a href="addCourse.jsp">添加课程</a>
                             
                             
                         </li>
@@ -205,13 +216,26 @@
                     <ul class="sub-menu">
                         <li>
                             <a href="">新闻管理</a>
-                            <a href="">添加新闻</a>
+                            <a href="addnew.jsp">添加新闻</a>
                             
                         </li>
                     </ul>
                 </li>
                 
-               
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon-comments"></i>
+                        <span class="title">角色管理</span>
+                        <span class="arrow "></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="">角色管理</a>
+                            <a href="addRole.jsp">添加角色</a>
+                            
+                        </li>
+                    </ul>
+                </li>
                 
             </ul>
             
@@ -238,7 +262,7 @@
                         <!-- BEGIN PAGE TITLE & BREADCRUMB-->
                         <h3 class="page-title">
 
-                            自定义模块 <small></small>
+                            添加新闻模块 <small></small>
 
                         </h3>
                         <div class="dome_menu">
@@ -284,17 +308,25 @@
                 </div> -->
                 <!-- END page-->
                 <div style="margin: 80px auto ">
+                <form action="addNew.do" method="post">
                 <ul class="forminfo">
-                <li><label>新闻标题</label><input name="title" type="text" class="dfinput" />
+                <p style="color:red;margin-left:200px">${message}</p>
+                <li><label>新闻标题</label><input name="new_title" type="text" class="dfinput" />
                 <i>标题不能超过30个字符</i></li>
     <li><label>作者</label>
-    <input name="author" type="text" class="dfinput" />
+    <input name="new_author" type="text" class="dfinput" />
     <i>多个关键字用,隔开</i></li>
     <li><label>新闻内容</label>
-    <textarea name="content" cols="" rows="" class="textinput"></textarea></li>
-    <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认保存"/></li>
+    <textarea name="new_content" cols="" rows="" class="textinput"></textarea>
+    </li>
+    <li><label>&nbsp;</label>
+    <input name="" type="submit" class="btn" value="确认保存"/>
+    </li>
                 </ul>
+                </form>
                 </div>
+                
+                
                 <h3>提示</h3>
                 <h5>主体js文件地址：public/media/js/website.js</h5>
                 <h5>上传图片形式以单击形式上传，图片php控制器:Website.php More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></h5>
@@ -426,3 +458,4 @@
 <!-- END BODY -->
 
 </html>
+

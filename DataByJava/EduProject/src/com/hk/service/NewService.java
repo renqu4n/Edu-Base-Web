@@ -2,11 +2,11 @@ package com.hk.service;
 
 import java.util.List;
 
-import com.hk.bean.New;
+import com.hk.bean.News;
 
 public interface NewService {
 	
-	List<New> findNew();
-	
+	List<News> findNew();
+	public  Boolean addNew(News news);  
 
 }
