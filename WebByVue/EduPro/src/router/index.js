@@ -8,6 +8,7 @@ import eduabout from '@/pages/eduAbout/center'
 import eduteac from '@/pages/eduRes/eduTeac/teachers'
 import edureso from '@/pages/eduRes/eduReso/resour'
 import eduheart from '@/pages/eduHeart/stuHeart'
+import eduheartsecond from '@/pages/eduHeart/stuHeartSecond'
 import error from '@/pages/error/error'
 
 Vue.use(Router)
@@ -57,6 +58,11 @@ export default new Router({
       path: '/eduHeart',
       name: 'eduHeart',
       component: eduheart
+    },
+    {
+      path: '/heartSecond',
+      name: 'heartSecond',
+      component: eduheartsecond
     },
     {
       path: '/error',

@@ -22,23 +22,22 @@
           </tr>
         </table>
         <div class="heartMenu">
-            <span class="heartIndex">1</span>
-            <router-link to="/heartSecond"><a href="newsSecond" title="第二页">2</a></router-link>
-            <router-link to="/heartSecond"><a href="newsSecond" title="下一页">下一页</a></router-link>
-            <router-link to="/heartSecond"><a href="newsSecond" title="最后一页">最后</a></router-link>
+            <router-link to="/eduHeart"><a href="" title="上一页">上一页</a></router-link>
+            <router-link to="/eduHeart"><a href="" title="第一页">最前</a></router-link>
+            <router-link to="/eduHeart"><a href="" title="第一页">1</a></router-link>
+            <span class="heartIndex">2</span>
         </div>
         <div class="heartTitle" style="margin-top:100px;">
           <p>留言板</p>
           <span>赠人玫瑰，手有余香</span>
         </div>
         <div class="message-board">
-          <!-- 留言功能 -->
-          <form action="" method="">
-            <p>留下你的心声</p>
-            <textarea></textarea>
-            <p><b>当前日期</b>:<span>{{time}}</span></p>
-            <p><button>提交</button></p>
-          </form>
+            <form action="" method="">
+                <p>留下你的心声</p>
+                <textarea></textarea>
+                <p><b>当前日期</b>:<span>{{time}}</span></p>
+                <p><button>提交</button></p>
+            </form>
         </div>
       </div>
     </div>
@@ -87,31 +86,6 @@ export default {
           'name': '学员',
           'content': '插入留言插入留言插入留言插入留言插入留言',
           'time': '2018-11-15'
-        }, {
-          'id': 6,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 7,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 8,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 9,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 10,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
         }],
       time: ''
     }
@@ -131,7 +105,7 @@ export default {
   margin: 0;
 }
 .body {
-  height:3895px;
+  height:4195px;
   width: 100%;
 }
 .heartPage {
@@ -207,9 +181,8 @@ export default {
             }
             .message-board {
                 width: 1300px;
-                height: 500px;
+                height: 700px;
                 margin: 0 auto;
-                /* border: 1px solid black; */
             }
             .message-board p:nth-child(1) {
               color: #be926f;
@@ -223,7 +196,7 @@ export default {
               height: 300px;
               font-size: 20px;
               line-height: 20px;
-              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              font-family: Verdana, Geneva, Tahoma, sans-serif
             }
             .message-board button {
               margin-top: 30px;
