@@ -1,0 +1,8 @@
+package com.hk.bean;
+
+public class TeacherShow {
+	private int teacher_id;
+	private String cName;
+	
+
+}

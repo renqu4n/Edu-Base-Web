@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LoginDao.xml&apos; to &apos;EduProject/src/com.hk.dao&apos;&#x0D;&#x0A;- Original project: &apos;EduProject&apos;&#x0D;&#x0A;- Destination element: &apos;EduProject/src/com.hk.dao&apos;&#x0D;&#x0A;- Original element: &apos;LoginDao.xml&apos;" description="Copy file" destination="/src&lt;com.hk.dao" element1="src/com/hk/dao/LoginDao.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1542189202525" units="0" version="1.0"/>
+</session>
