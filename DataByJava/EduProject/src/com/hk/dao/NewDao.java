@@ -2,11 +2,11 @@ package com.hk.dao;
 
 import java.util.List;
 
-import com.hk.bean.New;
+import com.hk.bean.News;
 
 public interface NewDao {
 	
-	List<New> selectNew();
-	
+	List<News> selectNew();
+	public  boolean addNew(News news);
 	
 }

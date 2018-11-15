@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dao.RoleDao">
+	
+
+	
+	<insert id="insertRole">
+		insert into role (name,role_descreption) values (#{name},#{role_descreption});
+	</insert>
+	
+	<select id="selectRole" resultType="Role">
+		select * from role where   name = #{name}
+	</select>
+
+</mapper>

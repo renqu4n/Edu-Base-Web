@@ -51,5 +51,4 @@ INDEX VERSION 1.126+D:\WebProject\Edu-Base-Web\DataByJava\.metadata\.plugins\org
 2959863323.index
 1997804439.index
 1166082546.index
-4193078203.index
 2409143572.index
