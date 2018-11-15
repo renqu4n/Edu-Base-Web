@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//HTML HTML 4.01 Transitional//EN">
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
@@ -7,6 +12,7 @@
 <!-- BEGIN HEAD -->
 
 <head>
+
     <meta charset="utf-8" />
     <title>后台管理</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -57,6 +63,8 @@
     <script src="public/media/js/bootstrap-modal.js" type="text/javascript"></script>
     <script src="public/media/js/bootstrap-modalmanager.js" type="text/javascript"></script>
     <script src="public/media/js/ui-modals.js"></script>
+
+
 </head>
 <!-- END HEAD -->
 <!-- BEGIN PAGE LEVEL STYLES -->
@@ -74,6 +82,9 @@
 </style>
 
 <body class="page-header-fixed">
+
+
+
     <!-- BEGIN HEADER -->
     <div class="header navbar navbar-inverse navbar-fixed-top">
         <!-- BEGIN TOP NAVIGATION BAR -->
@@ -188,7 +199,7 @@
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="">课程管理</a>
+                            <a href="addnew.html">课程管理</a>
                             <a href="addCourse.jsp">添加课程</a>
                             
                             
@@ -210,7 +221,7 @@
                         </li>
                     </ul>
                 </li>
-
+                
                 <li>
                     <a href="javascript:;">
                         <i class="icon-comments"></i>
@@ -225,8 +236,6 @@
                         </li>
                     </ul>
                 </li>
-                
-               
                 
             </ul>
             
@@ -253,7 +262,7 @@
                         <!-- BEGIN PAGE TITLE & BREADCRUMB-->
                         <h3 class="page-title">
 
-                            后台中心 <small></small>
+                            添加学员模块 <small></small>
 
                         </h3>
                         <div class="dome_menu">
@@ -298,15 +307,23 @@
                     </div>
                 </div> -->
                 <!-- END page-->
-                <div style="text-align:center ">
-                
-                <h1>欢迎来到管理后台！！！</h1>
+                <div style="margin: 80px auto ">
+                <form action="addStudent.do" method="post">
+                <ul class="forminfo">
+                <p style="color:red;margin-left:200px">${message}</p>
+                <li><label>学员ID</label><input name="id" type="text" class="dfinput" /><i>请输入普通用户的ID</i></li>
+                <li><label>学员名字</label><input name="user_name" type="text" class="dfinput" /><i>请输入普通用户的名字</i></li>
+                <li><label>&nbsp;</label>
+                <input name="" type="submit" class="btn" value="确认保存"/>
+                </li>
+                </ul>
+                </form>
                 </div>
-                <div style="margin-top:400px">
+                
+                
                 <h3>提示</h3>
                 <h5>主体js文件地址：public/media/js/website.js</h5>
                 <h5>上传图片形式以单击形式上传，图片php控制器:Website.php More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></h5>
-            	</div>
             </div>
             <!-- END PAGE CONTAINER-->
         </div>
@@ -435,3 +452,4 @@
 <!-- END BODY -->
 
 </html>
+
