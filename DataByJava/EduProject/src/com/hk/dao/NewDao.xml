@@ -5,9 +5,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.hk.dao.NewDao">
 	
 	
-	<select id="selectNew" resultType="New">
+	<select id="selectNew" resultType="News">
 		select * from new 
 	</select>
 	
+	<insert id="addNew">
+		insert into new (new_title,new_content,new_author) values (#{new_title},#{new_content},#{new_author});
+	</insert>
 
 </mapper>
