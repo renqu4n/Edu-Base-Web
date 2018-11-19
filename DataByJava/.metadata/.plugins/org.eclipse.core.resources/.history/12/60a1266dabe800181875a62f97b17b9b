@@ -1,0 +1,17 @@
+package com.hk.service;
+
+import java.util.List;
+
+
+
+
+
+public interface TeacherShowService {
+	
+	List<TeacherShow> selectTeacherShow();
+	
+	
+	
+	
+
+}

@@ -1,0 +1,6 @@
+package com.hk.service;
+
+@Service
+public class TeacherShowServiceImp implements TeacherShowService {
+
+}

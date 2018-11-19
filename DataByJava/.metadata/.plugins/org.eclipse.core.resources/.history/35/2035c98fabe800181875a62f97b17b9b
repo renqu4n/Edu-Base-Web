@@ -1,0 +1,29 @@
+package com.hk.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import com.hk.bean.TeacherShow;
+import com.hk.dao.TeacherShowDao;
+
+@Service
+public class TeacherShowServiceImp implements TeacherShowService {
+	
+	@Autowired
+	private TeacherShowDao dao;
+
+	
+	
+	
+	
+	@Override
+	public List<TeacherShow> selectTeacherShow() {
+		
+		return null;
+	}
+	
+
+}

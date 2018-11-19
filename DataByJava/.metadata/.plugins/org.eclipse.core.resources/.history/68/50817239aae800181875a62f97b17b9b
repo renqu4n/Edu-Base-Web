@@ -1,0 +1,8 @@
+package com.hk.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class TeacherShowServiceImp implements TeacherShowService {
+
+}

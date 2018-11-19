@@ -1,0 +1,13 @@
+package com.hk.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.hk.service.TeacherShowService;
+
+@Controller
+public class TeacherShowServlet {
+	@Autowired
+	private TeacherShowService teaservice;
+
+}
