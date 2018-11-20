@@ -1,7 +1,15 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=origin/master
 eclipse.preferences.version=1
+<<<<<<< HEAD
 <<<<<<< HEAD
 encoding//WebRoot/teacherShow.jsp=UTF-8
 =======
 encoding//src/com/hk/controller/CheckcodeServlet.java=UTF-8
 >>>>>>> 95dbf55574c22ae38f640557e4ac836203e5f312
+=======
+encoding//WebRoot/WEB-INF/jsp/teacherShow.jsp=UTF-8
+encoding//src/com/hk/controller/CheckcodeServlet.java=UTF-8
+>>>>>>> origin/Qxy
 encoding/<project>=UTF-8

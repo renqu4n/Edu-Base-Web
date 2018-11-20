@@ -5,12 +5,21 @@ public class TeacherShow {
 	private int teacher_id;
 	private String cName;
 	private String eName;
-	private String teacher_img;
+	private String teacher_image;
 	private String teacher_info;
 	
 	
 	public TeacherShow() {
 		super();
+	}
+	public TeacherShow(int teacher_id, String cName, String eName,
+			String teacher_image, String teacher_info) {
+		super();
+		this.teacher_id = teacher_id;
+		this.cName = cName;
+		this.eName = eName;
+		this.teacher_image = teacher_image;
+		this.teacher_info = teacher_info;
 	}
 	public int getTeacher_id() {
 		return teacher_id;
@@ -30,11 +39,11 @@ public class TeacherShow {
 	public void seteName(String eName) {
 		this.eName = eName;
 	}
-	public String getTeacher_img() {
-		return teacher_img;
+	public String getTeacher_image() {
+		return teacher_image;
 	}
-	public void setTeacher_img(String teacher_img) {
-		this.teacher_img = teacher_img;
+	public void setTeacher_image(String teacher_image) {
+		this.teacher_image = teacher_image;
 	}
 	public String getTeacher_info() {
 		return teacher_info;
@@ -45,9 +54,7 @@ public class TeacherShow {
 	@Override
 	public String toString() {
 		return "TeacherShow [teacher_id=" + teacher_id + ", cName=" + cName
-				+ ", eName=" + eName + ", teacher_img=" + teacher_img
+				+ ", eName=" + eName + ", teacher_image=" + teacher_image
 				+ ", teacher_info=" + teacher_info + "]";
 	}
-	
-
 }

@@ -1,0 +1,15 @@
+package com.hk.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hk.dao.NewDao;
+
+@Service
+public class TeacherShowServiceImp implements TeacherShowService {
+	
+	@Autowired
+	private TeacherShowDao dao;
+	
+
+}

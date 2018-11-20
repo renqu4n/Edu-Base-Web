@@ -1,0 +1,15 @@
+package com.hk.service;
+
+
+
+
+
+public interface TeacherShowService {
+	
+	List(TeacherShow)
+	
+	
+	
+	
+
+}

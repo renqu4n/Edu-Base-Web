@@ -16,8 +16,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="This is my page">
   </head>
   
+  
+ 
   <body>
-    <img alt="图片无法加载" src="http://p6alxlphh.bkt.clouddn.com/teacher/%E5%A7%AC%E6%88%902.png">
+    <h1>教师列表</h1>
+    	<ul id="list">
+  
+  
+    	</ul>
+    <script type="text/javascript">
+    	$.get("teacher/teacherShow.do",function(teacherShowList){
+    		for(var i=1;i<teacherShow.length;i++){
+    		 $("#list").append("<li>"+teacherShow[i]+"<li>");
+    		 }
+    	})
+   
+    </script>
     
     
     
