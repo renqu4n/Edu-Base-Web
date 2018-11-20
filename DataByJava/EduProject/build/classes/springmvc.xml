@@ -18,10 +18,9 @@
 		
 		<!-- 视图解析器  -->
 		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-			<property name="prefix" value=""></property>
-			<property name="suffix" value=".jsp"></property>
+			<property value="/WEB-INF/jsp/" name="prefix"/>
+			<property value=".jsp" name="suffix"/>
 		</bean>
-		
 			<!-- 配置数据源  -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>

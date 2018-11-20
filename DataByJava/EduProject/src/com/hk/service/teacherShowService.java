@@ -12,8 +12,4 @@ public interface teacherShowService {
 	
 	List<TeacherShow> findTeacherShow();
 	
-	
-	
-	
-
 }
