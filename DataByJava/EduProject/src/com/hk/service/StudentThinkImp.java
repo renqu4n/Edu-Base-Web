@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hk.bean.New;
 import com.hk.bean.StudentsThink;
 import com.hk.dao.StudentThinkDao;
 

@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//HTML HTML 4.01 Transitional//EN">
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
@@ -7,6 +12,7 @@
 <!-- BEGIN HEAD -->
 
 <head>
+
     <meta charset="utf-8" />
     <title>后台管理</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -57,6 +63,8 @@
     <script src="public/media/js/bootstrap-modal.js" type="text/javascript"></script>
     <script src="public/media/js/bootstrap-modalmanager.js" type="text/javascript"></script>
     <script src="public/media/js/ui-modals.js"></script>
+
+
 </head>
 <!-- END HEAD -->
 <!-- BEGIN PAGE LEVEL STYLES -->
@@ -74,6 +82,9 @@
 </style>
 
 <body class="page-header-fixed">
+
+
+
     <!-- BEGIN HEADER -->
     <div class="header navbar navbar-inverse navbar-fixed-top">
         <!-- BEGIN TOP NAVIGATION BAR -->
@@ -188,7 +199,7 @@
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="">课程管理</a>
+                            <a href="addnew.html">课程管理</a>
                             <a href="addCourse.jsp">添加课程</a>
                             
                             
@@ -210,7 +221,7 @@
                         </li>
                     </ul>
                 </li>
-
+                
                 <li>
                     <a href="javascript:;">
                         <i class="icon-comments"></i>
@@ -223,10 +234,9 @@
                             <a href="addRole.jsp">添加角色</a>
                             
                         </li>
-	   
-        			
-        		</li>
-        		<li>
+                    </ul>
+                </li>
+                <li>
                     <a href="javascript:;">
                         <i class="icon-comments"></i>
                         <span class="title">留言管理</span>
@@ -234,7 +244,9 @@
                     </a>
                     
                 </li>
+                
             </ul>
+            
             <!-- END SIDEBAR MENU -->
         </div>
         <!-- END SIDEBAR -->
@@ -258,7 +270,7 @@
                         <!-- BEGIN PAGE TITLE & BREADCRUMB-->
                         <h3 class="page-title">
 
-                            后台中心 <small></small>
+                            添加教师模块 <small></small>
 
                         </h3>
                         <div class="dome_menu">
@@ -305,13 +317,57 @@
                 <!-- END page-->
                 <div style="text-align:center ">
                 
-                <h1>欢迎来到管理后台！！！</h1>
-                </div>
-                <div style="margin-top:400px">
+        <table class="tablelist" style="margin: 10px auto">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <th>ID<i class="sort"><img src="images/px.gif" /></i></th>
+        <th>学员名称</th>
+        <th>学院心声</th>
+        <th>邮箱地址</th>
+        <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+		<c:forEach items="${pages.student}" var="page">
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>${page.id}</td>
+        <td>${page.name}</td>
+        <td>${page.score}</td>
+        <td>${page.age}</td>
+        <td><a href="#" class="tablelink">查看</a>     
+        <a href="PageServlet?method=delete&key=${page.id}" class="tablelink"  onclick="return confirm('确认删除吗?')"> 删除</a></td>
+        </tr> 
+		</c:forEach>
+        </tbody> 
+    </table>
+    
+   
+    <div class="pagin" style="text-align: center">
+    	
+		<a href="PageServlet?currentPage=1">首页</a>
+		<c:if test="${currentPage != 1 }">
+		<a href="PageServlet?currentPage=${currentPage-1 }">上一页</a>
+		</c:if>
+		<c:if test="${currentPage != pages.totalPageCount }">
+		<a href="PageServlet?currentPage=${currentPage+1 }">下一页</a>
+		</c:if>
+		<a href="PageServlet?currentPage=${pages.totalPageCount}">尾页</a>
+		<span>当前第${currentPage}页</span>
+   		<span>共${pages.totalPageCount}页</span>
+		
+		<form action="PageServlet">
+   		<input type="text" name="currentPage">
+   		<input type="submit" value="跳转">
+   </form> 
+		<div class="message" style="text-align: center">共<i class="blue">${pages.Count}</i>条记录，当前显示第&nbsp;<i class="blue">${currentPage}&nbsp;</i>页</div>
+    </div>
+                
+                
                 <h3>提示</h3>
                 <h5>主体js文件地址：public/media/js/website.js</h5>
                 <h5>上传图片形式以单击形式上传，图片php控制器:Website.php More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></h5>
-            	</div>
             </div>
             <!-- END PAGE CONTAINER-->
         </div>
@@ -440,3 +496,4 @@
 <!-- END BODY -->
 
 </html>
+
