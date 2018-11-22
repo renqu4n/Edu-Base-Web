@@ -1,7 +1,0 @@
-package com.hk.dao;
-
-public interface TeacherShowDao {
-	
-	List<TeacherShowDao> select
-
-}

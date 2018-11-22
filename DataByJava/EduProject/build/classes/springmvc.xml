@@ -22,15 +22,11 @@
 			<property value=".jsp" name="suffix"/>
 		</bean>
 			<!-- 配置数据源  -->
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/myssm"></property>
-		<property name="user" value="root"></property>
-<<<<<<< HEAD
-		<property name="password" value=""></property>
-=======
-		<property name="password" value="wenqin5201314"></property>
->>>>>>> c02da6dc405a8bab30769ff7ecc4dbe515b84884
+	<bean class="com.mchange.v2.c3p0.ComboPooledDataSource" id="dataSource">
+		<property value="com.mysql.jdbc.Driver" name="driverClass"/>
+		<property value="jdbc:mysql://localhost:3306/myssm" name="jdbcUrl"/>
+		<property value="root" name="user"/>
+		<property value="" name="password"/>
 	</bean>
 	
 	<!-- 配置SqlSessionFactoryBean，用于创建SqlSessionFactory 
