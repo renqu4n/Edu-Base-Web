@@ -21,7 +21,9 @@ public class LoginServiceImpl implements LoginService{
 
 	@Override
 	public User userLogin(String name, String pwd) {
+		System.out.println(name + pwd);
 		User user = dao.userLogin(name, pwd);
+		System.out.println("login 2");
 		return user;
 	}
 

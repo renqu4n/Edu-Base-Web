@@ -3,13 +3,15 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans 
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/mvc
-        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
 	
 		
 		<!--  配置springmvc到哪个包扫描注解  -->
@@ -23,14 +25,10 @@
 		</bean>
 			<!-- 配置数据源  -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/myssm"></property>
+		<property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql:///myssm?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong"></property>
 		<property name="user" value="root"></property>
-<<<<<<< HEAD
-		<property name="password" value=""></property>
-=======
-		<property name="password" value="wenqin5201314"></property>
->>>>>>> c02da6dc405a8bab30769ff7ecc4dbe515b84884
+		<property name="password" value="renquan123."></property> 
 	</bean>
 	
 	<!-- 配置SqlSessionFactoryBean，用于创建SqlSessionFactory 
@@ -47,13 +45,15 @@
 	 <!-- 配置扫描器，用于扫描映射文件mapper ，创建dao -->
 	 <bean id="mapper" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 	 	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
-	 	<property name="basePackage" value="com.hk.dao"></property>
+	 	<property name="basePackage" value="com.hk.dao/**.xml"></property>
 	 </bean>
 	 
 	 <!--  配置service -->
 	<!-- <bean id="stuService" class="com.hk.service.StudentServiceImpl">
 		<property name="dao" ref="studentDao"></property>
 	</bean> -->
+	<!-- 扫描所有mybatis接口的的实现 -->
+	<mybatis:scan base-package="com.hk.dao"></mybatis:scan>
 		
 		<!--注解的驱动  -->
 	<mvc:annotation-driven></mvc:annotation-driven>
