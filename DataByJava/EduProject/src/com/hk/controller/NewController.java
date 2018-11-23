@@ -2,7 +2,9 @@ package com.hk.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hk.bean.News;
+import com.hk.bean.Page;
+import com.hk.bean.User;
 import com.hk.service.NewService;
 import com.hk.tools.Json;
 
@@ -70,4 +74,65 @@ public class NewController {
 		
 		return null;
 	}
+	
+	@RequestMapping(value="/newShow.do")
+	public String newShow(HttpServletRequest request,HttpServletResponse response,Page page) {
+
+		int currentPage = 1;
+		int pageCount = 10;
+		
+		
+		String c = request.getParameter("currentPage");
+		if (c != null) {
+			currentPage = Integer.valueOf(c);
+		}
+		int start = (currentPage - 1) * pageCount;
+		
+		page.setPageCount(pageCount);
+		page.setStart(start);
+		List<News> News = service.getAllNews(page);
+		int  NewCount = service.selectNewCount();
+		System.out.println(News);
+		System.out.println(NewCount);
+		
+		//int pageCount = page.getPageCount();
+		 int   totalPageCount = NewCount / pageCount;
+			if(NewCount % pageCount != 0) {
+				totalPageCount = totalPageCount + 1;
+			}
+		Map<String, Object> pages = new HashMap<String, Object>();
+		
+		pages.put("News", News);
+		pages.put("totalPageCount",totalPageCount);
+		pages.put("NewCount",NewCount);
+		pages.put("pageCount",pageCount);
+		
+        request.setAttribute("pages", pages);
+		request.setAttribute("currentPage", currentPage);
+        
+        
+		
+		return "forward:/newManage.jsp";
+	}
+	
+	
+	@RequestMapping(value="/deleteNew.do")
+	public void deleteStudent(HttpServletRequest request,HttpServletResponse response) throws IOException {
+		
+		String type = request.getParameter("method");
+		if ("delete".equals(type)) {
+		String key = request.getParameter("key");
+		
+		service.deleteNew(Integer.parseInt(key));
+
+		}
+	
+		response.sendRedirect("newShow.do");
+	
+	}
+	
+	
+	
+	
+	
 }

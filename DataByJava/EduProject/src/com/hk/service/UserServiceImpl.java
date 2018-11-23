@@ -1,8 +1,11 @@
 package com.hk.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.hk.bean.Page;
 import com.hk.bean.User;
 import com.hk.dao.UserDao;
 
@@ -47,6 +50,36 @@ public class UserServiceImpl implements UserService{
 	public User selectTeacher(User user) {
 		
 		return dao.selectTeacher(user);
+	}
+
+	@Override
+	public List<User> getAllStudent(Page page) {
+	
+		return dao.getAllStudent(page);
+	}
+
+	@Override
+	public int selectCount() {
+		
+		return dao.selectCount();
+	}
+
+	@Override
+	public void deleteStudent(int key) {
+		dao.deleteStudent(key);
+		
+	}
+
+	@Override
+	public List<User> getAllTeachs(Page page) {
+		
+		return dao.getAllTeachs(page);
+	}
+
+	@Override
+	public int selectTeachCount() {
+		
+		return dao.selectTeachCount();
 	}
 
 }
