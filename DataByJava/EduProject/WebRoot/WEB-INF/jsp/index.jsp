@@ -50,5 +50,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </form>
     
     <a href="jump.do?target=teacherShow">查看老师信息</a>
+    <a href="jump.do?target=courseShow">查看课程信息</a>
   </body>
 </html>

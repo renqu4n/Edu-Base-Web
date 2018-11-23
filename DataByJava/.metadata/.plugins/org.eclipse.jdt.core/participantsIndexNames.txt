@@ -1,8 +1,7 @@
 INDEX VERSION 1.126
-<<<<<<< HEAD
-=======
 D:\WebProject\Edu-Base-Web\DataByJava\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\541586054.index
 \EduProject\src
->>>>>>> origin/Qxy
 D:\WebProject\Edu-Base-Web\DataByJava\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2415791206.index
+\EduProject\src
+D:\WebProject\Edu-Base-Web\DataByJava\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\991127009.index
 \EduProject\src

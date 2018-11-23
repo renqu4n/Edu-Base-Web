@@ -8,8 +8,8 @@ import com.hk.bean.TeacherShow;
 import com.hk.dao.TeacherShowDao;
 
 //创建service对象
-@Service(value="teacherShowService")
-public class TeacherShowServiceImp implements teacherShowService {
+@Service(value="TeacherShowService")
+public class TeacherShowServiceImp implements TeacherShowService {
 	
 	//不用创建对象，自动注入，按类型注入
 	@Autowired
@@ -21,6 +21,7 @@ public class TeacherShowServiceImp implements teacherShowService {
 	
 	@Override
 	public List<TeacherShow> findTeacherShow() {
+		
 		return teaShowDao.selectTeacherShow();
 	}
 	

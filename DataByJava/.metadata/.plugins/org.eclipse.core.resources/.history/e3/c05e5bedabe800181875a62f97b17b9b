@@ -1,6 +1,0 @@
-package com.hk.controller;
-
-@Controller
-public class TeacherShowServlet {
-
-}

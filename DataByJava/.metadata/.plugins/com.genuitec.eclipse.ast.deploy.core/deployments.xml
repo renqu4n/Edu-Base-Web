@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <deployments>
-  <deployment context-root="/Edu-ssm" deployment-path="D:/WebProject/Edu-Base-Web/DataByJava/.metadata/.me_tcat7/webapps/Edu-ssm" project-name="EduProject" server-id="myeclipseTomcatServer7" state="DEPLOYED" type="WEB"/>
+  <deployment alt-context-root="" context-root="/Edu-ssm" deployment-path="D:/WebProject/Edu-Base-Web/DataByJava/.metadata/.me_tcat7/webapps/Edu-ssm" project-name="EduProject" server-id="myeclipseTomcatServer7" state="DEPLOYED" type="WEB"/>
 </deployments>
