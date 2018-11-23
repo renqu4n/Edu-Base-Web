@@ -168,8 +168,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="addnew.html">优秀学员管理</a>
-                            <a href="">学院心声管理</a>
+                            <a href="studentShow.do">学员管理</a>
+                            
                             <a href="addStudents.jsp">添加学员</a>
                             
                         </li>
@@ -184,7 +184,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <ul class="sub-menu">
                         <li>
                             
-                            <a href="">教师管理</a>
+                            <a href="teachShow.do">教师管理</a>
                             <a href="addTeacher.jsp">添加教师</a>
                             
                         </li>
@@ -199,7 +199,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="addnew.html">课程管理</a>
+                            <a href="courseShow.do">课程管理</a>
                             <a href="addCourse.jsp">添加课程</a>
                             
                             
@@ -215,7 +215,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="">新闻管理</a>
+                            <a href="newShow.do">新闻管理</a>
                             <a href="addnew.jsp">添加新闻</a>
                             
                         </li>
@@ -230,12 +230,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="">角色管理</a>
+                            <a href="roleShow.do">角色管理</a>
                             <a href="addRole.jsp">添加角色</a>
                             
                         </li>
                     </ul>
+                </li>    
+                    <li>
+                    <a href="messageShow.do">
+                        <i class="icon-comments"></i>
+                        <span class="title">留言管理</span>
+                        
+                    </a>
+                    
                 </li>
+                   
                 
             </ul>
             

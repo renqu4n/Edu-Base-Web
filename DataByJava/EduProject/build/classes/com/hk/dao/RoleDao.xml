@@ -13,5 +13,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectRole" resultType="Role">
 		select * from role where   name = #{name}
 	</select>
+	
+			<select id="getAllRoles" resultType="Role"  parameterType="int">
+    <!-- mysql 的分页查询语句-->
+    <!--firstIndex pageSize是Page类的属性 -->
+        SELECT * FROM role   LIMIT #{start},#{pageCount}
+    </select>
+    <select id="selectRoleCount" resultType="int">
+    <!-- 查询总记录数-->
+        select count(id) from role 
+    </select>
+    
+    
+    <delete id="deleteRole">
+		delete from  role where id=#{0}
+	</delete>
+	
 
 </mapper>
