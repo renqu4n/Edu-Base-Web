@@ -1,0 +1,7 @@
+package com.hk.dao;
+
+public interface CourseShowDao {
+	
+	List<CourseShow>selectCourse
+
+}

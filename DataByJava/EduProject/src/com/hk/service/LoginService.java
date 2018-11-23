@@ -8,7 +8,6 @@ public interface LoginService {
 
 	
 	boolean addUser(User user);
-	
 	User  userLogin(String name,String pwd);
 	
 }

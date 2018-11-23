@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dao.NewDao">
+	
+	
+	<select id="selectNew" resultType="News">
+		select * from new 
+	</select>
+	
+	<insert id="addNew">
+		insert into new (new_title,new_content,new_author) values (#{new_title},#{new_content},#{new_author});
+	</insert>
+
+</mapper>

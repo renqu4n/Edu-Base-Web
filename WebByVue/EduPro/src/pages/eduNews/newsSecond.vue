@@ -44,56 +44,34 @@ export default {
   name: 'eduNews2',
   data () {
     return {
-      newsList: [
-        {
-          'id': 1,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 2,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 3,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 4,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 5,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 6,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 7,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 8,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 9,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }, {
-          'id': 10,
-          'content': '这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻这是一条新闻新闻新闻新闻',
-          'time': '2018-11-5'
-        }
-
-      ]
+      newsList: []
     }
   },
   components: {
     holder,
     foot,
     swiper
+  },
+  methods: {
+    getData () {
+      this.$axios.get('api/examples/news.txt').then(this.handleData)
+    },
+    handleData (res) {
+      if (res.status === 200) {
+        res = res.data
+        for (let i in res) {
+          if (i > 9) {
+            this.newsList.push(res[i])
+          }
+        }
+      } else {
+        alert('请求失败，即将跳转到刚才的页面')
+        this.$router.go('/eduNews')
+      }
+    }
+  },
+  mounted () {
+    this.getData()
   }
 
 }
@@ -176,7 +154,11 @@ export default {
                 line-height: 40px;
                 background: url(../../assets/news-li.png) no-repeat left center;
                 padding-left:20px;
+                width: 900px;
                 box-sizing: border-box;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
             }
 
             .newsMenu {

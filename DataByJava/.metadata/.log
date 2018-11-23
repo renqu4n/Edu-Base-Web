@@ -673,3 +673,1749 @@ java.net.UnknownHostException: www.apache.org
 	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
 	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+!SESSION 2018-11-14 16:45:11.998 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2018-11-14 16:45:27.513
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-14 16:45:27.513
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@144fee0f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.core 1 0 2018-11-14 16:45:27.992
+!MESSAGE Unable to locate .myeclipse.properties file
+
+!ENTRY org.eclipse.wst.common.modulecore 4 2 2018-11-14 16:45:32.204
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.common.modulecore".
+!STACK 0
+java.lang.RuntimeException: Illegal attempt to modify an immutable tree.
+	at org.eclipse.core.internal.dtree.AbstractDataTree.handleImmutableTree(AbstractDataTree.java:248)
+	at org.eclipse.core.internal.dtree.DeltaDataTree.createChild(DeltaDataTree.java:329)
+	at org.eclipse.core.internal.watson.ElementTree.createElement(ElementTree.java:182)
+	at org.eclipse.core.internal.resources.Workspace.createResource(Workspace.java:1369)
+	at org.eclipse.core.internal.resources.Workspace.createResource(Workspace.java:1322)
+	at org.eclipse.core.internal.localstore.RefreshLocalVisitor.createResource(RefreshLocalVisitor.java:78)
+	at org.eclipse.core.internal.localstore.RefreshLocalAliasVisitor.createResource(RefreshLocalAliasVisitor.java:30)
+	at org.eclipse.core.internal.localstore.RefreshLocalVisitor.synchronizeExistence(RefreshLocalVisitor.java:217)
+	at org.eclipse.core.internal.localstore.RefreshLocalVisitor.visit(RefreshLocalVisitor.java:291)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:109)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refreshResource(FileSystemResourceManager.java:920)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refresh(FileSystemResourceManager.java:904)
+	at org.eclipse.wst.common.componentcore.internal.ModuleStructuralModel.checkSync(ModuleStructuralModel.java:293)
+	at org.eclipse.wst.common.componentcore.internal.ModuleStructuralModel.getComponentFile(ModuleStructuralModel.java:258)
+	at org.eclipse.wst.common.componentcore.internal.StructureEdit.getComponentModelRoot(StructureEdit.java:461)
+	at org.eclipse.wst.common.componentcore.internal.StructureEdit.getWorkbenchModules(StructureEdit.java:506)
+	at org.eclipse.wst.common.componentcore.internal.StructureEdit.getComponent(StructureEdit.java:949)
+	at org.eclipse.wst.common.componentcore.internal.resources.VirtualComponent.createResource(VirtualComponent.java:124)
+	at org.eclipse.wst.common.componentcore.internal.resources.VirtualComponent.initializeResource(VirtualComponent.java:113)
+	at org.eclipse.wst.common.componentcore.internal.resources.VirtualComponent.<init>(VirtualComponent.java:148)
+	at org.eclipse.wst.common.componentcore.internal.util.ComponentImplManager.createComponent(ComponentImplManager.java:235)
+	at org.eclipse.wst.common.componentcore.internal.util.ComponentImplManager.createComponent(ComponentImplManager.java:203)
+	at org.eclipse.wst.common.componentcore.ComponentCore.createComponent(ComponentCore.java:64)
+	at org.eclipse.wst.common.componentcore.internal.builder.DependencyGraphImpl$GraphUpdateJob$1.run(DependencyGraphImpl.java:494)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.common.componentcore.internal.builder.DependencyGraphImpl$GraphUpdateJob.run(DependencyGraphImpl.java:462)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.modulecore 4 0 2018-11-14 16:45:32.214
+!MESSAGE Illegal attempt to modify an immutable tree.
+!STACK 0
+java.lang.RuntimeException: Illegal attempt to modify an immutable tree.
+	at org.eclipse.core.internal.dtree.AbstractDataTree.handleImmutableTree(AbstractDataTree.java:248)
+	at org.eclipse.core.internal.dtree.DeltaDataTree.createChild(DeltaDataTree.java:329)
+	at org.eclipse.core.internal.watson.ElementTree.createElement(ElementTree.java:182)
+	at org.eclipse.core.internal.resources.Workspace.createResource(Workspace.java:1369)
+	at org.eclipse.core.internal.resources.Workspace.createResource(Workspace.java:1322)
+	at org.eclipse.core.internal.localstore.RefreshLocalVisitor.createResource(RefreshLocalVisitor.java:78)
+	at org.eclipse.core.internal.localstore.RefreshLocalAliasVisitor.createResource(RefreshLocalAliasVisitor.java:30)
+	at org.eclipse.core.internal.localstore.RefreshLocalVisitor.synchronizeExistence(RefreshLocalVisitor.java:217)
+	at org.eclipse.core.internal.localstore.RefreshLocalVisitor.visit(RefreshLocalVisitor.java:291)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:109)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refreshResource(FileSystemResourceManager.java:920)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refresh(FileSystemResourceManager.java:904)
+	at org.eclipse.wst.common.componentcore.internal.ModuleStructuralModel.checkSync(ModuleStructuralModel.java:293)
+	at org.eclipse.wst.common.componentcore.internal.ModuleStructuralModel.getComponentFile(ModuleStructuralModel.java:258)
+	at org.eclipse.wst.common.componentcore.internal.StructureEdit.getComponentModelRoot(StructureEdit.java:461)
+	at org.eclipse.wst.common.componentcore.internal.StructureEdit.getWorkbenchModules(StructureEdit.java:506)
+	at org.eclipse.wst.common.componentcore.internal.StructureEdit.getComponent(StructureEdit.java:949)
+	at org.eclipse.wst.common.componentcore.internal.resources.VirtualComponent.createResource(VirtualComponent.java:124)
+	at org.eclipse.wst.common.componentcore.internal.resources.VirtualComponent.initializeResource(VirtualComponent.java:113)
+	at org.eclipse.wst.common.componentcore.internal.resources.VirtualComponent.<init>(VirtualComponent.java:148)
+	at org.eclipse.wst.common.componentcore.internal.util.ComponentImplManager.createComponent(ComponentImplManager.java:235)
+	at org.eclipse.wst.common.componentcore.internal.util.ComponentImplManager.createComponent(ComponentImplManager.java:203)
+	at org.eclipse.wst.common.componentcore.ComponentCore.createComponent(ComponentCore.java:64)
+	at org.eclipse.wst.common.componentcore.internal.builder.DependencyGraphImpl$GraphUpdateJob$1.run(DependencyGraphImpl.java:494)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.common.componentcore.internal.builder.DependencyGraphImpl$GraphUpdateJob.run(DependencyGraphImpl.java:462)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-11-14 16:45:35.755
+!MESSAGE Can't read workspace state
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2018-11-14 16:45:37.403
+!MESSAGE Installed snippet library: C:\Users\seven\MyEclipse Professional\configuration\org.eclipse.osgi\bundles\140\1\.cp\snippets\html\css_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2018-11-14 16:45:37.471
+!MESSAGE Installed snippet library: C:\Users\seven\MyEclipse Professional\configuration\org.eclipse.osgi\bundles\140\1\.cp\snippets\html\forms_lists_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2018-11-14 16:45:37.567
+!MESSAGE Installed snippet library: C:\Users\seven\MyEclipse Professional\configuration\org.eclipse.osgi\bundles\140\1\.cp\snippets\html\htmlform_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2018-11-14 16:45:37.646
+!MESSAGE Installed snippet library: C:\Users\seven\MyEclipse Professional\configuration\org.eclipse.osgi\bundles\140\1\.cp\snippets\html\html_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2018-11-14 16:45:37.736
+!MESSAGE Installed snippet library: C:\Users\seven\MyEclipse Professional\configuration\org.eclipse.osgi\bundles\140\1\.cp\snippets\html\javascript_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2018-11-14 16:45:37.766
+!MESSAGE Installed snippet library: C:\Users\seven\MyEclipse Professional\configuration\org.eclipse.osgi\bundles\140\1\.cp\snippets\jsp\jsf_f_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2018-11-14 16:45:37.846
+!MESSAGE Installed snippet library: C:\Users\seven\MyEclipse Professional\configuration\org.eclipse.osgi\bundles\140\1\.cp\snippets\jsp\jsf_h_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2018-11-14 16:45:38.306
+!MESSAGE Installed snippet library: C:\Users\seven\MyEclipse Professional\configuration\org.eclipse.osgi\bundles\140\1\.cp\snippets\jsp\struts_bean_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2018-11-14 16:45:38.366
+!MESSAGE Installed snippet library: C:\Users\seven\MyEclipse Professional\configuration\org.eclipse.osgi\bundles\140\1\.cp\snippets\jsp\struts_html_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2018-11-14 16:45:38.436
+!MESSAGE Installed snippet library: C:\Users\seven\MyEclipse Professional\configuration\org.eclipse.osgi\bundles\140\1\.cp\snippets\jsp\struts_logic_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2018-11-14 16:45:38.788
+!MESSAGE Installed snippet library: C:\Users\seven\MyEclipse Professional\configuration\org.eclipse.osgi\bundles\140\1\.cp\snippets\jsp\struts_tiles_snippets.xml
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-11-14 16:45:50.578
+!MESSAGE Unable to update index for central|http://repo.maven.apache.org/maven2
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:50.948
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.048
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.128
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.208
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.288
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.368
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.448
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.508
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.580
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.644
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.704
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.754
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.814
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.874
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.924
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:51.974
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.044
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.084
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.154
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.204
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.254
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.304
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.374
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.424
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.484
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.534
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.582
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.630
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.680
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.740
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.780
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.850
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.900
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.940
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:52.990
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.050
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.100
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.150
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.200
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.290
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.330
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.400
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.480
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.560
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.650
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.740
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.790
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.890
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:53.970
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.120
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.200
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.262
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.341
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.401
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.471
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.564
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.616
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.656
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.696
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.746
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.786
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.836
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.866
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.916
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:54.956
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.026
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.076
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.146
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.196
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.246
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.286
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.336
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.376
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.426
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.466
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.516
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.570
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.627
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.687
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.727
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.787
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.837
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.887
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.937
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:55.987
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.027
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.067
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.107
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.157
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.207
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.257
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.307
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.357
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.397
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.437
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.487
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.527
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.577
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.617
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.657
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.697
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.757
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.797
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.837
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.877
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.927
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:56.977
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:57.017
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:57.067
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:57.107
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:57.157
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:57.197
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+
+!ENTRY com.genuitec.eclipse.maven 4 0 2018-11-14 16:45:57.247
+!MESSAGE Execution errororg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project standalone-pom: Execution default-cli of goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file failed: Plugin org.apache.maven.plugins:maven-install-plugin:2.3.1 or one of its dependencies could not be resolved: Failed to collect dependencies for org.apache.maven.plugins:maven-install-plugin:jar:2.3.1 ()
+!SESSION 2018-11-15 15:05:41.126 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.genuitec.eclipse.core 1 0 2018-11-15 15:05:51.624
+!MESSAGE Unable to locate .myeclipse.properties file
+
+!ENTRY org.eclipse.jface 2 0 2018-11-15 15:05:54.957
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-15 15:05:54.957
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@1d155331,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2018-11-15 15:23:06.960
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(String.java:686)
+	at org.eclipse.wst.jsdt.internal.core.index.DiskIndex.writeAllDocumentNames(DiskIndex.java:991)
+	at org.eclipse.wst.jsdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:504)
+	at org.eclipse.wst.jsdt.internal.core.index.Index.save(Index.java:197)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:645)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:687)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:472)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:376)
+	at java.lang.Thread.run(Thread.java:662)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-11-15 15:59:39.340
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HttpServletResponse {key=Ljavax/servlet/http/HttpServletResponse;} [in HttpServletResponse.class [in javax.servlet.http [in C:\Users\seven\MyEclipse Professional\plugins\com.genuitec.eclipse.j2eedt.core_11.0.0.me201303222027\data\libraryset\EE_6\javax.servlet.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:77)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:997)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:463)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:619)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:565)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:557)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2018-11-15 15:59:39.340
+!MESSAGE Unknown javadoc format for HttpServletResponse {key=Ljavax/servlet/http/HttpServletResponse;} [in HttpServletResponse.class [in javax.servlet.http [in C:\Users\seven\MyEclipse Professional\plugins\com.genuitec.eclipse.j2eedt.core_11.0.0.me201303222027\data\libraryset\EE_6\javax.servlet.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-11-15 16:50:37.430
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for SOAPBinding [in SOAPBinding.class [in javax.jws.soap [in C:\Users\seven\MyEclipse Professional\binary\com.sun.java.jdk.win32.x86_64_1.6.0.u43\jre\lib\rt.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:77)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:997)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:463)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2018-11-15 16:50:37.430
+!MESSAGE Unknown javadoc format for SOAPBinding [in SOAPBinding.class [in javax.jws.soap [in C:\Users\seven\MyEclipse Professional\binary\com.sun.java.jdk.win32.x86_64_1.6.0.u43\jre\lib\rt.jar]]]
+!SESSION 2018-11-19 14:49:41.001 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.genuitec.eclipse.core 1 0 2018-11-19 14:49:48.177
+!MESSAGE Unable to locate .myeclipse.properties file
+
+!ENTRY org.eclipse.jface 2 0 2018-11-19 14:49:50.976
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-19 14:49:50.976
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@50802ed1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.core.filebuffers 4 2 2018-11-19 16:24:53.924
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.filebuffers".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.web.ui.internal.style.java.WebSelectionListenerWithASTManager.getTranslation(WebSelectionListenerWithASTManager.java:221)
+	at org.eclipse.wst.jsdt.web.ui.internal.style.java.semantic.WebSemanticHighlightingReconciler.retrieveASTRoot(WebSemanticHighlightingReconciler.java:457)
+	at org.eclipse.wst.jsdt.web.ui.internal.style.java.semantic.WebSemanticHighlightingReconciler.scheduleJob(WebSemanticHighlightingReconciler.java:408)
+	at org.eclipse.wst.jsdt.web.ui.internal.style.java.semantic.WebSemanticHighlightingReconciler.inputDocumentChanged(WebSemanticHighlightingReconciler.java:483)
+	at org.eclipse.jface.text.TextViewer.fireInputDocumentChanged(TextViewer.java:2894)
+	at org.eclipse.jface.text.TextViewer.setDocument(TextViewer.java:2943)
+	at org.eclipse.jface.text.source.SourceViewer.setDocument(SourceViewer.java:642)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.setDocument(ProjectionViewer.java:374)
+	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.setDocument(StructuredTextViewer.java:805)
+	at org.eclipse.jface.text.source.SourceViewer.setDocument(SourceViewer.java:590)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.initializeSourceViewer(AbstractTextEditor.java:4039)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4227)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:237)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1480)
+	at org.eclipse.ui.editors.text.TextEditor.doSetInput(TextEditor.java:169)
+	at org.eclipse.wst.sse.ui.StructuredTextEditor.doSetInput(StructuredTextEditor.java:1924)
+	at org.eclipse.jst.pagedesigner.editors.DesignerStructuredTextEditorJSP.doSetInput(DesignerStructuredTextEditorJSP.java:81)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.setInputWithNotify(AbstractTextEditor.java:4286)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.setInput(AbstractTextEditor.java:4308)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$7.run(AbstractTextEditor.java:530)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.execute(AbstractTextEditor.java:599)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.elementMoved(AbstractTextEditor.java:560)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider$FileBufferListener.underlyingFileMoved(TextFileDocumentProvider.java:322)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager$6.run(TextFileBufferManager.java:742)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.fireUnderlyingFileMoved(TextFileBufferManager.java:740)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.handleFileMoved(ResourceFileBuffer.java:449)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$3.execute(ResourceFileBuffer.java:162)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$SafeFileChange.run(ResourceFileBuffer.java:86)
+	at org.eclipse.ui.internal.editors.text.UISynchronizationContext.run(UISynchronizationContext.java:34)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.execute(TextFileBufferManager.java:629)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$FileSynchronizer.resourceChanged(ResourceFileBuffer.java:180)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.checkpoint(Workspace.java:557)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:263)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:223)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper$Operation.run(RefactoringExecutionHelper.java:106)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5204)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:106)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:759)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:756)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2649)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper.perform(RefactoringExecutionHelper.java:191)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper.perform(RefactoringExecutionHelper.java:151)
+	at org.eclipse.jdt.internal.ui.refactoring.reorg.ReorgMoveStarter.run(ReorgMoveStarter.java:70)
+	at org.eclipse.jdt.internal.ui.packageview.SelectionTransferDropAdapter.handleDropMove(SelectionTransferDropAdapter.java:283)
+	at org.eclipse.jdt.internal.ui.packageview.SelectionTransferDropAdapter.performDrop(SelectionTransferDropAdapter.java:220)
+	at org.eclipse.jdt.internal.ui.dnd.JdtViewerDropAdapter.drop(JdtViewerDropAdapter.java:246)
+	at org.eclipse.jface.util.DelegatingDropAdapter$3.run(DelegatingDropAdapter.java:211)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.util.DelegatingDropAdapter.drop(DelegatingDropAdapter.java:209)
+	at org.eclipse.swt.dnd.DNDListener.handleEvent(DNDListener.java:90)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:774)
+	at org.eclipse.swt.dnd.DropTarget.Drop(DropTarget.java:456)
+	at org.eclipse.swt.dnd.DropTarget.Drop_64(DropTarget.java:392)
+	at org.eclipse.swt.dnd.DropTarget$3.method6(DropTarget.java:260)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:119)
+	at org.eclipse.swt.internal.ole.win32.COM.DoDragDrop(Native Method)
+	at org.eclipse.swt.dnd.DragSource.drag(DragSource.java:363)
+	at org.eclipse.swt.dnd.DragSource.access$0(DragSource.java:289)
+	at org.eclipse.swt.dnd.DragSource$1.handleEvent(DragSource.java:172)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.genuitec.pulse.eclipse.launcher.Main.main(Main.java:110)
+
+!ENTRY org.eclipse.core.filebuffers 4 2 2018-11-19 16:50:49.734
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.filebuffers".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.web.ui.internal.style.java.WebSelectionListenerWithASTManager.getTranslation(WebSelectionListenerWithASTManager.java:221)
+	at org.eclipse.wst.jsdt.web.ui.internal.style.java.semantic.WebSemanticHighlightingReconciler.retrieveASTRoot(WebSemanticHighlightingReconciler.java:457)
+	at org.eclipse.wst.jsdt.web.ui.internal.style.java.semantic.WebSemanticHighlightingReconciler.scheduleJob(WebSemanticHighlightingReconciler.java:408)
+	at org.eclipse.wst.jsdt.web.ui.internal.style.java.semantic.WebSemanticHighlightingReconciler.inputDocumentChanged(WebSemanticHighlightingReconciler.java:483)
+	at org.eclipse.jface.text.TextViewer.fireInputDocumentChanged(TextViewer.java:2894)
+	at org.eclipse.jface.text.TextViewer.setDocument(TextViewer.java:2943)
+	at org.eclipse.jface.text.source.SourceViewer.setDocument(SourceViewer.java:642)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.setDocument(ProjectionViewer.java:374)
+	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.setDocument(StructuredTextViewer.java:805)
+	at org.eclipse.jface.text.source.SourceViewer.setDocument(SourceViewer.java:590)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.initializeSourceViewer(AbstractTextEditor.java:4039)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4227)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:237)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1480)
+	at org.eclipse.ui.editors.text.TextEditor.doSetInput(TextEditor.java:169)
+	at org.eclipse.wst.sse.ui.StructuredTextEditor.doSetInput(StructuredTextEditor.java:1924)
+	at org.eclipse.jst.pagedesigner.editors.DesignerStructuredTextEditorJSP.doSetInput(DesignerStructuredTextEditorJSP.java:81)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.setInputWithNotify(AbstractTextEditor.java:4286)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.setInput(AbstractTextEditor.java:4308)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$7.run(AbstractTextEditor.java:530)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.execute(AbstractTextEditor.java:599)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.elementMoved(AbstractTextEditor.java:560)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider$FileBufferListener.underlyingFileMoved(TextFileDocumentProvider.java:322)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager$6.run(TextFileBufferManager.java:742)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.fireUnderlyingFileMoved(TextFileBufferManager.java:740)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.handleFileMoved(ResourceFileBuffer.java:449)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$3.execute(ResourceFileBuffer.java:162)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$SafeFileChange.run(ResourceFileBuffer.java:86)
+	at org.eclipse.ui.internal.editors.text.UISynchronizationContext.run(UISynchronizationContext.java:34)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.execute(TextFileBufferManager.java:629)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$FileSynchronizer.resourceChanged(ResourceFileBuffer.java:180)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.checkpoint(Workspace.java:557)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:263)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:223)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper$Operation.run(RefactoringExecutionHelper.java:106)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5204)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:106)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:759)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:756)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2649)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper.perform(RefactoringExecutionHelper.java:191)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper.perform(RefactoringExecutionHelper.java:151)
+	at org.eclipse.jdt.internal.ui.refactoring.reorg.ReorgMoveStarter.run(ReorgMoveStarter.java:70)
+	at org.eclipse.jdt.internal.ui.packageview.SelectionTransferDropAdapter.handleDropMove(SelectionTransferDropAdapter.java:283)
+	at org.eclipse.jdt.internal.ui.packageview.SelectionTransferDropAdapter.performDrop(SelectionTransferDropAdapter.java:220)
+	at org.eclipse.jdt.internal.ui.dnd.JdtViewerDropAdapter.drop(JdtViewerDropAdapter.java:246)
+	at org.eclipse.jface.util.DelegatingDropAdapter$3.run(DelegatingDropAdapter.java:211)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.util.DelegatingDropAdapter.drop(DelegatingDropAdapter.java:209)
+	at org.eclipse.swt.dnd.DNDListener.handleEvent(DNDListener.java:90)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:774)
+	at org.eclipse.swt.dnd.DropTarget.Drop(DropTarget.java:456)
+	at org.eclipse.swt.dnd.DropTarget.Drop_64(DropTarget.java:392)
+	at org.eclipse.swt.dnd.DropTarget$3.method6(DropTarget.java:260)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:119)
+	at org.eclipse.swt.internal.ole.win32.COM.DoDragDrop(Native Method)
+	at org.eclipse.swt.dnd.DragSource.drag(DragSource.java:363)
+	at org.eclipse.swt.dnd.DragSource.access$0(DragSource.java:289)
+	at org.eclipse.swt.dnd.DragSource$1.handleEvent(DragSource.java:172)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.genuitec.pulse.eclipse.launcher.Main.main(Main.java:110)
+
+!ENTRY org.eclipse.core.filebuffers 4 2 2018-11-19 16:51:08.463
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.filebuffers".
+!STACK 0
+org.eclipse.wst.sse.core.internal.util.Assert$AssertionFailedException: reference count was less than zero
+	at org.eclipse.wst.sse.core.internal.util.Assert.isTrue(Assert.java:155)
+	at org.eclipse.wst.sse.core.internal.model.ModelManagerImpl._getModelFor(ModelManagerImpl.java:646)
+	at org.eclipse.wst.sse.core.internal.model.ModelManagerImpl.getModelForRead(ModelManagerImpl.java:1454)
+	at org.eclipse.wst.sse.ui.internal.reconcile.StructuredRegionProcessor.getStructuredModelForRead(StructuredRegionProcessor.java:231)
+	at org.eclipse.wst.sse.ui.internal.reconcile.StructuredRegionProcessor.setDocument(StructuredRegionProcessor.java:298)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor.handleInputDocumentChanged(DirtyRegionProcessor.java:555)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor$TextInputListener.inputDocumentChanged(DirtyRegionProcessor.java:167)
+	at org.eclipse.jface.text.TextViewer.fireInputDocumentChanged(TextViewer.java:2894)
+	at org.eclipse.jface.text.TextViewer.setDocument(TextViewer.java:2943)
+	at org.eclipse.jface.text.source.SourceViewer.setDocument(SourceViewer.java:642)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.setDocument(ProjectionViewer.java:374)
+	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.setDocument(StructuredTextViewer.java:805)
+	at org.eclipse.jface.text.source.SourceViewer.setDocument(SourceViewer.java:590)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.initializeSourceViewer(AbstractTextEditor.java:4039)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4227)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:237)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1480)
+	at org.eclipse.ui.editors.text.TextEditor.doSetInput(TextEditor.java:169)
+	at org.eclipse.wst.sse.ui.StructuredTextEditor.doSetInput(StructuredTextEditor.java:1924)
+	at org.eclipse.jst.pagedesigner.editors.DesignerStructuredTextEditorJSP.doSetInput(DesignerStructuredTextEditorJSP.java:81)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.setInputWithNotify(AbstractTextEditor.java:4286)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.setInput(AbstractTextEditor.java:4308)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$7.run(AbstractTextEditor.java:530)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.execute(AbstractTextEditor.java:599)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.elementMoved(AbstractTextEditor.java:560)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider$FileBufferListener.underlyingFileMoved(TextFileDocumentProvider.java:322)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager$6.run(TextFileBufferManager.java:742)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.fireUnderlyingFileMoved(TextFileBufferManager.java:740)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.handleFileMoved(ResourceFileBuffer.java:449)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$3.execute(ResourceFileBuffer.java:162)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$SafeFileChange.run(ResourceFileBuffer.java:86)
+	at org.eclipse.ui.internal.editors.text.UISynchronizationContext.run(UISynchronizationContext.java:34)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.execute(TextFileBufferManager.java:629)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$FileSynchronizer.resourceChanged(ResourceFileBuffer.java:180)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.checkpoint(Workspace.java:557)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:263)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:223)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper$Operation.run(RefactoringExecutionHelper.java:106)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5204)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:106)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:759)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:756)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2649)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper.perform(RefactoringExecutionHelper.java:191)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper.perform(RefactoringExecutionHelper.java:151)
+	at org.eclipse.jdt.internal.ui.refactoring.reorg.ReorgMoveStarter.run(ReorgMoveStarter.java:70)
+	at org.eclipse.jdt.internal.ui.packageview.SelectionTransferDropAdapter.handleDropMove(SelectionTransferDropAdapter.java:283)
+	at org.eclipse.jdt.internal.ui.packageview.SelectionTransferDropAdapter.performDrop(SelectionTransferDropAdapter.java:220)
+	at org.eclipse.jdt.internal.ui.dnd.JdtViewerDropAdapter.drop(JdtViewerDropAdapter.java:246)
+	at org.eclipse.jface.util.DelegatingDropAdapter$3.run(DelegatingDropAdapter.java:211)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.util.DelegatingDropAdapter.drop(DelegatingDropAdapter.java:209)
+	at org.eclipse.swt.dnd.DNDListener.handleEvent(DNDListener.java:90)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:774)
+	at org.eclipse.swt.dnd.DropTarget.Drop(DropTarget.java:456)
+	at org.eclipse.swt.dnd.DropTarget.Drop_64(DropTarget.java:392)
+	at org.eclipse.swt.dnd.DropTarget$3.method6(DropTarget.java:260)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:119)
+	at org.eclipse.swt.internal.ole.win32.COM.DoDragDrop(Native Method)
+	at org.eclipse.swt.dnd.DragSource.drag(DragSource.java:363)
+	at org.eclipse.swt.dnd.DragSource.access$0(DragSource.java:289)
+	at org.eclipse.swt.dnd.DragSource$1.handleEvent(DragSource.java:172)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.genuitec.pulse.eclipse.launcher.Main.main(Main.java:110)
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2018-11-19 16:55:39.105
+!MESSAGE null
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.wst.sse.core.internal.text.GenericPositionManager.removePositionCategory(GenericPositionManager.java:372)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.removePositionCategory(BasicStructuredDocument.java:2275)
+	at org.eclipse.wst.sse.ui.internal.style.SemanticHighlightingPresenter.releaseDocument(SemanticHighlightingPresenter.java:874)
+	at org.eclipse.wst.sse.ui.internal.style.SemanticHighlightingPresenter.inputDocumentAboutToBeChanged(SemanticHighlightingPresenter.java:670)
+	at org.eclipse.jface.text.TextViewer.fireInputDocumentAboutToBeChanged(TextViewer.java:2877)
+	at org.eclipse.jface.text.TextViewer.setDocument(TextViewer.java:2933)
+	at org.eclipse.jface.text.source.SourceViewer.setDocument(SourceViewer.java:642)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.setDocument(ProjectionViewer.java:374)
+	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.setDocument(StructuredTextViewer.java:805)
+	at org.eclipse.jface.text.source.SourceViewer.setDocument(SourceViewer.java:590)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.initializeSourceViewer(AbstractTextEditor.java:4039)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4227)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:237)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1480)
+	at org.eclipse.ui.editors.text.TextEditor.doSetInput(TextEditor.java:169)
+	at org.eclipse.wst.sse.ui.StructuredTextEditor.doSetInput(StructuredTextEditor.java:1924)
+	at org.eclipse.jst.pagedesigner.editors.DesignerStructuredTextEditorJSP.doSetInput(DesignerStructuredTextEditorJSP.java:81)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.setInputWithNotify(AbstractTextEditor.java:4286)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.setInput(AbstractTextEditor.java:4308)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$7.run(AbstractTextEditor.java:530)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.execute(AbstractTextEditor.java:599)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.elementMoved(AbstractTextEditor.java:560)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider$FileBufferListener.underlyingFileMoved(TextFileDocumentProvider.java:322)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager$6.run(TextFileBufferManager.java:742)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.fireUnderlyingFileMoved(TextFileBufferManager.java:740)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.handleFileMoved(ResourceFileBuffer.java:449)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$3.execute(ResourceFileBuffer.java:162)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$SafeFileChange.run(ResourceFileBuffer.java:86)
+	at org.eclipse.ui.internal.editors.text.UISynchronizationContext.run(UISynchronizationContext.java:34)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.execute(TextFileBufferManager.java:629)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$FileSynchronizer.resourceChanged(ResourceFileBuffer.java:180)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.checkpoint(Workspace.java:557)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:263)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:223)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper$Operation.run(RefactoringExecutionHelper.java:106)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5204)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:106)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:759)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:756)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2649)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper.perform(RefactoringExecutionHelper.java:191)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper.perform(RefactoringExecutionHelper.java:151)
+	at org.eclipse.jdt.internal.ui.refactoring.reorg.ReorgMoveStarter.run(ReorgMoveStarter.java:70)
+	at org.eclipse.jdt.internal.ui.packageview.SelectionTransferDropAdapter.handleDropMove(SelectionTransferDropAdapter.java:283)
+	at org.eclipse.jdt.internal.ui.packageview.SelectionTransferDropAdapter.performDrop(SelectionTransferDropAdapter.java:220)
+	at org.eclipse.jdt.internal.ui.dnd.JdtViewerDropAdapter.drop(JdtViewerDropAdapter.java:246)
+	at org.eclipse.jface.util.DelegatingDropAdapter$3.run(DelegatingDropAdapter.java:211)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.util.DelegatingDropAdapter.drop(DelegatingDropAdapter.java:209)
+	at org.eclipse.swt.dnd.DNDListener.handleEvent(DNDListener.java:90)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:774)
+	at org.eclipse.swt.dnd.DropTarget.Drop(DropTarget.java:456)
+	at org.eclipse.swt.dnd.DropTarget.Drop_64(DropTarget.java:392)
+	at org.eclipse.swt.dnd.DropTarget$3.method6(DropTarget.java:260)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:119)
+	at org.eclipse.swt.internal.ole.win32.COM.DoDragDrop(Native Method)
+	at org.eclipse.swt.dnd.DragSource.drag(DragSource.java:363)
+	at org.eclipse.swt.dnd.DragSource.access$0(DragSource.java:289)
+	at org.eclipse.swt.dnd.DragSource$1.handleEvent(DragSource.java:172)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.genuitec.pulse.eclipse.launcher.Main.main(Main.java:110)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 10001 2018-11-19 16:55:39.106
+!MESSAGE Internal Error
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.wst.sse.core.internal.text.GenericPositionManager.removePositionCategory(GenericPositionManager.java:372)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.removePositionCategory(BasicStructuredDocument.java:2275)
+	at org.eclipse.wst.jsdt.web.ui.internal.style.java.semantic.WebSemanticHighlightingPresenter.releaseDocument(WebSemanticHighlightingPresenter.java:787)
+	at org.eclipse.wst.jsdt.web.ui.internal.style.java.semantic.WebSemanticHighlightingPresenter.inputDocumentAboutToBeChanged(WebSemanticHighlightingPresenter.java:597)
+	at org.eclipse.jface.text.TextViewer.fireInputDocumentAboutToBeChanged(TextViewer.java:2877)
+	at org.eclipse.jface.text.TextViewer.setDocument(TextViewer.java:2933)
+	at org.eclipse.jface.text.source.SourceViewer.setDocument(SourceViewer.java:642)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.setDocument(ProjectionViewer.java:374)
+	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.setDocument(StructuredTextViewer.java:805)
+	at org.eclipse.jface.text.source.SourceViewer.setDocument(SourceViewer.java:590)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.initializeSourceViewer(AbstractTextEditor.java:4039)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4227)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:237)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1480)
+	at org.eclipse.ui.editors.text.TextEditor.doSetInput(TextEditor.java:169)
+	at org.eclipse.wst.sse.ui.StructuredTextEditor.doSetInput(StructuredTextEditor.java:1924)
+	at org.eclipse.jst.pagedesigner.editors.DesignerStructuredTextEditorJSP.doSetInput(DesignerStructuredTextEditorJSP.java:81)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.setInputWithNotify(AbstractTextEditor.java:4286)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.setInput(AbstractTextEditor.java:4308)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$7.run(AbstractTextEditor.java:530)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.execute(AbstractTextEditor.java:599)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.elementMoved(AbstractTextEditor.java:560)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider$FileBufferListener.underlyingFileMoved(TextFileDocumentProvider.java:322)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager$6.run(TextFileBufferManager.java:742)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.fireUnderlyingFileMoved(TextFileBufferManager.java:740)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.handleFileMoved(ResourceFileBuffer.java:449)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$3.execute(ResourceFileBuffer.java:162)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$SafeFileChange.run(ResourceFileBuffer.java:86)
+	at org.eclipse.ui.internal.editors.text.UISynchronizationContext.run(UISynchronizationContext.java:34)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.execute(TextFileBufferManager.java:629)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$FileSynchronizer.resourceChanged(ResourceFileBuffer.java:180)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.checkpoint(Workspace.java:557)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:263)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:223)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper$Operation.run(RefactoringExecutionHelper.java:106)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5204)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:106)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:759)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:756)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2649)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper.perform(RefactoringExecutionHelper.java:191)
+	at org.eclipse.jdt.internal.ui.refactoring.RefactoringExecutionHelper.perform(RefactoringExecutionHelper.java:151)
+	at org.eclipse.jdt.internal.ui.refactoring.reorg.ReorgMoveStarter.run(ReorgMoveStarter.java:70)
+	at org.eclipse.jdt.internal.ui.packageview.SelectionTransferDropAdapter.handleDropMove(SelectionTransferDropAdapter.java:283)
+	at org.eclipse.jdt.internal.ui.packageview.SelectionTransferDropAdapter.performDrop(SelectionTransferDropAdapter.java:220)
+	at org.eclipse.jdt.internal.ui.dnd.JdtViewerDropAdapter.drop(JdtViewerDropAdapter.java:246)
+	at org.eclipse.jface.util.DelegatingDropAdapter$3.run(DelegatingDropAdapter.java:211)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.util.DelegatingDropAdapter.drop(DelegatingDropAdapter.java:209)
+	at org.eclipse.swt.dnd.DNDListener.handleEvent(DNDListener.java:90)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:774)
+	at org.eclipse.swt.dnd.DropTarget.Drop(DropTarget.java:456)
+	at org.eclipse.swt.dnd.DropTarget.Drop_64(DropTarget.java:392)
+	at org.eclipse.swt.dnd.DropTarget$3.method6(DropTarget.java:260)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:119)
+	at org.eclipse.swt.internal.ole.win32.COM.DoDragDrop(Native Method)
+	at org.eclipse.swt.dnd.DragSource.drag(DragSource.java:363)
+	at org.eclipse.swt.dnd.DragSource.access$0(DragSource.java:289)
+	at org.eclipse.swt.dnd.DragSource$1.handleEvent(DragSource.java:172)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.genuitec.pulse.eclipse.launcher.Main.main(Main.java:110)
+
+!ENTRY org.eclipse.ui 4 0 2018-11-19 17:12:14.713
+!MESSAGE Unable to create editor ID com.genuitec.eclipse.webdesigner3.editors.jsp: reference count was less than zero
+!STACK 0
+org.eclipse.wst.sse.core.internal.util.Assert$AssertionFailedException: reference count was less than zero
+	at org.eclipse.wst.sse.core.internal.util.Assert.isTrue(Assert.java:155)
+	at org.eclipse.wst.sse.core.internal.model.ModelManagerImpl._getModelFor(ModelManagerImpl.java:646)
+	at org.eclipse.wst.sse.core.internal.model.ModelManagerImpl.getModelForEdit(ModelManagerImpl.java:1392)
+	at org.eclipse.jst.pagedesigner.editors.HTMLEditor.getModel(HTMLEditor.java:900)
+	at org.eclipse.jst.pagedesigner.editors.HTMLEditor.connectDesignPage(HTMLEditor.java:544)
+	at org.eclipse.jst.pagedesigner.editors.HTMLEditor.createPages(HTMLEditor.java:624)
+	at org.eclipse.ui.part.MultiPageEditorPart.createPartControl(MultiPageEditorPart.java:348)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:670)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:465)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2958)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2863)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2855)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2806)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2802)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2786)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2777)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:655)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:614)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:360)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:167)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:249)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:228)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:275)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:251)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerActionGroup.handleOpen(PackageExplorerActionGroup.java:376)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart$4.open(PackageExplorerPart.java:538)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:48)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:866)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:864)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1152)
+	at org.eclipse.jface.viewers.StructuredViewer$6.handleOpen(StructuredViewer.java:1256)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:275)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:269)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:309)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.genuitec.pulse.eclipse.launcher.Main.main(Main.java:110)
+
+!ENTRY org.eclipse.ui 2 2 2018-11-19 17:12:14.737
+!MESSAGE Ignored attempt to add saveable that was already registered
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse.ui.internal.DefaultSaveable@12633a9a from part: org.eclipse.ui.internal.ErrorEditorPart@12633a9a
+	at org.eclipse.ui.internal.SaveablesList.logWarning(SaveablesList.java:187)
+	at org.eclipse.ui.internal.SaveablesList.addModel(SaveablesList.java:116)
+	at org.eclipse.ui.internal.SaveablesList.addModels(SaveablesList.java:289)
+	at org.eclipse.ui.internal.SaveablesList.postOpen(SaveablesList.java:695)
+	at org.eclipse.ui.internal.PartList.partOpened(PartList.java:234)
+	at org.eclipse.ui.internal.PartList.access$0(PartList.java:210)
+	at org.eclipse.ui.internal.PartList$1.propertyChanged(PartList.java:40)
+	at org.eclipse.ui.internal.WorkbenchPartReference.fireInternalPropertyChange(WorkbenchPartReference.java:375)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:610)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2958)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2863)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2855)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2806)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2802)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2786)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2777)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:655)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:614)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:360)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:167)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:249)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:228)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:275)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:251)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerActionGroup.handleOpen(PackageExplorerActionGroup.java:376)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart$4.open(PackageExplorerPart.java:538)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:48)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:866)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:864)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1152)
+	at org.eclipse.jface.viewers.StructuredViewer$6.handleOpen(StructuredViewer.java:1256)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:275)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:269)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:309)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.genuitec.pulse.eclipse.launcher.Main.main(Main.java:110)
+!SESSION 2018-11-19 17:26:25.864 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2018-11-19 17:26:33.371
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.eclipse.jface 2 0 2018-11-19 17:26:41.408
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-19 17:26:41.408
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@62fdfcef,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.core 1 0 2018-11-19 17:26:43.160
+!MESSAGE Unable to locate .myeclipse.properties file
+!SESSION 2018-11-19 17:32:12.675 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2018-11-19 17:32:25.648
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-19 17:32:25.648
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@6e631b3b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.core 1 0 2018-11-19 17:32:27.725
+!MESSAGE Unable to locate .myeclipse.properties file
+
+!ENTRY org.eclipse.debug.core 4 2 2018-11-19 17:43:27.053
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4361)
+	at org.eclipse.swt.SWT.error(SWT.java:4276)
+	at org.eclipse.swt.SWT.error(SWT.java:4247)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:468)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:340)
+	at org.eclipse.swt.widgets.Tree.getSelection(Tree.java:3409)
+	at org.eclipse.jface.viewers.TreeViewer.getSelection(TreeViewer.java:256)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:344)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.setSelectionToWidget(AbstractTreeViewer.java:2544)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.setSelectionToWidget(AbstractTreeViewer.java:2967)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1450)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:403)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1404)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1506)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:537)
+	at com.genuitec.eclipse.easie.core.ServerLaunchListener$1.run(ServerLaunchListener.java:107)
+	at com.genuitec.eclipse.core.ui.util.PlatformSWTUtil.postOnDisplayQueue(PlatformSWTUtil.java:154)
+	at com.genuitec.eclipse.easie.core.ServerLaunchListener.refreshViewer(ServerLaunchListener.java:105)
+	at com.genuitec.eclipse.easie.core.ServerLaunchListener.launchesTerminated(ServerLaunchListener.java:55)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:313)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:266)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1028)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:401)
+	at org.eclipse.debug.core.Launch.handleDebugEvents(Launch.java:571)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1143)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:407)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.debug.core 4 120 2018-11-19 17:43:27.062
+!MESSAGE An exception occurred during launch change notification.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4361)
+	at org.eclipse.swt.SWT.error(SWT.java:4276)
+	at org.eclipse.swt.SWT.error(SWT.java:4247)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:468)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:340)
+	at org.eclipse.swt.widgets.Tree.getSelection(Tree.java:3409)
+	at org.eclipse.jface.viewers.TreeViewer.getSelection(TreeViewer.java:256)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:344)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.setSelectionToWidget(AbstractTreeViewer.java:2544)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.setSelectionToWidget(AbstractTreeViewer.java:2967)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1450)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:403)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1404)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1506)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:537)
+	at com.genuitec.eclipse.easie.core.ServerLaunchListener$1.run(ServerLaunchListener.java:107)
+	at com.genuitec.eclipse.core.ui.util.PlatformSWTUtil.postOnDisplayQueue(PlatformSWTUtil.java:154)
+	at com.genuitec.eclipse.easie.core.ServerLaunchListener.refreshViewer(ServerLaunchListener.java:105)
+	at com.genuitec.eclipse.easie.core.ServerLaunchListener.launchesTerminated(ServerLaunchListener.java:55)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:313)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:266)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1028)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:401)
+	at org.eclipse.debug.core.Launch.handleDebugEvents(Launch.java:571)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1143)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:407)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2018-11-20 14:28:23.280 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2018-11-20 14:28:40.011
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-20 14:28:40.011
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@e38e978,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.core 1 0 2018-11-20 14:28:41.230
+!MESSAGE Unable to locate .myeclipse.properties file
+!SESSION 2018-11-20 14:30:01.227 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2018-11-20 14:30:18.994
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-20 14:30:18.994
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@36c0b403,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.core 1 0 2018-11-20 14:30:20.836
+!MESSAGE Unable to locate .myeclipse.properties file
+!SESSION 2018-11-21 10:49:08.394 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-11-21 10:49:13.135
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2018-11-21 10:49:16.703
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.eclipse.jface 2 0 2018-11-21 10:49:22.865
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-21 10:49:22.865
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@37015590,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.core 1 0 2018-11-21 10:49:31.944
+!MESSAGE Unable to locate .myeclipse.properties file
+!SESSION 2018-11-21 14:46:46.858 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.genuitec.eclipse.core 1 0 2018-11-21 14:47:08.677
+!MESSAGE Unable to locate .myeclipse.properties file
+
+!ENTRY org.eclipse.jface 2 0 2018-11-21 14:47:11.125
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-21 14:47:11.125
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@42049d11,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2018-11-21 15:33:54.013 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.genuitec.eclipse.core 1 0 2018-11-21 15:34:00.059
+!MESSAGE Unable to locate .myeclipse.properties file
+
+!ENTRY org.eclipse.jface 2 0 2018-11-21 15:34:02.148
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-21 15:34:02.148
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@175390b7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2018-11-22 14:52:07.121 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.genuitec.eclipse.core 1 0 2018-11-22 14:52:14.737
+!MESSAGE Unable to locate .myeclipse.properties file
+
+!ENTRY org.eclipse.jface 2 0 2018-11-22 14:52:17.305
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-22 14:52:17.305
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@46671d0d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2018-11-22 16:34:48.329 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2018-11-22 16:34:59.231
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-22 16:34:59.231
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@239a6904,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.core 1 0 2018-11-22 16:35:00.360
+!MESSAGE Unable to locate .myeclipse.properties file

@@ -70,7 +70,7 @@ public class LoginController{
 		String name=request.getParameter("admin");
 		String pwd=request.getParameter("password");
 		User users = service.userLogin(name, pwd);
-		
+		System.out.println(users);
 		if (users!=null) {
 			System.out.println("用户登陆成功");
 			System.out.println(users);

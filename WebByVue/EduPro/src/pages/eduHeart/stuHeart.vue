@@ -52,7 +52,7 @@ import foot from '@/components/foot/foot'
 import swiper from './components/heartSwiper'
 import { quillEditor } from 'vue-quill-editor'
 export default {
-  name: 'eduClass',
+  name: 'eduHeart',
   components: {
     holder,
     foot,
@@ -131,7 +131,7 @@ export default {
   margin: 0;
 }
 .body {
-  height:3895px;
+  height:3595px;
   width: 100%;
 }
 .heartPage {
@@ -163,12 +163,15 @@ export default {
                 background: #be926f;
             }
             .heartTable {
-              height: 100%;
+              height: 700px;
               width: 1320px;
               margin: 0 auto;
               position: relative;
               text-align: center;
               border-top: 2px solid rgb(34, 34, 34);
+           }
+           .table-header {
+             height:50px;
            }
            .table-header>th {
               background: #f5f5f5;

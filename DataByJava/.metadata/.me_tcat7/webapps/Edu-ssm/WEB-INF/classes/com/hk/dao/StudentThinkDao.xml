@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dao.StudentThinkDao">
+	
+	
+	<select id="selectstudent" resultType="StudentsThink">
+		select *
+        from user u join message m
+        WHERE m.role_id=u.role_id and m.student_id=u.id
+        order by data  DESC
+	</select>
+	
+	<insert id="insermessage">
+	     insert into message (message_content,data,student_name) values (#{message_content},#{data},#{student_name})
+	</insert>
+     
+</mapper>
