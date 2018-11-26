@@ -36,10 +36,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     			var course_name = course.course_name;
     			var course_image = course.course_image;
     			var course_description = course.course_description;
+    			var course_video = course.course_video;
     			
     		 	$("#list").append("<li>"+course_name+"</li>");
     		 	$("#list").append("<li>"+course_image+"</li>");
     		 	$("#list").append("<li>"+course_description+"</li>");
+    		 	$("#list").append("<li>"+course_video+"</li>");
     		 	
 				/* $("#list").append("<li>"+teacherShow[i]["cName"]+"</li>");
 				

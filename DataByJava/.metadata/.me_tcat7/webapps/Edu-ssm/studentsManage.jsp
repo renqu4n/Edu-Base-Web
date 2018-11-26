@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -63,7 +64,37 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script src="public/media/js/bootstrap-modal.js" type="text/javascript"></script>
     <script src="public/media/js/bootstrap-modalmanager.js" type="text/javascript"></script>
     <script src="public/media/js/ui-modals.js"></script>
+	<script src="js/jquery-1.11.1-min.js"></script>
 
+<!-- 	<script type="text/javascript">
+	function directUrl() {
+	window.location.href="studentShow.do";
+	return;
+	}
+	</script> -->
+	
+	<style type="text/css">
+		#sub_menu_1,#sub_menu_2,#sub_menu_3,#sub_menu_4,#sub_menu_5{
+			display: none;
+		}
+		ul li:hover{
+			cursor: pointer;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		function f(str){
+                var sub_menu = document.getElementById(str);
+                var dis_v = sub_menu.style.display;
+                
+                if(dis_v == "block")
+                    sub_menu.style.display = "none";
+                else
+                    sub_menu.style.display = "block";
+                    
+            }
+		
+	</script>
 
 </head>
 <!-- END HEAD -->
@@ -81,7 +112,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 }
 </style>
 
-<body class="page-header-fixed">
+<body class="page-header-fixed" >
 
 
 
@@ -160,46 +191,46 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
                 </li>
                 
-                <li>
+                <li onclick = "f('sub_menu_1')">
                     <a href="javascript:;">
                         <i class="icon-comments"></i>
-                        <span class="title">学员管理</span>
+                        <span class="title" >学员管理</span>
                         <span class="arrow "></span>
                     </a>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" id="sub_menu_1">
                         <li>
-                            <a href="studentsManage.jsp">学员管理</a>
-                            <a href="">心声管理</a>
+                            <a href="studentShow.do">学员管理</a>
+                            
                             <a href="addStudents.jsp">添加学员</a>
                             
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li onclick="f('sub_menu_2')">
                     <a href="javascript:;">
                         <i class="icon-comments"></i>
                         <span class="title">教师管理</span>
                         <span class="arrow "></span>
                     </a>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" id="sub_menu_2">
                         <li>
                             
-                            <a href="">教师管理</a>
+                            <a href="teachShow.do">教师管理</a>
                             <a href="addTeacher.jsp">添加教师</a>
                             
                         </li>
                     </ul>
                 </li>
 
-                <li>
-                    <a href="">
+                <li onclick = "f('sub_menu_3')">
+                    <a href="#">
                         <i class="icon-home"></i>
                         <span class="title">课程管理</span>
                         <span class="arrow "></span>
                     </a>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" id="sub_menu_3">
                         <li>
-                            <a href="addnew.html">课程管理</a>
+                            <a href="courseShow.do">课程管理</a>
                             <a href="addCourse.jsp">添加课程</a>
                             
                             
@@ -207,37 +238,37 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </ul>
                 </li>
                 <!--  <li><a href="">360全景</a></li> -->
-                <li>
-                    <a href="">
+                <li onclick = "f('sub_menu_4')">
+                    <a href="javascript:;">
                         <i class="icon-bullhorn"></i>
                         <span class="title">新闻管理</span>
                         <span class="arrow "></span>
                     </a>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" id="sub_menu_4">
                         <li>
-                            <a href="">新闻管理</a>
+                            <a href="newShow.do">新闻管理</a>
                             <a href="addnew.jsp">添加新闻</a>
                             
                         </li>
                     </ul>
                 </li>
                 
-                <li>
+                <li onclick = "f('sub_menu_5')">
                     <a href="javascript:;">
                         <i class="icon-comments"></i>
                         <span class="title">角色管理</span>
                         <span class="arrow "></span>
                     </a>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" id="sub_menu_5">
                         <li>
-                            <a href="">角色管理</a>
+                            <a href="roleShow.do">角色管理</a>
                             <a href="addRole.jsp">添加角色</a>
                             
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript:;">
+                    <a href="messageShow.do">
                         <i class="icon-comments"></i>
                         <span class="title">留言管理</span>
                         
@@ -248,7 +279,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </ul>
             
             <!-- END SIDEBAR MENU -->
-        </div>
+      	</div>
         <!-- END SIDEBAR -->
         <!-- BEGIN PAGE -->
         <div class="page-content">
@@ -270,7 +301,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <!-- BEGIN PAGE TITLE & BREADCRUMB-->
                         <h3 class="page-title">
 
-                            添加教师模块 <small></small>
+                            学员管理模块 <small></small>
 
                         </h3>
                         <div class="dome_menu">
@@ -315,59 +346,64 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </div>
                 </div> -->
                 <!-- END page-->
+                <div class="rightinfo">
                 <div style="text-align:center ">
                 
-        <table class="tablelist" style="margin: 10px auto">
+        <table class="tablelist" style="margin: 10px auto" width="800">
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <th><input name="" type="checkbox" value="" /></th>
         <th>ID<i class="sort"><img src="images/px.gif" /></i></th>
-        <th>学员名称</th>
-        <th>学院心声</th>
-        <th>邮箱地址</th>
-        <th>操作</th>
+        <th width="200">学员名称</th>
+        <th width="200">学员心声</th>
+        <th width="200">邮箱地址</th>
+        <th width="200">操作</th>
         </tr>
         </thead>
         <tbody>
-		<c:forEach items="${pages.student}" var="page">
+		<c:forEach items="${pages.student}" var="student">
         <tr>
         <td><input name="" type="checkbox" value="" /></td>
-        <td>${page.id}</td>
-        <td>${page.name}</td>
-        <td>${page.score}</td>
-        <td>${page.age}</td>
-        <td><a href="#" class="tablelink">查看</a>     
-        <a href="PageServlet?method=delete&key=${page.id}" class="tablelink"  onclick="return confirm('确认删除吗?')"> 删除</a></td>
+        <td width="200">${student.id}</td>
+        <td width="200">${student.user_name}</td>
+        <td width="200">${student.user_think}</td>
+        <td width="200">${student.user_email}</td>
+        <td width="200"><a href="#" class="tablelink">查看</a>     
+        <a href="deleteStudent.do?method=delete&key=${student.id}" class="tablelink"  onclick="return confirm('确认删除吗?')"> 删除</a></td>
         </tr> 
 		</c:forEach>
         </tbody> 
     </table>
     
    
-    <div class="pagin" style="text-align: center">
+    <div class="pagin" style="text-align: center;margin-top:100px">
     	
-		<a href="PageServlet?currentPage=1">首页</a>
+		<a href="studentShow.do?currentPage=1">首页</a>
 		<c:if test="${currentPage != 1 }">
-		<a href="PageServlet?currentPage=${currentPage-1 }">上一页</a>
+		<a href="studentShow.do?currentPage=${currentPage-1 }">上一页</a>
 		</c:if>
 		<c:if test="${currentPage != pages.totalPageCount }">
-		<a href="PageServlet?currentPage=${currentPage+1 }">下一页</a>
+		<a href="studentShow.do?currentPage=${currentPage+1 }">下一页</a>
 		</c:if>
-		<a href="PageServlet?currentPage=${pages.totalPageCount}">尾页</a>
+		<a href="studentShow.do?currentPage=${pages.totalPageCount}">尾页</a>
 		<span>当前第${currentPage}页</span>
    		<span>共${pages.totalPageCount}页</span>
-		
-		<form action="PageServlet">
+	
+		<div class="message" style="text-align: center">共<i class="blue">${pages.Count}</i>条记录，当前显示第&nbsp;<i class="blue">${currentPage}&nbsp;</i>页</div>
+    	<form action="studentShow.do">
    		<input type="text" name="currentPage">
    		<input type="submit" value="跳转">
-   </form> 
-		<div class="message" style="text-align: center">共<i class="blue">${pages.Count}</i>条记录，当前显示第&nbsp;<i class="blue">${currentPage}&nbsp;</i>页</div>
+   		</form> 
+    
+    
     </div>
+        
                 
-                
+                <div style="margin-top:150px">
                 <h3>提示</h3>
                 <h5>主体js文件地址：public/media/js/website.js</h5>
                 <h5>上传图片形式以单击形式上传，图片php控制器:Website.php More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></h5>
+            	</div>
             </div>
             <!-- END PAGE CONTAINER-->
         </div>

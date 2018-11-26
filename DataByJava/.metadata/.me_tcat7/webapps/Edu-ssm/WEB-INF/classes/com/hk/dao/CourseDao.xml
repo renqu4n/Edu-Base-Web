@@ -11,5 +11,27 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
 	
-
+	<select id="getAllCourses" resultType="Course"  parameterType="int">
+    <!-- mysql 的分页查询语句-->
+    <!--firstIndex pageSize是Page类的属性 -->
+        SELECT * FROM course   LIMIT #{start},#{pageCount}
+    </select>
+    <select id="selectcourseCount" resultType="int">
+    <!-- 查询总记录数-->
+        select count(id) from course 
+    </select>
+    
+    
+    <delete id="deleteCourse">
+		delete from  course where id=#{0}
+	</delete>
+	
+	 <select id="selectTeacherName" resultType="List">
+    
+        select user_name from user where 1=1 and id in (select teacher_id from course)  
+    </select>
+	
+	
+	
+	
 </mapper>
