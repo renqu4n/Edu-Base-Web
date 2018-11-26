@@ -128,7 +128,7 @@ export default {
     margin: 0;
 }
     .body {
-        height:2265px;
+        height:1765px;
         width: 100%;
         min-width: 1903px;
     }

@@ -6,7 +6,11 @@
                     <p>从0到1的蜕变</p>
                     <span>在这里，你不止学到知识</span>
       </div>
-      <div class="webResPage">
+      <!-- 视频遮罩层 -->
+      <div class="mediaPage" v-if="mediaFlag" z-index=2>
+
+      </div>
+      <div class="webResPage" z-index=1>
         <div class="webTitle">
           <p>web前端课程</p>
           <div>
@@ -15,20 +19,20 @@
           <p>The front course</p>
         </div>
         <div class="webMedia">
-          <div class="videoPage" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+          <div class="videoPage" ref="videoPage" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);" >
             <div class="videoItem" v-for="item of webCourseList" :key="item.id">
               <div class="videoImg">
                 <img :src="item.courseImg" alt="">
               </div>
-              <a href="">
-                <div class="videoInfo">
+              <!-- <a href=""> -->
+                <div class="videoInfo"  @click="openOl(item)">
                   <p>【{{item.courseName}}】</p>
                   <div>
                     <span>{{item.courseInfo}}</span>
                     <img :src="item.coursePrice" alt="">
                   </div>
                 </div>
-              </a>
+              <!-- </a> -->
             </div>
           </div>
         </div>
@@ -53,7 +57,7 @@
                 <img :src="item.javaExerciseImg" alt="">
               </div>
               <div class="javaItemInfo">
-                <a href="">
+                <a href="#" alt="这里跳转到做测试的网页">
                   <p>{{item.javaExerciseName}}</p>
                   <div class="javaItemIntro">
                     <span>{{item.javaExerciseInfo}}</span>
@@ -82,17 +86,36 @@
               <div class="item-wx-photo"></div>
               <div class="item-wx-qrcode"></div>
               <div class="item-wx-detail">
-                <!-- <div>帮你量身定制课程</div>
-                <div>掌握高新技术</div> -->as
+                <div>帮你量身定制课程</div>
+                <div>掌握高新技术</div>
               </div>
             </div>
-            <p>微信</p>
+            <p class="wayTitle">WE CHAT</p>
           </div>
           <div class="contactWayItem">
-            <div class="item-wrapper"></div>
+            <div class="item-wrapper">
+              <div class="item-phone-photo"></div>
+              <div class="item-phone-phoneNumber">
+                <p class="numberP">15285776466</p>
+              </div>
+              <div class="item-phone-detail">
+                <div>倾听你的需求</div>
+                <div>帮你成为更好的自己</div>
+              </div>
+            </div>
+            <P class="wayTitle">Phone</P>
           </div>
           <div class="contactWayItem">
-            <div class="item-wrapper"></div>
+            <div class="item-wrapper">
+              <div class="item-qq-photo"></div>
+              <div class="item-qq-online">
+                <a class="item-qq-a" href="http://wpa.qq.com/msgrd?v=3&amp;uin=124797531&amp;site=qq&amp;menu=yes"></a>
+              </div>
+              <div class="item-qq-detail">
+                <div>来听听老师怎么说</div>
+              </div>
+            </div>
+            <p class="wayTitle">QQ</p>
           </div>
         </div>
       </div>
@@ -125,35 +148,35 @@ export default {
           'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
           'courseName': '淘宝商城项目课',
           'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E4%BB%98%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
+          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
         },
         {
           'id': 3,
           'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
           'courseName': '淘宝商城项目课',
           'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E4%BB%98%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
+          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
         },
         {
           'id': 4,
           'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
           'courseName': '淘宝商城项目课',
           'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E4%BB%98%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
+          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
         },
         {
           'id': 5,
           'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
           'courseName': '淘宝商城项目课',
           'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E4%BB%98%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
+          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
         },
         {
           'id': 6,
           'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
           'courseName': '淘宝商城项目课',
           'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E4%BB%98%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
+          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
         },
         {
           'id': 7,
@@ -213,7 +236,13 @@ export default {
           'javaExerciseInfo': '知己知彼，百战不殆',
           'javaExerciseStar': 4
         }
-      ]
+      ],
+      mediaFlag: false
+    }
+  },
+  methods: {
+    openOl (item) {
+      this.mediaFlag = true
     }
   }
 }
@@ -231,9 +260,10 @@ border: 0;
 }
 p {
 margin: 0 0 10px;
+
 }
  .body {
-        height:3865px;
+        height:3565px;
         width: 100%;
         min-width: 1903px;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -258,6 +288,16 @@ margin: 0 0 10px;
                 height: 2px;
                 background: #be926f;
             }
+            /* 遮罩层样式 */
+        .mediaPage {
+          margin-top: 200px;
+          width: 100%;
+          height: 900px;
+          position: absolute;
+          background: rgba(0, 0, 0, 1);
+          opacity: 1;
+          color: #fff;
+        }
         .webResPage {
           margin-top: 200px;
           width: 100%;
@@ -320,13 +360,16 @@ margin: 0 0 10px;
                     width: 4167px;
                     height: 490px;
                     padding: 5px 0;
+                    animation: imgMove 30s linear infinite both;
               }
                 .videoItem {
                   display: inline-block;
                   vertical-align: top;
                   margin-right: 36px;
                   border-radius: 10px;
-                  animation: imgMove 30s linear infinite both;
+                }
+                .videoPage:hover {
+                  animation-play-state:paused;
                 }
                 @keyframes imgMove {
                   0% {
@@ -420,13 +463,17 @@ margin: 0 0 10px;
                   position: relative;
                   padding-right: 20px;
                   width: 3000px;
+                  animation: imgMove 30s linear infinite both;
                 }
                   .javaExerciseItem {
                         margin-right: 3.16%;
                         width: 15.8%;
                         display: inline-block;
                         vertical-align: top;
-                        animation: imgMove 30s linear infinite both;
+
+                  }
+                  .javaMediaPage:hover {
+                    animation-play-state:paused;
                   }
                   @keyframes imgMove {
                   0% {
@@ -501,6 +548,12 @@ margin: 0 0 10px;
                 display: inline-block;
                 padding: 0 45px;
               }
+              .wayTitle {
+                    color: #222;
+                    font-size: 24px;
+                    text-align: center;
+                    margin-top: 20px;
+              }
                 .item-wrapper {
                   width: 333px;
                   height: 480px;
@@ -516,6 +569,26 @@ margin: 0 0 10px;
                     background-size: contain;
                     height: 56px;
                   }
+                  .item-phone-photo {
+                    position: relative;
+                    top: 96px;
+                    width: 100%;
+                    background: url(http://p6alxlphh.bkt.clouddn.com/phone.png);
+                    background-repeat: no-repeat;
+                    background-position-x: 50%;
+                    background-size: contain;
+                    height: 56px;
+                  }
+                  .item-qq-photo {
+                    position: relative;
+                    top: 96px;
+                    width: 100%;
+                    background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1567381953,3687108361&fm=27&gp=0.jpg);
+                    background-repeat: no-repeat;
+                    background-position-x: 50%;
+                    background-size: contain;
+                    height: 56px;
+                  }
                   .item-wx-qrcode {
                     background: url("../../../assets/qr.jpg") no-repeat 50% 0 / contain;
                     width: 100%;
@@ -523,12 +596,47 @@ margin: 0 0 10px;
                     position: relative;
                     top: 135px;
                   }
+                  .item-phone-phoneNumber {
+                    position: relative;
+                    top: 185px;
+                    width: 100%;
+                    color: #666;
+                  }
+                  .item-qq-a {
+                        background: url(http://p6alxlphh.bkt.clouddn.com/link-teacher.png) no-repeat 50% 0 / contain;
+                        display: block;
+                        width: 100%;
+                        height: 33px;
+                        position: relative;
+                        top: 195px;
+                  }
+                  .numberP {
+                      font-family: STX;
+                      margin: 0;
+                      font-size: 16px;
+                      margin-bottom: 10px;
+                      text-align: center;
+                    }
                   .item-wx-detail {
                     position: relative;
                     top: 195px;
                     text-align: center;
                     font-size: 16px;
                     color: #666;
+                  }
+                  .item-phone-detail {
+                    position: relative;
+                    text-align: center;
+                    font-size: 16px;
+                    color: #666;
+                    top: 260px;
+                  }
+                  .item-qq-detail {
+                    position: relative;
+                    text-align: center;
+                    font-size: 16px;
+                    color: #666;
+                    top: 273px;
                   }
 
 </style>
