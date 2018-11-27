@@ -7,6 +7,7 @@
                     <div class="culture">OUR CULTURE
                         <br>
                         <br>我们的介绍
+                        <br>
                         <div class="culture-intro">我们不会辜负时代赋予我们的历史性机遇，为构建技术互联的超科技世界，一往无前。在这里，愿我们拥有更多可能，也期待你们脚下有风，各自灿烂。</div>
                     </div>
                     <div class="categoris">
@@ -43,7 +44,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 * {
     margin: 0;
     padding: 0;
@@ -55,7 +56,7 @@ a {
 }
     .foot {
         height: 563px;
-        margin-top: -563px;
+        bottom: 0;
         width: 100%;
         min-width: 1300px;
         background: #222;
@@ -88,8 +89,8 @@ a {
                     .culture-intro {
                         height: 351px;
                         position: absolute;
-                        bottom: 0;
                         width: 270px;
+                        top:100px;
                     }
                 .categoris {
                     height: 100%;

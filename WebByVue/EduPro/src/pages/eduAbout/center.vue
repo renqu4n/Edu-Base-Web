@@ -109,7 +109,7 @@ img {
   vertical-align: middle;
 }
     .body {
-        height:4065px;
+        height:3565px;
         width: 100%;
         min-width: 1903px;
     }

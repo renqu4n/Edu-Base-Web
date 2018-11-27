@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<select id="selectCourse" resultType="CourseShow">
 	
-		select course_image,course_name,course_description from course_show 
+		select course_image,course_name,course_description,course_video from course_show 
 		
 	</select>
 	

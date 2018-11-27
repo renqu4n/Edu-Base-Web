@@ -4,9 +4,13 @@
     <div class="body">
       <div class="resTitle">
                     <p>从0到1的蜕变</p>
-                    <span>在XX，你只需要4个月的时间，我们承诺：达不到一线城市10w+年薪，全额退款</span>
+                    <span>在这里，你不止学到知识</span>
       </div>
-      <div class="webResPage">
+      <!-- 视频遮罩层 -->
+      <div class="mediaPage" v-if="mediaFlag" z-index=2>
+
+      </div>
+      <div class="webResPage" z-index=1>
         <div class="webTitle">
           <p>web前端课程</p>
           <div>
@@ -15,21 +19,103 @@
           <p>The front course</p>
         </div>
         <div class="webMedia">
-          <div class="videoPage" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
-            <div class="videoItem" v-for="item of courseList" :key="item.id">
+          <div class="videoPage" ref="videoPage" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);" >
+            <div class="videoItem" v-for="item of webCourseList" :key="item.id">
               <div class="videoImg">
                 <img :src="item.courseImg" alt="">
               </div>
-              <a href="">
-                <div class="videoInfo">
+              <!-- <a href=""> -->
+                <div class="videoInfo"  @click="openOl(item)">
                   <p>【{{item.courseName}}】</p>
                   <div>
                     <span>{{item.courseInfo}}</span>
                     <img :src="item.coursePrice" alt="">
                   </div>
                 </div>
-              </a>
+              <!-- </a> -->
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="javaResPage">
+        <div class="javaPort">
+          <p>COMMING SOON</p>
+          <p>更用心的筹备 只为了让你学到更优质的课程</p>
+          <p>JAVA课程</p>
+        </div>
+        <div class="webTitle" style="margin-top:118px;">
+          <p>基础练习题</p>
+          <div>
+            <img src="http://p6alxlphh.bkt.clouddn.com/hand.png">
+          </div>
+          <p>The java course</p>
+        </div>
+        <div class="javaMedia">
+          <div class="javaMediaPage" >
+            <div class="javaExerciseItem" v-for="item of javaExerciseList" :key="item.id">
+              <div class="javaItemImg">
+                <img :src="item.javaExerciseImg" alt="">
+              </div>
+              <div class="javaItemInfo">
+                <a href="#" alt="这里跳转到做测试的网页">
+                  <p>{{item.javaExerciseName}}</p>
+                  <div class="javaItemIntro">
+                    <span>{{item.javaExerciseInfo}}</span>
+                  </div>
+                  <div class="javaItemStar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="resContact">
+        <div class="contactTitle">
+                   <p>任何疑问，请联系我们</p>
+                    <p>Counseling course</p>
+                    <span></span>
+        </div>
+        <div class="contactWay">
+          <div class="contactWayItem">
+            <div class="item-wrapper">
+              <div class="item-wx-photo"></div>
+              <div class="item-wx-qrcode"></div>
+              <div class="item-wx-detail">
+                <div>帮你量身定制课程</div>
+                <div>掌握高新技术</div>
+              </div>
+            </div>
+            <p class="wayTitle">WE CHAT</p>
+          </div>
+          <div class="contactWayItem">
+            <div class="item-wrapper">
+              <div class="item-phone-photo"></div>
+              <div class="item-phone-phoneNumber">
+                <p class="numberP">15285776466</p>
+              </div>
+              <div class="item-phone-detail">
+                <div>倾听你的需求</div>
+                <div>帮你成为更好的自己</div>
+              </div>
+            </div>
+            <P class="wayTitle">Phone</P>
+          </div>
+          <div class="contactWayItem">
+            <div class="item-wrapper">
+              <div class="item-qq-photo"></div>
+              <div class="item-qq-online">
+                <a class="item-qq-a" href="http://wpa.qq.com/msgrd?v=3&amp;uin=124797531&amp;site=qq&amp;menu=yes"></a>
+              </div>
+              <div class="item-qq-detail">
+                <div>来听听老师怎么说</div>
+              </div>
+            </div>
+            <p class="wayTitle">QQ</p>
           </div>
         </div>
       </div>
@@ -49,7 +135,7 @@ export default {
   },
   data () {
     return {
-      courseList: [
+      webCourseList: [
         {
           'id': 1,
           'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
@@ -62,35 +148,35 @@ export default {
           'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
           'courseName': '淘宝商城项目课',
           'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E4%BB%98%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
+          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
         },
         {
           'id': 3,
           'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
           'courseName': '淘宝商城项目课',
           'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E4%BB%98%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
+          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
         },
         {
           'id': 4,
           'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
           'courseName': '淘宝商城项目课',
           'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E4%BB%98%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
+          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
         },
         {
           'id': 5,
           'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
           'courseName': '淘宝商城项目课',
           'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E4%BB%98%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
+          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
         },
         {
           'id': 6,
           'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
           'courseName': '淘宝商城项目课',
           'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E4%BB%98%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
+          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
         },
         {
           'id': 7,
@@ -99,13 +185,70 @@ export default {
           'courseInfo': '淘宝商城项目实战',
           'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E4%BB%98%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
         }
-      ]
+      ],
+      javaExerciseList: [
+        {
+          'id': 1,
+          'javaExerciseName': 'XX教育 入学必测',
+          'javaExerciseImg': 'http://p6alxlphh.bkt.clouddn.com/T1.png',
+          'javaExerciseInfo': '知己知彼，百战不殆',
+          'javaExerciseStar': 4
+        },
+        {
+          'id': 2,
+          'javaExerciseName': 'XX教育 入学必测',
+          'javaExerciseImg': 'http://p6alxlphh.bkt.clouddn.com/T1.png',
+          'javaExerciseInfo': '知己知彼，百战不殆',
+          'javaExerciseStarr': 4
+        },
+        {
+          'id': 3,
+          'javaExerciseName': 'XX教育 入学必测',
+          'javaExerciseImg': 'http://p6alxlphh.bkt.clouddn.com/T1.png',
+          'javaExerciseInfo': '知己知彼，百战不殆',
+          'javaExerciseStar': 4
+        },
+        {
+          'id': 4,
+          'javaExerciseName': 'XX教育 入学必测',
+          'javaExerciseImg': 'http://p6alxlphh.bkt.clouddn.com/T1.png',
+          'javaExerciseInfo': '知己知彼，百战不殆',
+          'javaExerciseStar': 4
+        },
+        {
+          'id': 5,
+          'javaExerciseName': 'XX教育 入学必测',
+          'javaExerciseImg': 'http://p6alxlphh.bkt.clouddn.com/T1.png',
+          'javaExerciseInfo': '知己知彼，百战不殆',
+          'javaExerciseStar': 4
+        },
+        {
+          'id': 6,
+          'javaExerciseName': 'XX教育 入学必测',
+          'javaExerciseImg': 'http://p6alxlphh.bkt.clouddn.com/T1.png',
+          'javaExerciseInfo': '知己知彼，百战不殆',
+          'javaExerciseStar': 4
+        },
+        {
+          'id': 7,
+          'javaExerciseName': 'XX教育 入学必测',
+          'javaExerciseImg': 'http://p6alxlphh.bkt.clouddn.com/T1.png',
+          'javaExerciseInfo': '知己知彼，百战不殆',
+          'javaExerciseStar': 4
+        }
+      ],
+      mediaFlag: false
+    }
+  },
+  methods: {
+    openOl (item) {
+      this.mediaFlag = true
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
 * {
   padding: 0;
   margin: 0;
@@ -115,8 +258,12 @@ img {
 vertical-align:middle;
 border: 0;
 }
+p {
+margin: 0 0 10px;
+
+}
  .body {
-        height:2265px;
+        height:3565px;
         width: 100%;
         min-width: 1903px;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -141,8 +288,18 @@ border: 0;
                 height: 2px;
                 background: #be926f;
             }
+            /* 遮罩层样式 */
+        .mediaPage {
+          margin-top: 200px;
+          width: 100%;
+          height: 900px;
+          position: absolute;
+          background: rgba(0, 0, 0, 1);
+          opacity: 1;
+          color: #fff;
+        }
         .webResPage {
-          margin-top: 100px;
+          margin-top: 200px;
           width: 100%;
           height: 700px;
         }
@@ -203,13 +360,16 @@ border: 0;
                     width: 4167px;
                     height: 490px;
                     padding: 5px 0;
+                    animation: imgMove 30s linear infinite both;
               }
                 .videoItem {
                   display: inline-block;
                   vertical-align: top;
                   margin-right: 36px;
                   border-radius: 10px;
-                  animation: imgMove 30s linear infinite both;
+                }
+                .videoPage:hover {
+                  animation-play-state:paused;
                 }
                 @keyframes imgMove {
                   0% {
@@ -257,4 +417,226 @@ border: 0;
                           right: 0;
                           bottom: 0;
                     }
+          .javaResPage {
+            margin-top: 200px;
+            width: 100%;
+            height: 1400px;
+          }
+            .javaPort {
+              margin-top: 179px;
+              height: 334px;
+              background: url(http://p6alxlphh.bkt.clouddn.com/java-bg.png) no-repeat;
+              background-size: cover;
+              padding: 106px 0;
+              color: #fff;
+            }
+              .javaPort p {
+                z-index: 200;
+                text-align: center;
+              }
+              .javaPort p:nth-child(1) {
+                font-family: STX;
+                font-size: 18px;
+              }
+              .javaPort p:nth-child(2) {
+                font-size: 14px;
+              }
+              .javaPort p:nth-child(3) {
+                font-size: 36px;
+              }
+              .javaPage {
+                margin-top:118px;
+              }
+              .container {
+                min-width:1170px;
+              }
+              .javaMedia {
+              position: relative;
+              overflow: hidden;
+              top: 10%;
+              padding-left: 117px;
+              margin-top: 100px;
+              cursor: pointer;
+              }
+                .javaMediaPage {
+                  white-space: nowrap;
+                  position: relative;
+                  padding-right: 20px;
+                  width: 3000px;
+                  animation: imgMove 30s linear infinite both;
+                }
+                  .javaExerciseItem {
+                        margin-right: 3.16%;
+                        width: 15.8%;
+                        display: inline-block;
+                        vertical-align: top;
+
+                  }
+                  .javaMediaPage:hover {
+                    animation-play-state:paused;
+                  }
+                  @keyframes imgMove {
+                  0% {
+                      transform: translateX(-1000px);
+                  }
+                  50% {
+                      transform: translateX(-100px);
+                  }
+                  100% {
+                      transform: translateX(-1000px);
+                  }
+                }
+                    .javaItemImg {
+                          height: 430px;
+                    }
+                    .javaItemInfo {
+                          margin-top: 35px;
+                          position: relative;
+                    }
+                      .javaItemInfo p {
+                        font-size: 22px;
+                        color: #242424;
+                        text-indent: 0px
+                      }
+                        .javaItemIntro {
+                          font-family: PingFangM;
+                          font-size: 12px;
+                          color: #747474;
+                        }
+                        .javaItemStar {
+                          display: inline-block;
+                          position: absolute;
+                          bottom: 4px;
+                          right: 0;
+                          height: 20px;
+                        }
+                          .javaItemStar span {
+                            background: url(http://p6alxlphh.bkt.clouddn.com/star.png);
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            background-size: contain;
+                            margin-right: 5px;
+                          }
+          .resContact {
+            margin-top: 150px;
+            margin-bottom: 500px;
+          }
+            .contactTitle {
+              text-align: center
+            }
+              .contactTitle p:nth-child(1) {
+                font-size: 40px;
+                margin-bottom: 13px;
+              }
+              .contactTitle p:nth-child(2) {
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+              }
+              .contactTitle span {
+                display: block;
+                width: 20px;
+                height: 2px;
+                margin: 25px auto 0;
+                background-color: #be926f;
+              }
+            .contactWay {
+              width: 1300px;
+              margin: 52px auto 0;
+            }
+              .contactWayItem {
+                display: inline-block;
+                padding: 0 45px;
+              }
+              .wayTitle {
+                    color: #222;
+                    font-size: 24px;
+                    text-align: center;
+                    margin-top: 20px;
+              }
+                .item-wrapper {
+                  width: 333px;
+                  height: 480px;
+                  background-color: #f4f4f4;
+                }
+                  .item-wx-photo {
+                    position: relative;
+                    top: 96px;
+                    width: 100%;
+                    background: url(http://p6alxlphh.bkt.clouddn.com/wechat.png);
+                    background-repeat: no-repeat;
+                    background-position-x: 50%;
+                    background-size: contain;
+                    height: 56px;
+                  }
+                  .item-phone-photo {
+                    position: relative;
+                    top: 96px;
+                    width: 100%;
+                    background: url(http://p6alxlphh.bkt.clouddn.com/phone.png);
+                    background-repeat: no-repeat;
+                    background-position-x: 50%;
+                    background-size: contain;
+                    height: 56px;
+                  }
+                  .item-qq-photo {
+                    position: relative;
+                    top: 96px;
+                    width: 100%;
+                    background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1567381953,3687108361&fm=27&gp=0.jpg);
+                    background-repeat: no-repeat;
+                    background-position-x: 50%;
+                    background-size: contain;
+                    height: 56px;
+                  }
+                  .item-wx-qrcode {
+                    background: url("../../../assets/qr.jpg") no-repeat 50% 0 / contain;
+                    width: 100%;
+                    height: 100px;
+                    position: relative;
+                    top: 135px;
+                  }
+                  .item-phone-phoneNumber {
+                    position: relative;
+                    top: 185px;
+                    width: 100%;
+                    color: #666;
+                  }
+                  .item-qq-a {
+                        background: url(http://p6alxlphh.bkt.clouddn.com/link-teacher.png) no-repeat 50% 0 / contain;
+                        display: block;
+                        width: 100%;
+                        height: 33px;
+                        position: relative;
+                        top: 195px;
+                  }
+                  .numberP {
+                      font-family: STX;
+                      margin: 0;
+                      font-size: 16px;
+                      margin-bottom: 10px;
+                      text-align: center;
+                    }
+                  .item-wx-detail {
+                    position: relative;
+                    top: 195px;
+                    text-align: center;
+                    font-size: 16px;
+                    color: #666;
+                  }
+                  .item-phone-detail {
+                    position: relative;
+                    text-align: center;
+                    font-size: 16px;
+                    color: #666;
+                    top: 260px;
+                  }
+                  .item-qq-detail {
+                    position: relative;
+                    text-align: center;
+                    font-size: 16px;
+                    color: #666;
+                    top: 273px;
+                  }
+
 </style>

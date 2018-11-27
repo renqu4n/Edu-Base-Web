@@ -5,18 +5,20 @@ public class CourseShow {
 	private String course_image;
 	private String course_name;
 	private String course_description;
+	private String course_video;
 	
 	public CourseShow() {
 		super();
 	}
 	
 	public CourseShow(int course_id, String course_image, String course_name,
-			String course_description) {
+			String course_description, String course_video) {
 		super();
 		this.course_id = course_id;
 		this.course_image = course_image;
 		this.course_name = course_name;
 		this.course_description = course_description;
+		this.course_video = course_video;
 	}
 
 	public int getCourse_id() {
@@ -43,15 +45,23 @@ public class CourseShow {
 	public void setCourse_description(String course_description) {
 		this.course_description = course_description;
 	}
+	
+
+	public String getCourse_video() {
+		return course_video;
+	}
+
+	public void setCourse_video(String course_video) {
+		this.course_video = course_video;
+	}
 
 	@Override
 	public String toString() {
 		return "CourseShow [course_id=" + course_id + ", course_image="
 				+ course_image + ", course_name=" + course_name
-				+ ", course_description=" + course_description + "]";
+				+ ", course_description=" + course_description
+				+ ", course_video=" + course_video + "]";
 	}
-	
-	
-	
+
 
 }

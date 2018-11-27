@@ -105,7 +105,7 @@ export default {
   margin: 0;
 }
 .body {
-  height:3795px;
+  height:3095px;
   width: 100%;
 }
 .heartPage {

@@ -85,7 +85,7 @@ export default {
     /* list-style-image: url(../../assets/news-li.png); */
 }
     .body {
-        height:2165px;
+        height:1665px;
         width: 100%;
     }
         .newsPage {
