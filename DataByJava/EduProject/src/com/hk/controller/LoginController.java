@@ -1,6 +1,7 @@
 package com.hk.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -11,15 +12,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.hk.bean.Url;
 import com.hk.bean.User;
 import com.hk.service.LoginService;
+import com.hk.service.UrlService;
 
 
 @Controller
 public class LoginController{
 	@Autowired
 	private LoginService service;
-	
+	@Autowired
+	private UrlService Urlservice;
 	
 
 
@@ -73,9 +77,16 @@ public class LoginController{
 		System.out.println(users);
 		if (users!=null) {
 			System.out.println("用户登陆成功");
-			System.out.println(users);
+			
 			System.out.println(users.getRole_id());
-			session.setAttribute("users", users); 
+			List<Url> allurl = Urlservice.showAll();
+			users.getRole_id();
+			users.setUrls(Urlservice.selByRid(users.getRole_id()));
+			session.setAttribute("allurl",allurl);
+			session.setAttribute("user", users);
+			System.out.println(users);
+			System.out.println(allurl);
+			
 			//request.getRequestDispatcher("/WEB-INF/jsp/back_manager.jsp").forward(request, response);
 			int   rid=users.getRole_id();
 			if (rid==1||rid==4) {
