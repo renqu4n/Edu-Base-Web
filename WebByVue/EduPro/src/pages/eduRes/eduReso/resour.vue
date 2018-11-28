@@ -6,10 +6,6 @@
                     <p>从0到1的蜕变</p>
                     <span>在这里，你不止学到知识</span>
       </div>
-      <!-- 视频遮罩层 -->
-      <div class="mediaPage" v-if="mediaFlag" z-index=2>
-
-      </div>
       <div class="webResPage" z-index=1>
         <div class="webTitle">
           <p>web前端课程</p>
@@ -24,15 +20,17 @@
               <div class="videoImg">
                 <img :src="item.courseImg" alt="">
               </div>
-              <!-- <a href=""> -->
-                <div class="videoInfo"  @click="openOl(item)">
+              <!-- <router-link to="/eduRes/eduReso/eduVideo"> -->
+              <a href="#" @click="toVideo(item.id)">
+                <div class="videoInfo" >
                   <p>【{{item.courseName}}】</p>
                   <div>
                     <span>{{item.courseInfo}}</span>
                     <img :src="item.coursePrice" alt="">
                   </div>
                 </div>
-              <!-- </a> -->
+              </a>
+              <!-- </router-link> -->
             </div>
           </div>
         </div>
@@ -236,13 +234,13 @@ export default {
           'javaExerciseInfo': '知己知彼，百战不殆',
           'javaExerciseStar': 4
         }
-      ],
-      mediaFlag: false
+      ]
     }
   },
   methods: {
-    openOl (item) {
-      this.mediaFlag = true
+    toVideo (id) {
+      alert(id)
+      this.$router.push({path: `/eduRes/eduReso/eduVideo/${id}`})
     }
   }
 }
@@ -288,16 +286,6 @@ margin: 0 0 10px;
                 height: 2px;
                 background: #be926f;
             }
-            /* 遮罩层样式 */
-        .mediaPage {
-          margin-top: 200px;
-          width: 100%;
-          height: 900px;
-          position: absolute;
-          background: rgba(0, 0, 0, 1);
-          opacity: 1;
-          color: #fff;
-        }
         .webResPage {
           margin-top: 200px;
           width: 100%;

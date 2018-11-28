@@ -22,10 +22,10 @@ public class filter implements Filter {
 			FilterChain fchain) throws IOException, ServletException {
 		requset.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
-		response.setContentType("text/html;charSet=utf-8");
-		// ¹ıÂËµÄÄÚÈİ
+		response.setContentType("text/html;charset=utf-8");
+		// ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½
 		fchain.doFilter(requset, response);
-		//Íê³É¶ÔÇëÇóºÍÏìÓ¦µÄ¹ıÂË
+		//ï¿½ï¿½É¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä¹ï¿½ï¿½ï¿½
 
 	}
 

@@ -17,7 +17,7 @@
             </div>
           </li>
           <router-link to="/eduHeart"><li class="header-li"><a><span>学员心声</span></a></li></router-link>
-          <li class="header-li"><a><span>登录</span></a></li>
+          <li class="header-li"><a href="api/login.html"><span>登录</span></a></li>
         </ul>
 
       </div>

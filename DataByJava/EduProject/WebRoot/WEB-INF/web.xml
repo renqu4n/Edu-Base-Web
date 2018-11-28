@@ -14,12 +14,12 @@
   
   <servlet>
   
-  <!--  注册中央处理器  -->
+ 
   	<servlet-name>springmvc</servlet-name>
   	<servlet-class>
   		org.springframework.web.servlet.DispatcherServlet
   	</servlet-class>
-  	<!-- 服务器启动时，就会创建Servlet  -->
+ 
   
   	
   		<init-param>
@@ -32,15 +32,9 @@
   <servlet-mapping>
   	<servlet-name>springmvc</servlet-name>
   	
-  	<!--
-  		让中央处理器拦截所有请求,中央处理器会将请求最终传入到Controller
-  		URL的写法有两种
-  			1. / , 会导致静态资源，无法访问
-  			2. *.do  *.action 
-  			/xxxx/xx/x.do	
-  	  -->
+  	
   	 <url-pattern>*.do</url-pattern>
-  	<!-- <url-pattern>/</url-pattern> -->
+  
   </servlet-mapping>
   
   
@@ -77,7 +71,7 @@
   </filter-mapping>
   
   
-  <!-- 配置session 有效时间，单位是分钟 ，连续30分钟不使用session就会销毁 -->
+  
   <session-config>
   	<session-timeout>30</session-timeout>
   </session-config>		

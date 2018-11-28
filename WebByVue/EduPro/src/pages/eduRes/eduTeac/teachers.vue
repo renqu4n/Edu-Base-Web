@@ -107,9 +107,22 @@ export default {
     },
     getY () {
       return Math.random() * 30
+    },
+    handleTeacherData () {
+      this.$axios.get('api/teacher/teacherShow.do').then(this.handleData)
+    },
+    handleData (res) {
+      if (res.status === 200) {
+        res = res.data
+        console.log(res)
+      } else {
+        alert('请求失败，即将跳转到刚才的页面')
+        this.$router.go('/')
+      }
     }
   },
   mounted: function () {
+    this.handleTeacherData()
     var teacherP = document.getElementsByClassName('teacher')
     for (let i = 0; i < teacherP.length; i++) {
       teacherP[i].addEventListener('mouseover', () => {

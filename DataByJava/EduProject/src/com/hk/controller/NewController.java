@@ -35,7 +35,7 @@ public class NewController {
 		
 		List<News> news = service.findNew();
 		String   newsjson = Json.toJSONString(news);
-		System.out.println(news);
+		System.out.println(newsjson);
 
 		return newsjson;
 	}

@@ -20,7 +20,6 @@ public class TeacherShowController {
 	private TeacherShowService teaservice;
 	
 	@RequestMapping("teacherShow.do")
-	@ResponseBody
 	public Object teacherShowList(){
 		//调用service的方法
 		List<TeacherShow> teaShowList = teaservice.findTeacherShow();

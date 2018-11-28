@@ -1,30 +1,28 @@
 <template>
-     <div class="wrapper" >
-         <!-- 遮罩层 -->
-        <div class="rebox" v-if="flag" style="z-index:2">
-            <button @click="closeOl">X</button>
-            <img :src="studentObj.stuImgUrl" alt="" class="picOl">
-            <p class="titleOl">{{studentObj.name}}</p>
-            <p class="schoolOl">{{studentObj.school}}</p>
-            <p class="companyOl">就职公司：{{studentObj.company}}</p>
-            <p class="priceOl">{{studentObj.price}}</p>
-        </div>
-        <!-- 正常显示层 -->
-        <div class="titleStu">
-            <p>优秀学员俱乐部</p>
-            <span>部分xx-xxW年薪学员</span>
-        </div>
-        <div class="picStu">
-            <ul class="picTable" >
-                <li v-for="item of stuList" ref="student" :key="item.id"  >
-                    <a href=""></a>
-                    <img :src="item.stuImgUrl" alt="" @click="openOl(item)">
-                </li>
-            </ul>
-        </div>
-
+  <div class="wrapper" >
+      <!-- 遮罩层 -->
+    <div class="rebox" v-if="flag" style="z-index:2">
+        <button @click="closeOl">X</button>
+        <img :src="studentObj.stuImgUrl" alt="" class="picOl">
+        <p class="titleOl">{{studentObj.name}}</p>
+        <p class="schoolOl">{{studentObj.school}}</p>
+        <p class="companyOl">就职公司：{{studentObj.company}}</p>
+        <p class="priceOl">{{studentObj.price}}</p>
     </div>
-
+    <!-- 正常显示层 -->
+    <div class="titleStu">
+        <p>优秀学员俱乐部</p>
+        <span>部分xx-xxW年薪学员</span>
+    </div>
+    <div class="picStu">
+        <ul class="picTable" >
+            <li v-for="item of stuList" ref="student" :key="item.id"  >
+                <a href=""></a>
+                <img :src="item.stuImgUrl" alt="" @click="openOl(item)">
+            </li>
+        </ul>
+    </div>
+  </div>
 </template>
 
 <script>

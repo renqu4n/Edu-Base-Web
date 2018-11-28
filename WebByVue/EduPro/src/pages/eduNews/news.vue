@@ -16,18 +16,20 @@
 
                     </div>
                     <ul>
-                        <router-link to="/eduNews/eduNewsDetail"><li v-for="item of newsList" :key="item.id">
-                            <a href="#" title="新闻名称">
-                            <span>{{item.content}}</span>
-                            <span style="position:absolute;right:0">{{item.time}}</span>
+                        <!-- <router-link to="/eduNews/eduNewsDetail/1"> -->
+                        <li v-for="item of newsList" :key="item.id">
+                            <a href="#" title="新闻名称" @click="toDetail(item.id)">
+                            <span>{{item.new_title}}</span>
+                            <span style="position:absolute;right:0">{{item.release_time}}</span>
                             </a>
-                        </li></router-link>
+                        </li>
+                        <!-- </router-link> -->
                     </ul>
-                    <div class="newsMenu">
+                    <div class="newsMenu" v-if="newsCount">
                         <span class="newsIndex">1</span>
                         <router-link to="/eduNews2"><a href="newsSecond" title="第二页">2</a></router-link>
-                        <router-link to="/eduNews2"><a href="" title="下一页">下一页</a></router-link>
-                        <router-link to="/eduNews2"><a href="" title="最后一页">最后</a></router-link>
+                        <router-link to="/eduNews2"><a href="newsSecond" title="下一页">下一页</a></router-link>
+                        <router-link to="/eduNews2"><a href="newsSecond" title="最后一页">最后</a></router-link>
                     </div>
                 </div>
             </div>
@@ -45,7 +47,8 @@ export default {
   name: 'eduNews',
   data () {
     return {
-      newsList: []
+      newsList: [],
+      newsCount: false
     }
   },
   components: {
@@ -55,20 +58,26 @@ export default {
   },
   methods: {
     getData () {
-      this.$axios.get('api/examples/news.txt').then(this.handleData)
+      this.$axios.get('api/getNew.do').then(this.handleData)
     },
     handleData (res) {
       if (res.status === 200) {
         res = res.data
+        if (res.length > 10) {
+          this.newsCount = true
+        }
         for (let i in res) {
-          if (i <= 14) {
-            this.newsList.push(res[i])
-          }
+          this.newsList.push(res[i])
         }
       } else {
         alert('请求失败，即将跳转到刚才的页面')
         this.$router.go('/eduNews')
       }
+    },
+    toDetail (id) {
+      // 传入点击的列表id到下一个页面
+      alert(id)
+      this.$router.push({path: `/eduNews/eduNewsDetail/${id}`})
     }
   },
   mounted () {

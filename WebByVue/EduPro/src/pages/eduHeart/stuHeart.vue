@@ -41,8 +41,9 @@
           </form>
         </div>
       </div>
+      <foot></foot>
     </div>
-    <foot></foot>
+
     </div>
 </template>
 
@@ -131,7 +132,8 @@ export default {
   margin: 0;
 }
 .body {
-  height:3095px;
+  position: relative;
+  /* height:3095px; */
   width: 100%;
 }
 .heartPage {

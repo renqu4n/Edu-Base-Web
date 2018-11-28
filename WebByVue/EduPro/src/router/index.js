@@ -7,6 +7,7 @@ import edunewsdetail from '@/pages/eduNews/newsDetail/newsDetail'
 import eduabout from '@/pages/eduAbout/center'
 import eduteac from '@/pages/eduRes/eduTeac/teachers'
 import edureso from '@/pages/eduRes/eduReso/resour'
+import eduresovideo from '@/pages/eduRes/eduReso/video/videoDetail'
 import eduheart from '@/pages/eduHeart/stuHeart'
 import eduheartsecond from '@/pages/eduHeart/stuHeartSecond'
 import error from '@/pages/error/error'
@@ -32,7 +33,7 @@ export default new Router({
       component: edunews2
     },
     {
-      path: '/eduNews/eduNewsDetail',
+      path: '/eduNews/eduNewsDetail/:newsId',
       name: 'eduNewsDetail',
       component: edunewsdetail
     },
@@ -52,6 +53,11 @@ export default new Router({
       path: '/eduRes/eduReso',
       name: 'eduReso',
       component: edureso
+    },
+    {
+      path: '/eduRes/eduReso/eduVideo/:videoId',
+      name: 'eduResoVideo',
+      component: eduresovideo
     },
     // 学员心声router
     {

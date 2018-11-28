@@ -49,6 +49,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        <input type="submit" value="提交" name="submit">
     </form>
     
-    <a href="jump.do?target=teacherShow">查看老师信息</a>
+    <a href="jump.do?target=teacherShow.do">查看老师信息</a>
   </body>
 </html>
