@@ -14,4 +14,7 @@
 <fullyQualifiedTypeName name="com.hk.bean.CourseShow"/>
 <fullyQualifiedTypeName name="com.hk.service.CourseShowService"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="com.hk.tools.Json"/>
 </qualifiedTypeNameHistroy>

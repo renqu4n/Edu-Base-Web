@@ -14,12 +14,11 @@ import com.hk.tools.Json;
 
 
 @Controller
-@RequestMapping("StudentThink")
 public class StudentThinkController {
 	@Autowired
      private StudentThinkService service;
 	
-	@RequestMapping(value="/getStudentThink.do")
+	@RequestMapping(value="/getStudentThink.do",produces="text/json;charset=UTF-8")
 	@ResponseBody
 	public String getStudentThink(){
 		List<StudentsThink> studentsThink= service.findStudent();

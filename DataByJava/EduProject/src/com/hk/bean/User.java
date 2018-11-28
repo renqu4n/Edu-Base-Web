@@ -1,5 +1,7 @@
 package com.hk.bean;
 
+import java.util.List;
+
 public class User {
 	private int id;
 	private String user_name;
@@ -7,6 +9,21 @@ public class User {
 	private String user_email;
 	private String user_think;
 	private int role_id;
+	private List<Url> urls;
+	
+	
+	
+	
+	
+	public List<Url> getUrls() {
+		return urls;
+	}
+	public void setUrls(List<Url> urls) {
+		this.urls = urls;
+	}
+	
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -50,6 +67,7 @@ public class User {
 				+ user_email + ", user_think=" + user_think + ", role_id="
 				+ role_id + "]";
 	}
+
 	
 	
 	

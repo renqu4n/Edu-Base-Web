@@ -1,7 +1,7 @@
 package com.hk.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.hk.bean.News;
 import com.hk.bean.Page;
-import com.hk.bean.User;
 import com.hk.service.NewService;
 import com.hk.tools.Json;
 
@@ -29,11 +28,16 @@ public class NewController {
 	private NewService service;
 	
 //	当使用注解方式的时候，是一个URL对应一个方法，方法可以自定义
-	@RequestMapping(value="/getNew.do")
+	@RequestMapping(value="/getNew.do",produces = "text/html;charset=UTF-8")
 	@ResponseBody
-	public String getNew() {
+	public String getNew(HttpServletRequest request,HttpServletResponse response) {
 		
 		List<News> news = service.findNew();
+		
+		response.setCharacterEncoding("utf-8");
+        response.setContentType("text/html");
+		
+		
 		String   newsjson = Json.toJSONString(news);
 		System.out.println(newsjson);
 
