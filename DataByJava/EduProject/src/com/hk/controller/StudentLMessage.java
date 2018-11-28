@@ -23,7 +23,7 @@ public class StudentLMessage{
 	@Autowired
     private StudentThinkService service;
 	
-	@RequestMapping(value="/insertMessage.do")
+	@RequestMapping(value="/insertMessage.do",produces="text/json;charset=UTF-8")
 	public String insertMessage(HttpServletRequest request, HttpServletResponse response) throws Exception{
 
 		String message=request.getParameter("input");
