@@ -21,11 +21,11 @@ public class CourseShowController {
     
 	@RequestMapping("courseshow.do")
 	@ResponseBody
-    public Object courseShowList(){
+    public String getCourseShowList(){
     	List<CourseShow> coShowList = coservice.findCourseShow();
     	System.out.println(coShowList);
-    	String   coShowLists = Json.toJSONString(coShowList);
-		return coShowLists;
+    	String   coShowJson = Json.toJSONString(coShowList);
+		return coShowJson;
 		
 		
 	}
