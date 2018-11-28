@@ -48,7 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        <input type="text" placeholder="请输入你的留言" name="input">
        <input type="submit" value="提交" name="submit">
     </form>
-    
+    <a href="index.html">跳转到主页</a>
     <a href="jump.do?target=teacherShow">查看老师信息</a>
     <a href="jump.do?target=courseShow">查看课程信息</a>
   </body>

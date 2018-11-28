@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dao.UrlDao">
+	
+
+	
+	
+	
+	<select id="selByRid" resultType="Url">
+		select * from url where id in (select uid from role_url where rid=#{0})
+	</select>
+	
+	
+	
+	<select id="showAll" resultType="Url">
+		select * from url
+	</select>
+	
+
+</mapper>
