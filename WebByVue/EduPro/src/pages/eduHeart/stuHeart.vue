@@ -16,7 +16,7 @@
               <div class="heartUser">
                 <a href="">
                   <img src="http://tx.tianyaui.com/logo/small/132409785" alt="">
-                  <span>{{item.student_name}}</span>
+                  <span>{{item.user_name}}</span>
                 </a>
                 &nbsp;{{item.data}}
               </div>
@@ -87,6 +87,7 @@ export default {
     this.handleMessage()
     var myDate = new Date()
     this.time = myDate.toLocaleDateString()
+    this.subDate()
   },
   methods: {
     handleMessage () {
@@ -108,12 +109,19 @@ export default {
         if (res.length > 15) {
           this.messageFlag = true
         }
-        // for (let i in res) {
-        //   this.heartInfo.push(res[i])
-        // }
+        for (let i in res) {
+          for (let j in JSON.parse(res[i].json)) {
+            this.heartInfo.push(JSON.parse(res[i].json)[j])
+          }
+        }
       } else {
         alert('请求失败，即将跳转到刚才的页面')
         this.$router.go('/')
+      }
+    },
+    subDate () {
+      for (let i = 0; i < this.heartInfo.length; i++) {
+        this.heartInfo[i].data = this.heartInfo[i].data.substr(0, this.heartInfo[i].length - 2)
       }
     }
     // 发送POST请求
