@@ -33,10 +33,12 @@ public class StudentThinkController {
 	    User user=(User) request.getSession().getAttribute("user");
 	    System.out.println( user.getUser_name());
 	    Map<String, String> map=new HashMap<String, String>();
+	    System.out.println(studentsThink);
 	    map.put("json", studentsJson);
-	    map.put("student_name","user.getUser_name()" );
+	    map.put("student_name",user.getUser_name());
 	    //System.out.println(studentsJson);
 	    String mapjson=Json.toJSONString(map);
+	    System.out.println(mapjson);
 		return mapjson;
 		
 	}
