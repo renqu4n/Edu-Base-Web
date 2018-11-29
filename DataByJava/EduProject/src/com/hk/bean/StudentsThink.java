@@ -8,13 +8,7 @@ public class StudentsThink {
   private String user_name;
   private String message_content;
   private String data;
-  private String student_name;
-public String getStudent_name() {
-	return student_name;
-}
-public void setStudent_name(String student_name) {
-	this.student_name = student_name;
-}
+
 public String getData() {
 	return data;
 }

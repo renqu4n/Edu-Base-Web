@@ -45,8 +45,9 @@ public class StudentLMessage{
 		       // System.out.println(sdf.format(date));
 			   	stk.setData(sdf.format(date));//留言时间
 			   	
+			   	
 			   	//System.out.println(user.getUser_name());
-				stk.setStudent_name(user.getUser_name());//留言学生名字
+				//stk.setStudent_name(user.getUser_name());//留言学生名字
 					
 			   	boolean b=service.insertmessage(stk);
 			   	request.setAttribute("isSuccess", b);//插入成功是否的提示 ，需要返回前端
