@@ -1,6 +1,13 @@
-<!DOCTYPE HTML>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+<base href="<%=basePath%>">
 <title>找回账户页面</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -14,7 +21,7 @@
 <script type="text/javascript">
 	function change(){
 		//切换验证码
-		document.getElementById("myimg").src="/Login/checkcode?"+new Date().getTime();
+		document.getElementById("myimg").src="/Edu-ssm/checkcode?"+new Date().getTime();
 	}
 </script>
 
@@ -177,22 +184,25 @@ pwd.onblur = function (){
 		  
 
 	</div>
-		<form name="SendEmail" method="post" action="SendEmail.do">
+		<form name="SendEmail" method="post" action="findUser.do">
 			
 			<li>
-				<input type="text" class="text" placeholder="name" name="admin"  autocomplete="off" required>
+				<input type="text" class="text" placeholder="name" name="user_name"  autocomplete="off" required>
 				
 			</li>
 			<li>
-				<input type="text" class="text" placeholder="e_mail" name="admin"  autocomplete="off" required>
+				<input type="text" class="text" placeholder="e_mail" name="user_email"  autocomplete="off" required>
 				
 			</li>
 			
 				
 			<li>
-				<input type="text"  placeholder="code" class="input" name="checkcode" autocomplete="off" required="required"> 
-				<input type="button" value="获取验证码" class="getSecurityCode" name="">
+				<input type="text"  placeholder="code" class="text" name="checkcode" autocomplete="off" required="required"> 
+				
 			</li>
+			<img id="myimg"  src="/Edu-ssm/CheckcodeServlet" style="cursor:pointer; " onclick="change();"/>
+			
+			<h3 style="color:red;">${msg }</h3>
 			
 			
 			<div class="submit">

@@ -181,6 +181,46 @@ public class UsersController {
 	
 	}
 	
+	@RequestMapping(value="/findUser.do")
+	public String findUser(HttpServletRequest request,HttpServletResponse response,User user) {
+		
+		String checkcode = request.getParameter("checkcode");
+		String checkcode_session = (String) request.getSession().getAttribute(
+				"checkcode_session");
+		
+		
+		System.out.println(checkcode_session);
+		// 删除session中验证码
+		request.getSession().removeAttribute("checkcode_session");
+
+		if (checkcode_session == null || !checkcode_session.equals(checkcode)) {
+			// 验证码无效 -- 跳回login.jsp
+			// response.sendRedirect("/Login/Session/demo/login.jsp");
+
+			// 传递错误信息给jsp
+			request.setAttribute("msg", "验证码错误");
+			return "forward:/findUser.jsp";
+		}
+		
+
+		
+		User  is = service.selectUserByEmail(user);
+		System.out.println(is);
+	if (is!=null) {
+		is.getUser_email();
+		return "forward:/SendEmail.do";
+		
+	} else {
+		request.setAttribute("msg", "不存在该用户或用户名或密码错误！");
+		
+	}
+		
+		
+		
+
+		return "findUser";
+	}
+	
 	
 	
 }

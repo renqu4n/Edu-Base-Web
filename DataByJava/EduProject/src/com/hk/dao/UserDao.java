@@ -16,4 +16,5 @@ public interface UserDao {
 	public void deleteStudent(int key);
 	public List<User> getAllTeachs(Page page);
 	public int selectTeachCount();
+	public  User selectUserByEmail(User user);
 }

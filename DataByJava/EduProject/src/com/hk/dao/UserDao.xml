@@ -55,5 +55,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         select count(id) from user where role_id = 3
     </select>
 	
+	
+	<select id="selectUserByEmail" resultType="User">
+		select * from user where  user_name= #{user_name} and user_email= #{user_email}
+	</select>
 
 </mapper>

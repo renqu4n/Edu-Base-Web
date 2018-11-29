@@ -32,7 +32,7 @@ public class UrlFilter implements Filter {
 		//js css放行  图片  
 		HttpServletRequest request=(HttpServletRequest)req;
 		String uri = request.getRequestURI();
-		if(uri.endsWith(".js")||uri.endsWith(".css")||uri.endsWith(".html")||uri.endsWith(".jpg")||uri.endsWith(".png")||uri.endsWith(".gif")||uri.endsWith(".map")||uri.endsWith(".java")||uri.endsWith(".woff")||uri.endsWith(".ttf")){
+		if(uri.endsWith(".js")||uri.endsWith(".css")||uri.endsWith(".html")||uri.endsWith(".jpg")||uri.endsWith(".png")||uri.endsWith(".gif")||uri.endsWith(".map")||uri.endsWith(".java")||uri.endsWith("CheckcodeServlet")||uri.endsWith(".woff")||uri.endsWith(".ttf")){
 			filterchain.doFilter(req, res);
 			
 		}else{
@@ -41,7 +41,7 @@ public class UrlFilter implements Filter {
 				
 			filterchain.doFilter(req, res);
 			}else{
-				if (uri.equals("/Edu-ssm/regist")||uri.equals("/Edu-ssm/regist.jsp")||uri.equals("/Edu-ssm/index.jsp")||uri.equals("/Edu-ssm/index")) {
+				if (uri.equals("/Edu-ssm/findUser")||uri.equals("/Edu-ssm/findUser.jsp")||uri.equals("/Edu-ssm/regist")||uri.equals("/Edu-ssm/regist.jsp")||uri.equals("/Edu-ssm/index.jsp")||uri.equals("/Edu-ssm/index")) {
 					filterchain.doFilter(req, res);
 				} else {
 

@@ -15,13 +15,15 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.hk.bean.User;
+
 @Controller
 public class SendEmailController {
 
 	@RequestMapping(value="/SendEmail.do")
-	public void SendEmail(HttpServletRequest request,HttpServletResponse response) throws MessagingException {
-		 
-		    
+	public void SendEmail(HttpServletRequest request,HttpServletResponse response,User user) throws MessagingException {
+			System.out.println("这是发送邮件的用户：");
+		    System.out.println(user);
 			 Properties props = new Properties();  
 		        // 开启debug调试  
 		        props.setProperty("mail.debug", "true");  
@@ -33,7 +35,7 @@ public class SendEmailController {
 		        props.setProperty("mail.transport.protocol", "smtp");  
 		        // 设置环境信息  
 		        Session session = Session.getInstance(props);  
-		          
+		        session.setDebug(true); 
 		        // 创建邮件对象  
 		        Message msg = new MimeMessage(session);  
 		        try {
@@ -51,7 +53,9 @@ public class SendEmailController {
 		        // 连接邮件服务器     xzbbrvnlsjpdbfei
 		        transport.connect("296435342@qq.com", "gxhmfkzrbrxtcafj");  
 		        // 发送邮件  
-		        transport.sendMessage(msg, new Address[] {new InternetAddress("296435342@qq.com")});  
+		        user.getUser_email();
+		        System.out.println(user.getUser_email());
+		        transport.sendMessage(msg, new Address[] {new InternetAddress(user.getUser_email())});  
 		        // 关闭连接  
 		        transport.close();  
 		    }  

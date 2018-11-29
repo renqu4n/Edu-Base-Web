@@ -82,4 +82,10 @@ public class UserServiceImpl implements UserService{
 		return dao.selectTeachCount();
 	}
 
+	@Override
+	public User selectUserByEmail(User user) {
+		// TODO Auto-generated method stub
+		return dao.selectUserByEmail(user);
+	}
+
 }
