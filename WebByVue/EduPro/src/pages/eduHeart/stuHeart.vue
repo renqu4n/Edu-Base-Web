@@ -44,11 +44,11 @@
         </div>
         <div class="message-board">
           <!-- 留言功能 -->
-          <form action="" method="">
+          <form action="insertMessage.do" method="post">
             <p>留下你的心声</p>
-            <textarea v-if="textarea1" @click="checkLogin"></textarea>
+            <textarea v-if="textarea1" name="input" @click="checkLogin"></textarea>
             <div class="textareaRebox" v-if="textarea2">
-              <a href="http://laptop-pas9esvj:8080/Edu-ssm/login.html"><div class="loginCheck">请先登录</div></a>
+              <a href="login.html"><div class="loginCheck">请先登录</div></a>
             </div>
             <p><b>当前日期</b>:<span>{{time}}</span></p>
             <p><button>提交</button></p>
@@ -90,11 +90,15 @@ export default {
   },
   methods: {
     handleMessage () {
-      this.$axios.get('api/getStudentThink.do').then(this.handleData)
+      this.$axios.get('/Edu-ssm/getStudentThink.do').then(this.handleData)
+      // this.$axios({
+      //   method: 'post',
+      //   url: '/Edu-ssm/insertMessage.do',
+      //   data: {}})
     },
     checkLogin () {
-      this.textarea1 = false
-      this.textarea2 = true
+      // this.textarea1 = false
+      // this.textarea2 = true
     },
     handleData (res) {
       if (res.status === 200) {
@@ -104,9 +108,9 @@ export default {
         if (res.length > 15) {
           this.messageFlag = true
         }
-        for (let i in res) {
-          this.heartInfo.push(res[i])
-        }
+        // for (let i in res) {
+        //   this.heartInfo.push(res[i])
+        // }
       } else {
         alert('请求失败，即将跳转到刚才的页面')
         this.$router.go('/')
@@ -144,7 +148,7 @@ export default {
             position: absolute;
             width: 100%;
             height: 1500px;
-            top: 1180px;
+            top: 1160px;
             z-index: 2;
         }
             .heartTitle {
@@ -281,7 +285,6 @@ export default {
                 line-height: 200px;
               }
             .message-board button {
-              margin-top: 30px;
               width: 80px;
               height: 60px;
               border: none;

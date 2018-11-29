@@ -30,7 +30,7 @@ public class StudentThinkController {
 		List<StudentsThink> studentsThink= service.findStudent();
 	    String studentsJson= Json.toJSONString(studentsThink);
 	    
-	    User user=(User) request.getSession().getAttribute("users");
+	    User user=(User) request.getSession().getAttribute("user");
 	    System.out.println( user.getUser_name());
 	    Map<String, String> map=new HashMap<String, String>();
 	    map.put("json", studentsJson);

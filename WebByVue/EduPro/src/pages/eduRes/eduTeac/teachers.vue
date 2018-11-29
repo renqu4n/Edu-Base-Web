@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     handleTeacherData () {
-      this.$axios.get('api/teacher/teacherShow.do').then(this.handleData)
+      this.$axios.get('/Edu-ssm/teacher/teacherShow.do').then(this.handleData)
     },
     handleData (res) {
       if (res.status === 200) {

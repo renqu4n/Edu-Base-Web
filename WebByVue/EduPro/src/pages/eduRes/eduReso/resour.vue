@@ -193,7 +193,7 @@ export default {
       this.$router.push({path: `/eduRes/eduReso/eduVideo${id}`})
     },
     handleCourse () {
-      this.$axios.get('api/coshow/courseshow.do').then(this.handleData)
+      this.$axios.get('/Edu-ssm/coshow/courseshow.do').then(this.handleData)
     },
     handleData (res) {
       if (res.status === 200) {

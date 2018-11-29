@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     getData () {
-      this.$axios.get('api/getNew.do').then(this.handleData)
+      this.$axios.get('/Edu-ssm/getNew.do').then(this.handleData)
     },
     handleData (res) {
       if (res.status === 200) {

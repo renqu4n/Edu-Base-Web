@@ -37,14 +37,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		if (user=="null"||user=="") {
 			alert("您还没有登录！！！！！！！！滚回去登陆！！");
 			return false;
-		} 
-	window.onload = function () {
-			var xhr = new XMLHttpRequest();
-            xhr.open('GET',true);
-            xhr.onload = function () {
-               if (this.status == 200) {
-               console.log(this.response);
-               }
            }
   </script>
   

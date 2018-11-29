@@ -58,10 +58,11 @@ export default {
   },
   methods: {
     getData () {
-      this.$axios.get('api/getNew.do').then(this.handleData)
+      this.$axios.get('/Edu-ssm/getNew.do').then(this.handleData)
     },
     handleData (res) {
       if (res.status === 200) {
+        console.log(res)
         res = res.data
         if (res.length > 10) {
           this.newsCount = true
@@ -82,26 +83,6 @@ export default {
   mounted () {
     this.getData()
   }
-
-//   mounted () {
-//     let url = './test.txt'
-//     this.$axios({
-//       type: 'get',
-//       url: url,
-//       dataType: 'json',
-//       success: function (data) {
-//         if (data.status === 200) {
-//           console.log(data)
-//         } else {
-//           alert('接口调用失败')
-//         }
-//       },
-//       error: function (data) {
-//         alert(JSON.stringify(data))
-//       }
-
-//     })
-//   }
 }
 </script>
 
