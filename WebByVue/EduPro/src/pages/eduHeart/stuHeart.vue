@@ -9,19 +9,30 @@
           <p>学员心声</p>
           <span>桃李不言，下自成蹊</span>
         </div>
-        <table class="heartTable" cellpadding="0" cellspacing="0">
-          <tr class="table-header">
-            <th style="width:11%">学员名字</th>
-            <th style="width:67%">内容</th>
-            <th style="width:11%">时间</th>
-          </tr>
-          <tr v-for="(item,index) of heartInfo" :key="index" class="table-info">
-            <th style="width:11%">{{item.name}}</th>
-            <th style="width:67%">{{item.content}}</th>
-            <th style="width:11%">{{item.time}}</th>
-          </tr>
-        </table>
-        <div class="heartMenu">
+        <div class="heartTable">
+          <h2>{{messageConut}}个回答</h2>
+          <div class="heartWrapper">
+            <div class="heartItem" v-for="item of heartInfo" :key="item.mid">
+              <div class="heartUser">
+                <a href="">
+                  <img src="http://tx.tianyaui.com/logo/small/132409785" alt="">
+                  <span>{{item.student_name}}</span>
+                </a>
+                &nbsp;{{item.data}}
+              </div>
+              <div class="heartContent">
+                {{item.message_content}}
+              </div>
+              <div class="heartCtr">
+                <span>
+                  <i class="heartStar"></i>
+                  <a href="">举报</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="heartMenu" v-if="messageFlag">
             <span class="heartIndex">1</span>
             <router-link to="/heartSecond"><a href="newsSecond" title="第二页">2</a></router-link>
             <router-link to="/heartSecond"><a href="newsSecond" title="下一页">下一页</a></router-link>
@@ -35,7 +46,10 @@
           <!-- 留言功能 -->
           <form action="" method="">
             <p>留下你的心声</p>
-            <textarea></textarea>
+            <textarea v-if="textarea1" @click="checkLogin"></textarea>
+            <div class="textareaRebox" v-if="textarea2">
+              <a href="http://laptop-pas9esvj:8080/Edu-ssm/login.html"><div class="loginCheck">请先登录</div></a>
+            </div>
             <p><b>当前日期</b>:<span>{{time}}</span></p>
             <p><button>提交</button></p>
           </form>
@@ -61,66 +75,57 @@ export default {
   },
   data () {
     return {
-      heartInfo: [
-        {
-          'id': 1,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 2,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 3,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 4,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 5,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 6,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 7,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 8,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 9,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }, {
-          'id': 10,
-          'name': '学员',
-          'content': '插入留言插入留言插入留言插入留言插入留言',
-          'time': '2018-11-15'
-        }],
-      time: ''
+      heartInfo: [],
+      time: '',
+      messageConut: Number,
+      messageFlag: false,
+      textarea1: true,
+      textarea2: false
     }
   },
   mounted () {
+    this.handleMessage()
     var myDate = new Date()
     this.time = myDate.toLocaleDateString()
   },
   methods: {
+    handleMessage () {
+      this.$axios.get('api/getStudentThink.do').then(this.handleData)
+    },
+    checkLogin () {
+      this.textarea1 = false
+      this.textarea2 = true
+    },
+    handleData (res) {
+      if (res.status === 200) {
+        res = res.data
+        console.log(res)
+        this.messageConut = res.length
+        if (res.length > 15) {
+          this.messageFlag = true
+        }
+        for (let i in res) {
+          this.heartInfo.push(res[i])
+        }
+      } else {
+        alert('请求失败，即将跳转到刚才的页面')
+        this.$router.go('/')
+      }
+    }
+    // 发送POST请求
+    // sendData () {
+    //   this.$axios({
+    //     method: 'post',
+    //     url: '/insertMessage.do',
+    //     data: {
+    //       'name': '张三',
+    //       'content': '这是我的心声心声啊心声啊',
+    //       'time': this.time
+    //     }
+    //   }).then((res) => {
+    //     console.log(res.data)
+    //   })
+    // }
   }
 }
 </script>
@@ -131,13 +136,14 @@ export default {
   margin: 0;
 }
 .body {
+  position: relative;
   height:3095px;
   width: 100%;
 }
 .heartPage {
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: 1500px;
             top: 1180px;
             z-index: 2;
         }
@@ -163,55 +169,79 @@ export default {
                 background: #be926f;
             }
             .heartTable {
-              height: 700px;
-              width: 1320px;
-              margin: 0 auto;
-              position: relative;
-              text-align: center;
-              border-top: 2px solid rgb(34, 34, 34);
-           }
-           .table-header {
-             height:50px;
-           }
-           .table-header>th {
-              background: #f5f5f5;
-              height: 33px;
-              line-height: 33px;
-              border:solid 1px #e2e2e2;
-           }
-           .table-info>th {
-                  border: solid 1px #e2e2e2;
-                  line-height: 24px;
-                  background: #fcfcfc;
-                  padding: 5px;
-                  font-weight: normal;
-           }
-           .heartMenu {
-                position: absolute;
-                width: 200px;
-                left: 50%;
-                margin-left: -100px;
-                margin-top: 30px;
+                  margin-bottom: 15px;
+                  background-color: #eee;
+                  border-radius: 5px;
+                  padding: 15px 19px;
+                  max-width: 1300px;
+                  margin: 0 auto;
             }
-            .heartMenu a {
-                margin-left: 5px;
-                 color: black;
+              .heartTable h2 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: left;
+                    margin-bottom: 20px;
+                    margin-left: 70px;
+              }
+            .heartWrapper {
+              margin: 50px 70px;
+              padding: 0;
             }
-            .heartMenu a:hover{
-                text-decoration: underline;
-            }
-            .heartIndex {
-                display: inline-block;
-                width: 22px;
-                height: 22px;
-                background: rgb(34,34,34);
-                text-align: center;
-                color: #fcfcfc;
-            }
+              .heartItem {
+                padding: 20px 0 15px 64px;
+                border-bottom: 1px solid #888;
+                position: relative;
+              }
+                .heartUser {
+                  color: #888;
+                  margin-bottom: 5px;
+                  text-align: left;
+                }
+                  .heartUser a:nth-child(1) {
+                    color: #2965b1;
+                    outline: 0;
+                    text-decoration: none;
+                  }
+                  .heartUser>a>img {
+                    width: 30px;
+                    height: 30px;
+                    vertical-align: middle;
+                    border-radius: 50%;
+                    margin-right: 5px
+                  }
+                .heartContent {
+                      font-size: 16px;
+                      line-height: 28px;
+                      margin-bottom: 10px;
+                      word-wrap: break-word;
+                      text-align: justify;
+                }
+                .heartCtr {
+                  line-height: 22px;
+                  text-align: right;
+                  color: #888;
+                }
+                .heartCtr span a {
+                  color: #888
+                }
+                .heartCtr span a:hover {
+                  cursor: pointer;
+                  text-decoration: underline
+                }
+                .heartStar {
+                  display: block;
+                  width: 30px;
+                  height: 30px;
+                  background: url(http://static.tianyaui.com/global/bbs/web/static/images/bbs_wenda_icons_b756c52.png) 0 -169px no-repeat;
+                  position: absolute;
+                  bottom: 11px;
+                  right: 40px;
+                  cursor: pointer;
+                }
             .message-board {
-                width: 1300px;
-                height: 500px;
-                margin: 0 auto;
+              width: 1300px;
+              height: 500px;
+              margin: 0 auto;
                 /* border: 1px solid black; */
             }
             .message-board p:nth-child(1) {
@@ -222,12 +252,34 @@ export default {
               text-align: center;
             }
             .message-board textarea {
-              width: 1298px;
+              background: white;
+              width: 1300px;
               height: 300px;
               font-size: 20px;
               line-height: 20px;
               font-family: Verdana, Geneva, Tahoma, sans-serif;
+              padding: 20px;
             }
+            .textareaRebox{
+              border: 1px solid black;
+              width: 1340px;
+              height: 340px;
+              font-size: 20px;
+              line-height: 20px;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              cursor: pointer;
+            }
+              .loginCheck {
+                width: 400px;
+                height: 200px;
+                margin: 50px auto;
+                background: #888;
+                text-align: center;
+                border: 2px solid #888;
+                border-radius: 10px;
+                text-align: center;
+                line-height: 200px;
+              }
             .message-board button {
               margin-top: 30px;
               width: 80px;

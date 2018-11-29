@@ -8,7 +8,7 @@ public class JumpTeacherShowController {
 	//用控制器来控制转发
 	@RequestMapping("jump.do")
 	public String jump(String target){
-		return target;
+		return "forward:/target";
 		
 	}
 

@@ -9,13 +9,11 @@
         <div class="picCoo">
             <ul class="picTable" >
                 <li v-for="item of cooList" :key="item.id" >
-                    <a href=""></a>
-                    <img :src="item.cooImgUrl1" alt="" @mouseover="changeImg(item)" >
-                    <img :src="item.cooImgUrl2" alt=""  >
+                    <img :src="item.cooImgUrl1" alt="" @mouseover="changeImg(item)" @mouseout="changeImg2(item)">
+                    <img :src="item.cooImgUrl2" alt="" >
                 </li>
             </ul>
         </div>
-        <div class="rebox" v-if="flag" style="z-index:2000"></div>
     </div>
 
 </template>
@@ -79,12 +77,19 @@ export default {
           cooImgUrl2: 'http://p6alxlphh.bkt.clouddn.com/company/e/light/%E5%8D%8E%E4%B8%BA.png'
         }
       ],
-      flag: false
+      flag: false,
+      img1: String,
+      img2: String
     }
   },
   methods: {
     changeImg (item) {
-      item.cooImgUrl1 = item.cooImgUrl2
+      this.img = item.cooImgUrl1
+      this.img2 = item.cooImgUrl2
+      item.cooImgUrl1 = this.img2
+    },
+    changeImg2 (item) {
+      item.cooImgUrl1 = this.img
     }
   }
 }

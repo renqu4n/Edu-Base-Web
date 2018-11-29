@@ -223,7 +223,7 @@ img {
         width: 570px;
         height: 855px;
         overflow: hidden;
-        transition: all .4s ease 0s;
+        transition: all 2s ease 0s;
       }
       .center-post-img:hover {
         transform: scale(1.2,1.2)

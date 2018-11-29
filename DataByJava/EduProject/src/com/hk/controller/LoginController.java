@@ -93,7 +93,7 @@ public class LoginController{
 				
 				return "forward:/back_manager.html";
 			}else{
-				return "index";
+				return "/index";
 			}
 		} else {
 			System.out.println("用户登录失败，用户名或密码错误");

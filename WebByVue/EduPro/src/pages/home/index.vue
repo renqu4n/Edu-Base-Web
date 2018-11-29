@@ -1,5 +1,5 @@
 <template>
-<div style="" id="fullScreen">
+<div>
     <!-- 头部 -->
     <holder style="position:absolute;z-index:3;"></holder>
     <div class="body">

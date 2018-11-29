@@ -39,7 +39,7 @@ public class NewController {
 		
 		
 		String   newsjson = Json.toJSONString(news);
-		System.out.println(news);
+		System.out.println(newsjson);
 
 		return newsjson;
 	}

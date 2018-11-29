@@ -55,6 +55,8 @@ a {
     text-decoration: none;
 }
     .foot {
+        /* position: absolute; */
+        position: relative;
         height: 563px;
         bottom: 0;
         width: 100%;

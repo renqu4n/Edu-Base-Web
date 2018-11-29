@@ -38,7 +38,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			alert("您还没有登录！！！！！！！！滚回去登陆！！");
 			return false;
 		} 
-	}
+	window.onload = function () {
+			var xhr = new XMLHttpRequest();
+            xhr.open('GET',true);
+            xhr.onload = function () {
+               if (this.status == 200) {
+               console.log(this.response);
+               }
+           }
   </script>
   
       <script src="js/jquery-1.11.1-min.js"></script>
@@ -61,6 +68,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        <input type="submit" value="提交" name="submit">
     </form>
     
-    <a href="jump.do?target=teacherShow">查看老师信息</a>
+    <a href="jump.do?target=teacherShow.do">查看老师信息</a>
   </body>
 </html>
