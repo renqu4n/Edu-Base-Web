@@ -30,16 +30,18 @@ public class StudentThinkController {
 		List<StudentsThink> studentsThink= service.findStudent();
 	    String studentsJson= Json.toJSONString(studentsThink);
 	    
-	    User user=(User) request.getSession().getAttribute("user");
-	    System.out.println( user.getUser_name());
-	    Map<String, String> map=new HashMap<String, String>();
-	    System.out.println(studentsThink);
-	    map.put("json", studentsJson);
-	    map.put("student_name",user.getUser_name());
+	  //  User user=(User) request.getSession().getAttribute("user");
+	   // System.out.println( user.getUser_name());
+	    
+	   // Map<String, String> map=new HashMap<String, String>();
+	   
+	  //  map.put("json", studentsJson);
+	  //  map.put("student_name",user.getUser_name());
 	    //System.out.println(studentsJson);
-	    String mapjson=Json.toJSONString(map);
-	    System.out.println(mapjson);
-		return mapjson;
+	  //  String mapjson=Json.toJSONString(map);
+	  //  System.out.println(mapjson);
+	    System.out.println(studentsThink);
+		return studentsJson;
 		
 	}
 	 
