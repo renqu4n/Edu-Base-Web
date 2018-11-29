@@ -7,6 +7,7 @@
           <p>课程视频</p>
           <span>业精于勤，荒于嬉</span>
         </div>
+        <router-link to="/eduRes/eduReso"><button class="return">返回</button></router-link>
         <div class="video">
           <video src="http://www.w3school.com.cn/i/movie.ogg" controls="controls"></video>
           <div class="videoInfo">
@@ -85,6 +86,23 @@ export default {
       width: 20px;
       height: 2px;
       background: #be926f;
+  }
+  .return {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0,0.5);
+    margin-left: 200px;
+    margin-bottom: 20px;
+    background: #dddddd;
+  }
+  .return::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    color: #222;
+    transform: rotate(35deg)
   }
   .video {
     width: 1500px;

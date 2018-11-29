@@ -16,17 +16,17 @@
         </div>
         <div class="webMedia">
           <div class="videoPage" ref="videoPage" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);" >
-            <div class="videoItem" v-for="item of webCourseList" :key="item.id">
+            <div class="videoItem" v-for="item of webCourseList" :key="item.course_id">
               <div class="videoImg">
-                <img :src="item.courseImg" alt="">
+                <img :src="item.course_image" alt="">
               </div>
               <!-- <router-link to="/eduRes/eduReso/eduVideo"> -->
-              <a href="#" @click="toVideo(item.id)">
+              <a href="#" @click="toVideo(item.course_id)">
                 <div class="videoInfo" >
-                  <p>【{{item.courseName}}】</p>
+                  <p>【{{item.course_name}}】</p>
                   <div>
-                    <span>{{item.courseInfo}}</span>
-                    <img :src="item.coursePrice" alt="">
+                    <span>{{item.course_description}}</span>
+                    <img src="http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png" alt="">
                   </div>
                 </div>
               </a>
@@ -134,55 +134,6 @@ export default {
   data () {
     return {
       webCourseList: [
-        {
-          'id': 1,
-          'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
-          'courseName': '淘宝商城项目课',
-          'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
-        },
-        {
-          'id': 2,
-          'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
-          'courseName': '淘宝商城项目课',
-          'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
-        },
-        {
-          'id': 3,
-          'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
-          'courseName': '淘宝商城项目课',
-          'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
-        },
-        {
-          'id': 4,
-          'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
-          'courseName': '淘宝商城项目课',
-          'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
-        },
-        {
-          'id': 5,
-          'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
-          'courseName': '淘宝商城项目课',
-          'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
-        },
-        {
-          'id': 6,
-          'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
-          'courseName': '淘宝商城项目课',
-          'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E5%85%8D%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
-        },
-        {
-          'id': 7,
-          'courseImg': 'http://p6alxlphh.bkt.clouddn.com/weblesson/1.png',
-          'courseName': '淘宝商城项目课',
-          'courseInfo': '淘宝商城项目实战',
-          'coursePrice': 'http://p6alxlphh.bkt.clouddn.com/study/%E4%BB%98%E8%B4%B9%E5%AD%A6%E4%B9%A0.png'
-        }
       ],
       javaExerciseList: [
         {
@@ -239,9 +190,25 @@ export default {
   },
   methods: {
     toVideo (id) {
-      alert(id)
-      this.$router.push({path: `/eduRes/eduReso/eduVideo/${id}`})
+      this.$router.push({path: `/eduRes/eduReso/eduVideo${id}`})
+    },
+    handleCourse () {
+      this.$axios.get('api/coshow/courseshow.do').then(this.handleData)
+    },
+    handleData (res) {
+      if (res.status === 200) {
+        res = res.data
+        for (let i in res) {
+          this.webCourseList.push(res[i])
+        }
+      } else {
+        alert('请求失败，即将跳转到刚才的页面')
+        this.$router.go('/')
+      }
     }
+  },
+  mounted () {
+    this.handleCourse()
   }
 }
 </script>

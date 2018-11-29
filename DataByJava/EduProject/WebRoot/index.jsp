@@ -38,7 +38,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			alert("您还没有登录！！！！！！！！滚回去登陆！！");
 			return false;
 		} 
-	}
+	window.onload = function () {
+			var xhr = new XMLHttpRequest();
+            xhr.open('GET',true);
+            xhr.onload = function () {
+               if (this.status == 200) {
+               console.log(this.response);
+               }
+           }
   </script>
   
       <script src="js/jquery-1.11.1-min.js"></script>

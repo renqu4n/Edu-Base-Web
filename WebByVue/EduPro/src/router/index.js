@@ -55,7 +55,7 @@ export default new Router({
       component: edureso
     },
     {
-      path: '/eduRes/eduReso/eduVideo/:videoId',
+      path: '/eduRes/eduReso/eduVideo:videoId',
       name: 'eduResoVideo',
       component: eduresovideo
     },

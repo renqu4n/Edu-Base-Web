@@ -7,7 +7,9 @@
         <p class="titleOl">{{studentObj.name}}</p>
         <p class="schoolOl">{{studentObj.school}}</p>
         <p class="companyOl">就职公司：{{studentObj.company}}</p>
-        <p class="priceOl">{{studentObj.price}}</p>
+        <p class="priceOl">{{studentObj.price}}
+          <span style="font-size:20px">年薪</span>
+        </p>
     </div>
     <!-- 正常显示层 -->
     <div class="titleStu">
@@ -36,10 +38,10 @@ export default {
         {
           'id': 1,
           stuImgUrl: 'http://p6alxlphh.bkt.clouddn.com/duyistudent/1.png',
-          name: '张三',
-          school: '贵州大学',
-          price: '30+W 年薪',
-          company: '网易云音乐'
+          name: '刘飞翔',
+          school: '哈尔滨理工大学',
+          price: '40+W',
+          company: '今日头条'
         }, {
           'id': 2,
           stuImgUrl: 'http://p6alxlphh.bkt.clouddn.com/duyistudent/2.png',
@@ -153,7 +155,7 @@ export default {
   position: absolute;
   height: 1030px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.7);
   opacity: 0.99;
   color: #fff;
 }
@@ -205,7 +207,8 @@ export default {
   transition: transform .8s
 }
 .rebox button:hover {
-  transform: scale(1.5,1.5)
+  transform: scale(1.5,1.5);
+  background: #111
 }
 .titleStu {
   height: 170px;

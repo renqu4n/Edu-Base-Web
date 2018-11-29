@@ -17,7 +17,10 @@
             </div>
           </li>
           <router-link to="/eduHeart"><li class="header-li"><a><span>学员心声</span></a></li></router-link>
-          <li class="header-li"><a href="api/login.html"><span>登录</span></a></li>
+          <li class="header-li" v-if="login"><a href="http://laptop-pas9esvj:8080/Edu-ssm/login.html"><span>登录</span></a></li>
+          <li class="header-li" v-if="loginStatus">
+            <span>欢迎你</span>
+          </li>
         </ul>
 
       </div>
@@ -31,7 +34,10 @@ export default {
   name: 'holder',
   data () {
     return {
-      scrollTop: null
+      scrollTop: null,
+      loginHtml: '',
+      loginStatus: false,
+      login: true
     }
   },
   mounted () {

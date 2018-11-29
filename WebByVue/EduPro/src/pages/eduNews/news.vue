@@ -76,8 +76,7 @@ export default {
     },
     toDetail (id) {
       // 传入点击的列表id到下一个页面
-      alert(id)
-      this.$router.push({path: `/eduNews/eduNewsDetail/${id}`})
+      this.$router.push({path: `/eduNews/eduNewsDetail/${id--}`})
     }
   },
   mounted () {

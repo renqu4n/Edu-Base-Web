@@ -55,8 +55,7 @@ export default {
     handleData (res) {
       if (res.status === 200) {
         res = res.data
-        this.newsDetail = res[this.newsId--]
-        console.log(res[this.newsId])
+        this.newsDetail = res[--this.newsId]
       } else {
         alert('请求失败，即将跳转到刚才的页面')
         this.$router.go('/eduNews')
@@ -78,13 +77,13 @@ export default {
     margin: 0;
 }
     .body {
-        height:2565px;
+        height:2065px;
         width: 100%;
     }
         .newsPage {
             position: absolute;
             width: 100%;
-            height: 1000px;
+            height: 500px;
             top: 580px;
             z-index: 2;
         }

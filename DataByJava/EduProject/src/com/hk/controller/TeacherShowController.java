@@ -22,14 +22,9 @@ public class TeacherShowController {
 	@Autowired
 	private TeacherShowService teaservice;
 	
-<<<<<<< HEAD
-	@RequestMapping("teacherShow.do")
-	public Object teacherShowList(){
-=======
 	@RequestMapping("/teacherShow.do")
 	@ResponseBody
 	/*public Object teacherShowList(){
->>>>>>> e579da15acfc4a5a9387dc5aebc2bf1118c8168d
 		//调用service的方法
 		List<TeacherShow> teaShowList = teaservice.findTeacherShow();
 		System.out.print(teaShowList);

@@ -111,7 +111,7 @@ export default {
 .heartPage {
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: 2000px;
             top: 1180px;
             z-index: 2;
         }
