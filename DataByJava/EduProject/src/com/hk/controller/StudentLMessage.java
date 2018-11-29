@@ -27,7 +27,7 @@ public class StudentLMessage{
 	public String insertMessage(HttpServletRequest request, HttpServletResponse response) throws Exception{
 
 		String message=request.getParameter("input");
-		User user=(User) request.getSession().getAttribute("users");
+		User user=(User) request.getSession().getAttribute("user");
 		int user_rid=user.getRole_id();
 		if (user_rid==2) {
 			if (message==null || message.trim().isEmpty() ) {
@@ -40,6 +40,8 @@ public class StudentLMessage{
 			   	
 				stk.setMessage_content(message);//留言内容
 			   	
+				stk.setStudent_id(user.getId());
+				
 			    Date date = new Date();
 			    SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
 		       // System.out.println(sdf.format(date));
