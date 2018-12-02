@@ -19,4 +19,5 @@ public interface UserService {
 	public List<User> getAllTeachs(Page page);
 	public int selectTeachCount();
 	public  User selectUserByEmail(User user);
+	public Boolean updateUserPassword(User user);
 }

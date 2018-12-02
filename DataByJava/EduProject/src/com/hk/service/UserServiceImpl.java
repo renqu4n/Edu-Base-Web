@@ -88,4 +88,11 @@ public class UserServiceImpl implements UserService{
 		return dao.selectUserByEmail(user);
 	}
 
+	@Override
+	public Boolean updateUserPassword(User user) {
+		// TODO Auto-generated method stub
+		Boolean r = dao.updateUserPassword(user);
+		return r;
+	}
+
 }

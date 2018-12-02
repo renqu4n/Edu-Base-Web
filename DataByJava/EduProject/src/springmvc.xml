@@ -27,7 +27,7 @@
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
 		<property name="jdbcUrl" value="jdbc:mysql:///myssm"></property>
 		<property name="user" value="root"></property>
-		<property name="password" value="lmy19970219"></property>
+		<property name="password" value="wenqin5201314"></property>
 	</bean>
 	
 	<!-- 配置SqlSessionFactoryBean，用于创建SqlSessionFactory 
@@ -53,67 +53,5 @@
 	</bean> -->
 		
 		<!--注解的驱动  -->
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xsi:schemaLocation="
-        http://www.springframework.org/schema/beans 
-        http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context 
-        http://www.springframework.org/schema/context/spring-context.xsd
-        http://www.springframework.org/schema/mvc
-        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-	
-		
-		<!--  配置springmvc到哪个包扫描注解  -->
-		<context:component-scan base-package="com.hk.controller"></context:component-scan>
-		<context:component-scan base-package="com.hk.service"></context:component-scan>
-		
-		<!-- 视图解析器  -->
-		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-			<property name="prefix" value=""></property>
-			<property name="suffix" value=".jsp"></property>
-		</bean>
-		
-			<!-- 配置数据源  -->
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/myssm"></property>
-		<property name="user" value="root"></property>
-		<property name="password" value="123456"></property>
-	</bean>
-	
-	<!-- 配置SqlSessionFactoryBean，用于创建SqlSessionFactory 
-		通过SqlSessionFactory可以获取sqlSession，因此需要将数据源的
-		信息配置给SqlSessionFactoryBean
-	 -->
-	 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-	 	<!-- 数据源  -->
-	 	<property name="dataSource" ref="dataSource"></property>
-	 	<!-- mybatis  -->
-	 	<property name="configLocation" value="classpath:mybatis.xml"></property>
-	 </bean>
-	 
-	 <!-- 配置扫描器，用于扫描映射文件mapper ，创建dao -->
-	 <bean id="mapper" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-	 	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
-	 	<property name="basePackage" value="com.hk.dao"></property>
-	 </bean>
-	 
-	 <!--  配置service -->
-	<!-- <bean id="stuService" class="com.hk.service.StudentServiceImpl">
-		<property name="dao" ref="studentDao"></property>
-	</bean> -->
-		
-		<!--注解的驱动  -->
->>>>>>> b670f1e9fb87fe8ebcc2867f94fe7359be948b90
->>>>>>> 16783f2d140a53b3f502cfb28734e7fefb2a470b
->>>>>>> dde7a5202a1662b5e2e13db5975f090f26b9b7a1
 	<mvc:annotation-driven></mvc:annotation-driven>
 </beans>

@@ -7,14 +7,17 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hk.bean.Page;
 import com.hk.bean.User;
 import com.hk.service.UserService;
+import com.hk.tools.Json;
 
 @Controller
 public class UsersController {
@@ -222,5 +225,38 @@ public class UsersController {
 	}
 	
 	
+	@RequestMapping(value="/updateUserPassword.do")
+	public String updateUserPassword(HttpServletRequest request,HttpServletResponse response,User user) {
+		
+		
+		System.out.println(user);
+		Boolean is = service.updateUserPassword(user);
+	if (is) {
+		
+		request.setAttribute("msg", "修改密码成功");
+		
+	} else {
+		request.setAttribute("msg", "修改密码失败");
+		
+	}
+		
+		
+		
+
+		return "updatePassword";
+	}
+	
+	
+	
+	@RequestMapping(value="/getLoginUser.do",produces = "text/html;charset=UTF-8")
+	@ResponseBody
+	public String getLoginUser(HttpServletRequest request,HttpServletResponse response,HttpSession session) {
+		User user = (User) session.getAttribute("user");
+		System.out.println("登录用户为：");
+		System.out.println(user);
+		String LoginUser = Json.toJSONString(user);
+		System.out.println(LoginUser);
+		return LoginUser;
+	}
 	
 }
