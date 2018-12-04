@@ -6,9 +6,9 @@
           <router-link to="/"><img src="..\..\assets\logo.png"></router-link>
         </div>
         <ul class="header-right" id="wrapNav" >
-          <li class="header-li"><router-link to="/"><a><span>首页</span></a></router-link></li>
-          <li class="header-li"><router-link to="/eduNews"><a><span>新闻资讯</span></a></router-link></li>
-          <li class="header-li"><router-link to="/eduCenter"><a><span>中心简介</span></a></router-link></li>
+          <router-link to="/"><li class="header-li"><a><span>首页</span></a></li></router-link>
+          <router-link to="/eduNews"><li class="header-li"><a><span>新闻资讯</span></a></li></router-link>
+          <router-link to="/eduCenter"><li class="header-li"><a><span>中心简介</span></a></li></router-link>
           <li class="selected" id="selectCtrl" @mouseover="showSelect()" @mouseout="hiddenSelect()">
             <a><span>教学资源</span></a>
             <div id="select">
@@ -19,7 +19,7 @@
           <router-link to="/eduHeart"><li class="header-li"><a><span>学员心声</span></a></li></router-link>
           <li class="header-li" v-if="login"><a href="login.html"><span>登录</span></a></li>
           <li class="header-li" v-if="loginStatus">
-            <span>欢迎你{{user}}</span>
+            <span>欢迎你<a class="userName">{{user}}</a></span>
           </li>
         </ul>
 
@@ -37,7 +37,8 @@ export default {
       scrollTop: null,
       loginHtml: '',
       loginStatus: false,
-      login: true
+      login: true,
+      userName: ''
     }
   },
   prop: {
@@ -45,6 +46,7 @@ export default {
   },
   mounted () {
     // 控制当屏幕滚动超过90px时，隐藏菜单栏
+    this.checkLogin()
     window.addEventListener('scroll', () => {
       this.scrollTop = document.documentElement.scrollTop
       // 控制滚动按钮的隐藏或显示
@@ -56,8 +58,26 @@ export default {
         this.hiddenBtn()
       }
     }, true)
+    this.userName = this.$global.user
   },
   methods: {
+    checkLogin () {
+      this.$axios.get('/Edu-ssm/getLoginUser.do').then(this.getName)
+    },
+    getName (res) {
+      if (res.status === 200) {
+        res = res.data[0]
+        if (res == null) {
+
+        } else {
+          this.user = res.user_name
+          this.login = false
+          this.loginStatus = true
+        }
+      } else {
+        alert('请求失败！即将返回上个页面！')
+      }
+    },
     // 隐藏按钮、显示导航栏
     hiddenBtn () {
       var menuBtn = this.$get('menuBtn')
@@ -91,6 +111,11 @@ export default {
       this.$get('select').style.height = 0 + 'px'
     }
   }
+  // 监听登录名变化 ,
+  // watch: {
+  //   userName (str, oldstr) {
+  //   }
+  // }
 }
 </script>
 
@@ -219,7 +244,12 @@ a {
         }
         .header-li span {
           font-size: 16px;
-
+          cursor: pointer;
+        }
+        .userName {
+          color:honeydew;
+          font-size: 20px;
+          margin-left: 5px;
         }
       .menuBtn {
         position:absolute;

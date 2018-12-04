@@ -17,11 +17,12 @@
         <div class="webMedia">
           <div class="videoPage" ref="videoPage" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);" >
             <div class="videoItem" v-for="item of webCourseList" :key="item.course_id">
+              <a href="#" @click="toVideo(item.course_id)">
               <div class="videoImg">
                 <img :src="item.course_image" alt="">
               </div>
               <!-- <router-link to="/eduRes/eduReso/eduVideo"> -->
-              <a href="#" @click="toVideo(item.course_id)">
+
                 <div class="videoInfo" >
                   <p>【{{item.course_name}}】</p>
                   <div>
@@ -218,6 +219,7 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 img {
 vertical-align:middle;
@@ -358,7 +360,7 @@ margin: 0 0 10px;
                     .videoInfo div {
                           position: relative;
                           color: #aaa;
-                          font-size: 17px;
+                          font-size: 20px;
                           margin-top: 30px;
                     }
                     .videoInfo div span:nth-child(1) {
@@ -455,7 +457,7 @@ margin: 0 0 10px;
                       }
                         .javaItemIntro {
                           font-family: PingFangM;
-                          font-size: 12px;
+                          font-size: 18px;
                           color: #747474;
                         }
                         .javaItemStar {

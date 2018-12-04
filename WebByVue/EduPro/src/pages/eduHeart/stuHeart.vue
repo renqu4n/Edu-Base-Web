@@ -129,14 +129,14 @@ export default {
         if (res == null) {
           console.log('您还未登录!')
         } else {
-          this.GLOBAL.userName = res.user_name
+          this.$global.user = res.user_name
           if (res.role_id === 2) {
             this.user = res.user_name
             console.log('欢迎您' + this.user)
           } else {
             this.textarea1 = false
             this.textarea2 = false
-            this.textarea3 = true
+            this.textarea3 = true // 当登录的用户不是学员时，提示不能留言
           }
         }
       } else {
