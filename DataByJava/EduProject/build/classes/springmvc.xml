@@ -33,7 +33,7 @@
 
 <property value="root" name="user"/>
 
-<property value="123456" name="password"/>
+<property value="wenqin5201314" name="password"/>
 
 </bean>
 
