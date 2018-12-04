@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="75" version="2.0">
+<workbench progressCount="100" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="26" y="26">
 <fastViewData fastViewLocation="1024"/>
@@ -38,7 +38,7 @@
 <coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.genuitec.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typePlaceholder" x="278" y="22"/>
+<coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="278" y="22"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -52,13 +52,19 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TeacherShowController.java" partName="TeacherShowController.java" path="D:/WebProject/Edu-Base-Web/DataByJava/EduProject/src/com/hk/controller/TeacherShowController.java" title="TeacherShowController.java" tooltip="EduProject/src/com/hk/controller/TeacherShowController.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EduProject/src/com/hk/controller/TeacherShowController.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="501" selectionTopPixel="510"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="985" selectionTopPixel="30"/>
 </editor>
 <editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="mybatis.xml" partName="mybatis.xml" path="D:/WebProject/Edu-Base-Web/DataByJava/EduProject/src/mybatis.xml" title="mybatis.xml" tooltip="EduProject/src/mybatis.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EduProject/src/mybatis.xml"/>
@@ -66,11 +72,34 @@
 </editor>
 <editor id="com.genuitec.eclipse.springframework.springconfigeditor" name="springmvc.xml" partName="springmvc.xml" path="D:/WebProject/Edu-Base-Web/DataByJava/EduProject/src/springmvc.xml" title="springmvc.xml" tooltip="EduProject/src/springmvc.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EduProject/src/springmvc.xml"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1429" selectionTopPixel="120"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1241" selectionTopPixel="1111"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CourseShowController.java" partName="CourseShowController.java" path="D:/WebProject/Edu-Base-Web/DataByJava/EduProject/src/com/hk/controller/CourseShowController.java" title="CourseShowController.java" tooltip="EduProject/src/com/hk/controller/CourseShowController.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CourseShowController.java" partName="CourseShowController.java" path="D:/WebProject/Edu-Base-Web/DataByJava/EduProject/src/com/hk/controller/CourseShowController.java" title="CourseShowController.java" tooltip="EduProject/src/com/hk/controller/CourseShowController.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EduProject/src/com/hk/controller/CourseShowController.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="533" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="601" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NewController.java" partName="NewController.java" path="D:/WebProject/Edu-Base-Web/DataByJava/EduProject/src/com/hk/controller/NewController.java" title="NewController.java" tooltip="EduProject/src/com/hk/controller/NewController.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EduProject/src/com/hk/controller/NewController.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="60"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="teacherShow.jsp" partName="teacherShow.jsp" path="D:/WebProject/Edu-Base-Web/DataByJava/EduProject/WebRoot/WEB-INF/jsp/teacherShow.jsp" title="teacherShow.jsp" tooltip="EduProject/WebRoot/WEB-INF/jsp/teacherShow.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EduProject/WebRoot/WEB-INF/jsp/teacherShow.jsp"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Json.java" partName="Json.java" path="D:/WebProject/Edu-Base-Web/DataByJava/EduProject/src/com/hk/tools/Json.java" title="Json.java" tooltip="EduProject/src/com/hk/tools/Json.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EduProject/src/com/hk/tools/Json.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="441" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CourseShow.java" partName="CourseShow.java" path="D:/WebProject/Edu-Base-Web/DataByJava/EduProject/src/com/hk/bean/CourseShow.java" title="CourseShow.java" tooltip="EduProject/src/com/hk/bean/CourseShow.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EduProject/src/com/hk/bean/CourseShow.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="CourseShowDao.xml" partName="CourseShowDao.xml" path="D:/WebProject/Edu-Base-Web/DataByJava/EduProject/src/com/hk/dao/CourseShowDao.xml" title="CourseShowDao.xml" tooltip="EduProject/src/com/hk/dao/CourseShowDao.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EduProject/src/com/hk/dao/CourseShowDao.xml"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="337" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CourseController.java" partName="CourseController.java" path="D:/WebProject/Edu-Base-Web/DataByJava/EduProject/src/com/hk/controller/CourseController.java" title="CourseController.java" tooltip="EduProject/src/com/hk/controller/CourseController.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EduProject/src/com/hk/controller/CourseController.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="609" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -232,9 +261,6 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -435,7 +461,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@2f06b18e" ratio="0.6473118" ratioLeft="602" ratioRight="328" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@2f06b18e" ratio="0.744086" ratioLeft="692" ratioRight="238" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -479,9 +505,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/controller/MessageController.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/controller/TeacherShowController.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/service/MessageService.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/controller/TeacherShowController.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/EduProject/WebRoot/messageManage.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/EduProject/src/mybatis.xml"/>
@@ -489,150 +512,160 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/EduProject/src/com/hk/dao/LoginDao.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/controller/NewController.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/controller/CourseShowController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/controller/NewController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/controller/TeacherShowController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/controller/TeacherShowController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/EduProject/src/springmvc.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.springframework.springconfigeditor" path="/EduProject/src/springmvc.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/EduProject/WebRoot/WEB-INF/jsp/teacherShow.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/tools/Json.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/bean/CourseShow.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/bean/Course.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/EduProject/src/com/hk/dao/CourseShowDao.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/EduProject/src/springmvc.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.springframework.springconfigeditor" path="/EduProject/src/springmvc.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/controller/CourseShowController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EduProject/src/com/hk/controller/CourseController.java"/>
 </editors>
-<item historyLabel="TeacherShowController.java" index="1">
-<position info="not_deleted" x="689" y="0"/>
-</item>
-<item historyLabel="MessageController.java" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MessageService.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="TeacherShowController.java" index="1">
-<position info="not_deleted" x="792" y="0"/>
-</item>
-<item historyLabel="MessageController.java" index="0">
-<position info="not_deleted" x="1698" y="0"/>
-</item>
-<item historyLabel="TeacherShowController.java" index="1">
-<position info="not_deleted" x="792" y="0"/>
-</item>
-<item historyLabel="MessageController.java" index="0">
-<position info="not_deleted" x="1698" y="0"/>
-</item>
-<item historyLabel="TeacherShowController.java" index="1">
-<position info="not_deleted" x="792" y="0"/>
-</item>
-<item historyLabel="MessageController.java" index="0">
-<position info="not_deleted" x="1698" y="0"/>
-</item>
-<item historyLabel="TeacherShowController.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MessageController.java" index="0">
-<position info="not_deleted" x="1698" y="0"/>
-</item>
-<item historyLabel="TeacherShowController.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MessageController.java" index="0">
-<position info="not_deleted" x="1698" y="0"/>
-</item>
-<item historyLabel="TeacherShowController.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MessageController.java" index="0">
-<position info="not_deleted" x="1698" y="0"/>
-</item>
-<item historyLabel="TeacherShowController.java" index="3">
-<position info="not_deleted" x="734" y="0"/>
-</item>
-<item historyLabel="MessageController.java" index="0">
-<position info="not_deleted" x="1698" y="0"/>
-</item>
-<item historyLabel="TeacherShowController.java" index="3">
-<position info="not_deleted" x="734" y="0"/>
-</item>
-<item historyLabel="MessageController.java" index="0">
-<position info="not_deleted" x="1698" y="0"/>
-</item>
-<item historyLabel="TeacherShowController.java" index="3">
-<position info="not_deleted" x="1175" y="0"/>
-</item>
-<item historyLabel="MessageController.java" index="0">
-<position info="not_deleted" x="798" y="0"/>
-</item>
-<item historyLabel="TeacherShowController.java" index="3">
-<position info="not_deleted" x="1175" y="0"/>
-</item>
-<item historyLabel="TeacherShowController.java" index="3">
-<position info="not_deleted" x="1019" y="0"/>
-</item>
-<item historyLabel="TeacherShowController.java" index="3">
+<item historyLabel="TeacherShowController.java" index="0">
 <position/>
 </item>
-<item historyLabel="TeacherShowController.java" index="3">
+<item historyLabel="TeacherShowController.java" index="0">
 <position info="not_deleted" x="1041" y="0"/>
 </item>
-<item historyLabel="TeacherShowController.java" index="3">
+<item historyLabel="TeacherShowController.java" index="0">
 <position/>
 </item>
-<item historyLabel="TeacherShowController.java" index="3">
+<item historyLabel="TeacherShowController.java" index="0">
 <position/>
 </item>
-<item historyLabel="messageManage.jsp" index="4"/>
-<item historyLabel="TeacherShowController.java" index="3">
+<item historyLabel="messageManage.jsp" index="1"/>
+<item historyLabel="TeacherShowController.java" index="0">
 <position info="not_deleted" x="1278" y="0"/>
 </item>
-<item historyLabel="mybatis.xml" index="5">
+<item historyLabel="mybatis.xml" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="springmvc.xml" index="6">
+<item historyLabel="springmvc.xml" index="3">
 <position info="not_deleted" x="1429" y="0"/>
 </item>
-<item historyLabel="mybatis.xml" index="5">
+<item historyLabel="mybatis.xml" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="LoginDao.xml" index="7">
+<item historyLabel="LoginDao.xml" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="messageManage.jsp" index="4"/>
-<item historyLabel="TeacherShowController.java" index="3">
+<item historyLabel="messageManage.jsp" index="1"/>
+<item historyLabel="TeacherShowController.java" index="0">
 <position info="not_deleted" x="1086" y="0"/>
 </item>
-<item historyLabel="NewController.java" index="8">
+<item historyLabel="NewController.java" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="LoginDao.xml" index="7">
+<item historyLabel="LoginDao.xml" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="NewController.java" index="8">
+<item historyLabel="NewController.java" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="messageManage.jsp" index="4"/>
-<item historyLabel="NewController.java" index="8">
+<item historyLabel="messageManage.jsp" index="1"/>
+<item historyLabel="NewController.java" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="TeacherShowController.java" index="3">
+<item historyLabel="TeacherShowController.java" index="0">
 <position info="not_deleted" x="1019" y="0"/>
 </item>
-<item historyLabel="NewController.java" index="8">
+<item historyLabel="NewController.java" index="5">
 <position info="not_deleted" x="931" y="171"/>
 </item>
-<item historyLabel="TeacherShowController.java" index="3">
+<item historyLabel="TeacherShowController.java" index="0">
 <position info="not_deleted" x="1008" y="0"/>
 </item>
-<item historyLabel="NewController.java" index="8">
+<item historyLabel="NewController.java" index="5">
 <position info="not_deleted" x="928" y="0"/>
 </item>
-<item historyLabel="TeacherShowController.java" index="3">
+<item historyLabel="TeacherShowController.java" index="0">
 <position info="not_deleted" x="501" y="0"/>
 </item>
-<item historyLabel="CourseShowController.java" index="9">
+<item historyLabel="CourseShowController.java" index="6">
 <position info="not_deleted" x="651" y="0"/>
 </item>
-<item historyLabel="TeacherShowController.java" index="3">
+<item historyLabel="TeacherShowController.java" index="0">
 <position info="not_deleted" x="501" y="0"/>
 </item>
-<item historyLabel="CourseShowController.java" index="9">
+<item historyLabel="CourseShowController.java" index="6">
 <position info="not_deleted" x="800" y="0"/>
 </item>
-<item historyLabel="TeacherShowController.java" index="3">
+<item historyLabel="TeacherShowController.java" index="0">
 <position info="not_deleted" x="501" y="0"/>
 </item>
-<item active="true" historyLabel="CourseShowController.java" index="9">
+<item historyLabel="CourseShowController.java" index="6">
 <position info="not_deleted" x="800" y="0"/>
+</item>
+<item historyLabel="NewController.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TeacherShowController.java" index="8">
+<position info="not_deleted" x="501" y="0"/>
+</item>
+<item historyLabel="CourseShowController.java" index="6">
+<position info="not_deleted" x="533" y="0"/>
+</item>
+<item historyLabel="TeacherShowController.java" index="8">
+<position info="not_deleted" x="501" y="0"/>
+</item>
+<item historyLabel="NewController.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TeacherShowController.java" index="8">
+<position info="not_deleted" x="501" y="0"/>
+</item>
+<item historyLabel="NewController.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TeacherShowController.java" index="9">
+<position info="not_deleted" x="501" y="0"/>
+</item>
+<item historyLabel="springmvc.xml" index="10">
+<position info="not_deleted" x="1429" y="0"/>
+</item>
+<item historyLabel="springmvc.xml" index="11">
+<position info="not_deleted" x="1429" y="0"/>
+</item>
+<item historyLabel="TeacherShowController.java" index="9">
+<position info="not_deleted" x="1175" y="0"/>
+</item>
+<item historyLabel="teacherShow.jsp" index="12"/>
+<item historyLabel="TeacherShowController.java" index="9">
+<position info="not_deleted" x="985" y="0"/>
+</item>
+<item historyLabel="Json.java" index="13">
+<position info="not_deleted" x="441" y="0"/>
+</item>
+<item historyLabel="teacherShow.jsp" index="12"/>
+<item historyLabel="CourseShow.java" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Course.java" index="15">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="CourseShow.java" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="CourseShowDao.xml" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="springmvc.xml" index="17">
+<position info="not_deleted" x="1423" y="0"/>
+</item>
+<item historyLabel="springmvc.xml" index="18">
+<position info="not_deleted" x="1423" y="0"/>
+</item>
+<item historyLabel="CourseShowController.java" index="19">
+<position info="not_deleted" x="601" y="10"/>
+</item>
+<item active="true" historyLabel="CourseController.java" index="20">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -654,11 +687,29 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CourseShowController.java" tooltip="EduProject/src/com/hk/controller/CourseShowController.java">
-<persistable path="/EduProject/src/com/hk/controller/CourseShowController.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CourseController.java" tooltip="EduProject/src/com/hk/controller/CourseController.java">
+<persistable path="/EduProject/src/com/hk/controller/CourseController.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="CourseShowDao.xml" tooltip="EduProject/src/com/hk/dao/CourseShowDao.xml">
+<persistable path="/EduProject/src/com/hk/dao/CourseShowDao.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Course.java" tooltip="EduProject/src/com/hk/bean/Course.java">
+<persistable path="/EduProject/src/com/hk/bean/Course.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CourseShow.java" tooltip="EduProject/src/com/hk/bean/CourseShow.java">
+<persistable path="/EduProject/src/com/hk/bean/CourseShow.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Json.java" tooltip="EduProject/src/com/hk/tools/Json.java">
+<persistable path="/EduProject/src/com/hk/tools/Json.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="teacherShow.jsp" tooltip="EduProject/WebRoot/WEB-INF/jsp/teacherShow.jsp">
+<persistable path="/EduProject/WebRoot/WEB-INF/jsp/teacherShow.jsp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NewController.java" tooltip="EduProject/src/com/hk/controller/NewController.java">
 <persistable path="/EduProject/src/com/hk/controller/NewController.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CourseShowController.java" tooltip="EduProject/src/com/hk/controller/CourseShowController.java">
+<persistable path="/EduProject/src/com/hk/controller/CourseShowController.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="LoginDao.xml" tooltip="EduProject/src/com/hk/dao/LoginDao.xml">
 <persistable path="/EduProject/src/com/hk/dao/LoginDao.xml"/>
@@ -680,24 +731,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MessageService.java" tooltip="EduProject/src/com/hk/service/MessageService.java">
 <persistable path="/EduProject/src/com/hk/service/MessageService.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MessageController.java" tooltip="EduProject/src/com/hk/controller/MessageController.java">
-<persistable path="/EduProject/src/com/hk/controller/MessageController.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="News.java" tooltip="EduProject/src/com/hk/bean/News.java">
-<persistable path="/EduProject/src/com/hk/bean/News.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="addCourse.jsp" tooltip="EduProject/WebRoot/addCourse.jsp">
-<persistable path="/EduProject/WebRoot/addCourse.jsp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="UserDao.xml" tooltip="EduProject/src/com/hk/dao/UserDao.xml">
-<persistable path="/EduProject/src/com/hk/dao/UserDao.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" name="index.html" tooltip="EduProject/WebRoot/index.html">
-<persistable path="/EduProject/WebRoot/index.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="manifest.3ad1d5771e9b13dbdad2.js" tooltip="EduProject/WebRoot/static/js/manifest.3ad1d5771e9b13dbdad2.js">
-<persistable path="/EduProject/WebRoot/static/js/manifest.3ad1d5771e9b13dbdad2.js"/>
 </file>
 </mruList>
 </workbench>

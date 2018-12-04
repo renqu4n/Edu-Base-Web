@@ -47,8 +47,7 @@ export default {
   },
   mounted () {
     this.videoId = this.$route.params.videoId
-    // this.getData()
-    alert(this.videoId)
+    // this.getData
   }
 }
 </script>

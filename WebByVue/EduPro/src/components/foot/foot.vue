@@ -60,7 +60,7 @@ a {
         height: 563px;
         bottom: 0;
         width: 100%;
-        min-width: 1300px;
+        min-width: 1903px;
         background: #222;
     }
         .main-footer {

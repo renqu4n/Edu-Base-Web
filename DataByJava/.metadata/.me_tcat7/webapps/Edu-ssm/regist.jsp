@@ -88,7 +88,7 @@ function check(form) {
 			
 			<div class="submit">
 				<input type="submit"  value="Sign in" >
-				<h4><a href="findUser.html">Lost your Password ?</a></h4>
+				<h4><a href="findUser.jsp">Lost your Password ?</a></h4>
 						  	
 			</div>
 				

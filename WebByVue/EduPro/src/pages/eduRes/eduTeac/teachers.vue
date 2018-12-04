@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     handleTeacherData () {
-      this.$axios.get('api/teacher/teacherShow.do').then(this.handleData)
+      this.$axios.get('/Edu-ssm/teacher/teacherShow.do').then(this.handleData)
     },
     handleData (res) {
       if (res.status === 200) {
@@ -127,7 +127,7 @@ export default {
             }
             .teacher {
                 vertical-align: middle;
-                width: 330px;
+                width: 325px;
                 height: 584px;
                 box-sizing: border-box;
                 float: left;

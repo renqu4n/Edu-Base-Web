@@ -27,7 +27,7 @@ public class UrlFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain filterchain)
 			throws IOException, ServletException {
-		System.out.println("我是拦截器！！");
+//		System.out.println("我是拦截器！！");
 		
 		//js css放行  图片  
 		HttpServletRequest request=(HttpServletRequest)req;

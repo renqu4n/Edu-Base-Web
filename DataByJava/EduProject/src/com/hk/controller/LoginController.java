@@ -99,7 +99,11 @@ public class LoginController{
 				
 				return "forward:/back_manager.jsp";
 			}else{
+<<<<<<< HEAD
 				return "/index.html";
+=======
+				return "forward:/index.html";
+>>>>>>> ed801071460a87e46b222b33bbd18c8bca8e4e83
 			}
 		} else {
 			System.out.println("用户登录失败，用户名或密码错误");

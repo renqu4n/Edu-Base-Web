@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     getData () {
-      this.$axios.get('api/examples/news.txt').then(this.handleData)
+      this.$axios.get('/Edu-ssm/getNew.do').then(this.handleData)
     },
     handleData (res) {
       if (res.status === 200) {
@@ -82,6 +82,7 @@ export default {
 * {
     padding: 0;
     margin: 0;
+    text-decoration: none;
     /* list-style-image: url(../../assets/news-li.png); */
 }
     .body {
@@ -130,7 +131,7 @@ export default {
             }
                 .newsHomeImg {
                     display: inline-block;
-                    background: url(../../assets/news-home.png)
+                    background: url(../../assets/news-li.png)
                 }
                 .newsHome a {
                     color: black;
