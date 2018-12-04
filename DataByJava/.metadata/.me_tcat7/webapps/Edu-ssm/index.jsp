@@ -37,18 +37,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		if (user=="null"||user=="") {
 			alert("您还没有登录！！！！！！！！滚回去登陆！！");
 			return false;
-		} 
-	}
+           }
   </script>
+  
+      <script src="js/jquery-1.11.1-min.js"></script>
+  
   </head>
   
   <body>
+  <!-- <script>
+    	
+    	//使用ajax请求json.do，将数据显示到html
+		$.post("getNew.do",function(news){
+			console.log(news);
+			
+		
+		})
+    </script> -->
    
     <form action="insertMessage.do" onsubmit=" return chkinput(this)" method="post">
        <input type="text" placeholder="请输入你的留言" name="input">
        <input type="submit" value="提交" name="submit">
     </form>
     
-    <a href="jump.do?target=teacherShow">查看老师信息</a>
+    <a href="jump.do?target=teacherShow.do">查看老师信息</a>
   </body>
 </html>
