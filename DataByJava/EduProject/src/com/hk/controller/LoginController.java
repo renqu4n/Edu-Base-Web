@@ -12,9 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.hk.bean.Menu;
 import com.hk.bean.Url;
 import com.hk.bean.User;
 import com.hk.service.LoginService;
+import com.hk.service.MenuService;
 import com.hk.service.UrlService;
 
 
@@ -24,7 +26,8 @@ public class LoginController{
 	private LoginService service;
 	@Autowired
 	private UrlService Urlservice;
-	
+	@Autowired
+	private MenuService menuService;
 
 
 	@RequestMapping(value="/regist.do")
@@ -84,16 +87,19 @@ public class LoginController{
 			users.setUrls(Urlservice.selByRid(users.getRole_id()));
 			session.setAttribute("allurl",allurl);
 			session.setAttribute("user", users);
-			System.out.println(users);
+			
 			System.out.println(allurl);
 			
+			users.setMenus(menuService.showMenu(users.getRole_id()));
+			System.out.println(users);
+			request.setAttribute("user", users);
 			//request.getRequestDispatcher("/WEB-INF/jsp/back_manager.jsp").forward(request, response);
 			int   rid=users.getRole_id();
 			if (rid==1||rid==4) {
 				
-				return "forward:/back_manager.html";
+				return "forward:/back_manager.jsp";
 			}else{
-				return "/index";
+				return "/index.html";
 			}
 		} else {
 			System.out.println("用户登录失败，用户名或密码错误");

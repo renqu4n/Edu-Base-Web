@@ -2,6 +2,8 @@ package com.hk.bean;
 
 import java.util.List;
 
+
+
 public class User {
 	private int id;
 	private String user_name;
@@ -10,7 +12,7 @@ public class User {
 	private String user_think;
 	private int role_id;
 	private List<Url> urls;
-	
+	private List<Menu> menus;
 	
 	
 	
@@ -60,13 +62,22 @@ public class User {
 	public void setRole_id(int role_id) {
 		this.role_id = role_id;
 	}
+	public List<Menu> getMenus() {
+		return menus;
+	}
+	public void setMenus(List<Menu> menus) {
+		this.menus = menus;
+	}
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", user_name=" + user_name
 				+ ", user_password=" + user_password + ", user_email="
 				+ user_email + ", user_think=" + user_think + ", role_id="
-				+ role_id + "]";
+				+ role_id + ", urls=" + urls + ", menus=" + menus + "]";
 	}
+	
+	
+
 
 	
 	

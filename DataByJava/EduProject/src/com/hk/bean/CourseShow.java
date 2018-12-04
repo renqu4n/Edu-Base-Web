@@ -1,7 +1,7 @@
 package com.hk.bean;
 
 public class CourseShow {
-	private int course_id;
+	private int id;
 	private String course_image;
 	private String course_name;
 	private String course_description;
@@ -11,10 +11,10 @@ public class CourseShow {
 		super();
 	}
 	
-	public CourseShow(int course_id, String course_image, String course_name,
+	public CourseShow(int id, String course_image, String course_name,
 			String course_description, String course_video) {
 		super();
-		this.course_id = course_id;
+		this.id = id;
 		this.course_image = course_image;
 		this.course_name = course_name;
 		this.course_description = course_description;
@@ -22,10 +22,10 @@ public class CourseShow {
 	}
 
 	public int getCourse_id() {
-		return course_id;
+		return id;
 	}
-	public void setCourse_id(int course_id) {
-		this.course_id = course_id;
+	public void setCourse_id(int id) {
+		this.id = id;
 	}
 	public String getCourse_image() {
 		return course_image;
@@ -57,7 +57,7 @@ public class CourseShow {
 
 	@Override
 	public String toString() {
-		return "CourseShow [course_id=" + course_id + ", course_image="
+		return "CourseShow [course_id=" + id + ", course_image="
 				+ course_image + ", course_name=" + course_name
 				+ ", course_description=" + course_description
 				+ ", course_video=" + course_video + "]";

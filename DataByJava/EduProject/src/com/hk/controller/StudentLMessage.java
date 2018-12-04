@@ -48,7 +48,7 @@ public class StudentLMessage{
 			   	stk.setData(sdf.format(date));//留言时间
 			   	
 			   	String student_name=user.getUser_name();
-			   	request.setAttribute("student_name", student_name);s
+			   	request.setAttribute("student_name", student_name);
 			   	//System.out.println(user.getUser_name());
 				//stk.setStudent_name(user.getUser_name());//留言学生名字
 					

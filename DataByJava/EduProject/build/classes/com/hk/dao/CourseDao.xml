@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	
 	<insert id="insertCourse">
-		insert into course (course_name,course_introduce,teacher_id) values (#{course_name},#{course_introduce},#{teacher_id});
+		insert into course (course_name,course_description,teacher_id) values (#{course_name},#{course_introduce},#{teacher_id});
 	</insert>
 	
 	

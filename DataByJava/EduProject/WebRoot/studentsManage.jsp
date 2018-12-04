@@ -64,7 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script src="public/media/js/bootstrap-modal.js" type="text/javascript"></script>
     <script src="public/media/js/bootstrap-modalmanager.js" type="text/javascript"></script>
     <script src="public/media/js/ui-modals.js"></script>
-	<script src="js/jquery-1.11.1-min.js"></script>
+	
 
 <!-- 	<script type="text/javascript">
 	function directUrl() {
@@ -73,7 +73,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}
 	</script> -->
 	
-	<style type="text/css">
+	<!-- <style type="text/css">
 		#sub_menu_1,#sub_menu_2,#sub_menu_3,#sub_menu_4,#sub_menu_5{
 			display: none;
 		}
@@ -94,7 +94,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     
             }
 		
-	</script>
+	</script> -->
 
 </head>
 <!-- END HEAD -->
@@ -324,7 +324,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             </ul> -->
                             <!-- BEGIN FORM-->
                             <div class="savewebsite">
-                                <button onclick="savewebsite()" class="btn blue "><i class="icon-ok"></i>发布</button>
+                                <button onclick="savewebsite()" class="btn blue "><a href="index.html">首页</a></button>
                                 <a class=" btn yellow hide alertdome" data-toggle="modal" href="#static">View Demo</a>
                             </div>
                             <!-- END FORM-->

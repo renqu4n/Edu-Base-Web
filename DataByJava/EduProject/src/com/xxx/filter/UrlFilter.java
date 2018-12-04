@@ -41,7 +41,7 @@ public class UrlFilter implements Filter {
 				
 			filterchain.doFilter(req, res);
 			}else{
-				if (uri.equals("/Edu-ssm/findUser")||uri.equals("/Edu-ssm/findUser.jsp")||uri.equals("/Edu-ssm/regist")||uri.equals("/Edu-ssm/regist.jsp")||uri.equals("/Edu-ssm/index.jsp")||uri.equals("/Edu-ssm/index")) {
+				if (uri.equals("/Edu-ssm/back_manager")||uri.equals("/Edu-ssm/back_manager.jsp")||uri.equals("/Edu-ssm/findUser")||uri.equals("/Edu-ssm/findUser.jsp")||uri.equals("/Edu-ssm/regist")||uri.equals("/Edu-ssm/regist.jsp")||uri.equals("/Edu-ssm/index.jsp")||uri.equals("/Edu-ssm/index")) {
 					filterchain.doFilter(req, res);
 				} else {
 

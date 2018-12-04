@@ -252,11 +252,17 @@ public class UsersController {
 	@ResponseBody
 	public String getLoginUser(HttpServletRequest request,HttpServletResponse response,HttpSession session) {
 		User user = (User) session.getAttribute("user");
-		System.out.println("登录用户为：");
-		System.out.println(user);
-		String LoginUser = Json.toJSONString(user);
-		System.out.println(LoginUser);
-		return LoginUser;
+		if (user!=null) {
+			System.out.println("登录用户为：");
+			System.out.println(user);
+			String LoginUser = Json.toJSONString(user);
+			System.out.println(LoginUser);
+			return LoginUser;
+		} else {
+			
+		}
+		return null;
+		
 	}
 	
 }

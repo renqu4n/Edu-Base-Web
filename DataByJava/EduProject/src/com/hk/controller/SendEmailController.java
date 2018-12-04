@@ -45,9 +45,9 @@ public class SendEmailController {
 					e.printStackTrace();
 				}  
 		        // 设置邮件内容  
-		        msg.setText("测试邮件");  
+		        msg.setText("惠科集团----");  
 		        // 设置发件人  
-		        msg.setFrom(new InternetAddress("惠科集团----"));  
+		        msg.setFrom(new InternetAddress("296435342@qq.com"));  
 		          
 		        Transport transport = session.getTransport();  
 		        // 连接邮件服务器     xzbbrvnlsjpdbfei
