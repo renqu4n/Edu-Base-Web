@@ -19,7 +19,7 @@
           <router-link to="/eduHeart"><li class="header-li"><a><span>学员心声</span></a></li></router-link>
           <li class="header-li" v-if="login"><a href="login.html"><span>登录</span></a></li>
           <li class="header-li" v-if="loginStatus">
-            <span>欢迎你</span>
+            <span>欢迎你{{user}}</span>
           </li>
         </ul>
 
@@ -39,6 +39,9 @@ export default {
       loginStatus: false,
       login: true
     }
+  },
+  prop: {
+    user: String
   },
   mounted () {
     // 控制当屏幕滚动超过90px时，隐藏菜单栏
@@ -91,7 +94,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 * {
   margin: 0;
   padding: 0;

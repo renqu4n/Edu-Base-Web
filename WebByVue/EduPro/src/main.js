@@ -8,6 +8,19 @@ import VueQuillEditor from 'vue-quill-editor'
 import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
+// 引入样式
+import 'vue-easytable/libs/themes-base/index.css'
+import global_ from './components/tool/Global'
+// 导入 table 和 分页组件
+import {
+  VTable,
+  VPagination
+} from 'vue-easytable'
+Vue.prototype.GLOBAL = global_
+
+// 注册到全局
+Vue.component(VTable.name, VTable)
+Vue.component(VPagination.name, VPagination)
 Vue.prototype.$axios = axios
 // 封装通过id操作dom
 Vue.prototype.$get = function (id) {

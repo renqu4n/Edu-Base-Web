@@ -47,7 +47,7 @@ public class SendEmailController {
 		        // 设置邮件内容  
 		        msg.setText("测试邮件");  
 		        // 设置发件人  
-		        msg.setFrom(new InternetAddress("296435342@qq.com"));  
+		        msg.setFrom(new InternetAddress("惠科集团----"));  
 		          
 		        Transport transport = session.getTransport();  
 		        // 连接邮件服务器     xzbbrvnlsjpdbfei

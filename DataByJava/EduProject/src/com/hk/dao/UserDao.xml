@@ -59,5 +59,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectUserByEmail" resultType="User">
 		select * from user where  user_name= #{user_name} and user_email= #{user_email}
 	</select>
+	
+	
+	<update id="updateUserPassword">
+		update user set user_password = #{user_password}
+		where user_name= #{user_name} and user_email= #{user_email}
+	</update>
 
 </mapper>

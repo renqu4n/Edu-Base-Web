@@ -100,13 +100,6 @@ export default {
     margin: 0;
     padding: 0;
 }
-.zhezhao{
-    width: 100%;
-    height: 10px;
-    background: rgba(0,0,0,0.5);
-    z-index: 200;
-    opacity: 10%;
-}
     .wrapper {
         position: absolute;
         width: 100%;
@@ -114,9 +107,6 @@ export default {
         background: orange;
         top: 1880px;
         z-index: 100;
-    }
-    .rebox {
-
     }
         .titleCoo {
             height: 170px;
@@ -143,6 +133,7 @@ export default {
         .picCoo {
             width: 100%;
             height: 366px;
+            margin-top: 200px;
             /* background: skyblue; */
         }
             .picTable {

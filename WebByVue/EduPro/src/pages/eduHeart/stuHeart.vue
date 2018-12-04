@@ -1,7 +1,7 @@
 <template>
     <div>
-    <holder style="position:absolute;z-index:3;"></holder>
-    <div class="body">
+    <holder style="position:absolute;z-index:3;" :user='user'></holder>
+    <div class="body" ref="body">
       <swiper style="position:absolute;z-index:1;">
       </swiper>
       <div class="heartPage">
@@ -10,7 +10,7 @@
           <span>桃李不言，下自成蹊</span>
         </div>
         <div class="heartTable">
-          <h2>{{messageConut}}个回答</h2>
+          <h2>{{messageConut}}条留言</h2>
           <div class="heartWrapper">
             <div class="heartItem" v-for="item of heartInfo" :key="item.mid">
               <div class="heartUser">
@@ -31,27 +31,34 @@
               </div>
             </div>
           </div>
+          <div class="paginationPage">
+          <v-pagination  @page-change="pageChange" @page-size-change="pageSizeChange" :total='messageConut' :page-size="pageSize"></v-pagination>
+          </div>
         </div>
-        <div class="heartMenu" v-if="messageFlag">
+
+        <!-- <div class="heartMenu" v-if="messageFlag">
             <span class="heartIndex">1</span>
             <router-link to="/heartSecond"><a href="newsSecond" title="第二页">2</a></router-link>
             <router-link to="/heartSecond"><a href="newsSecond" title="下一页">下一页</a></router-link>
             <router-link to="/heartSecond"><a href="newsSecond" title="最后一页">最后</a></router-link>
-        </div>
+        </div> -->
         <div class="heartTitle" style="margin-top:100px;">
           <p>留言板</p>
           <span>赠人玫瑰，手有余香</span>
         </div>
         <div class="message-board">
           <!-- 留言功能 -->
-          <form action="insertMessage.do" method="post">
+          <form action="insertMessage.do" method="post" @submit="checkMessage">
             <p>留下你的心声</p>
-            <textarea v-if="textarea1" name="input" @click="checkLogin"></textarea>
+            <textarea v-if="textarea1"  name="input" @click="checkUser"></textarea>
             <div class="textareaRebox" v-if="textarea2">
               <a href="login.html"><div class="loginCheck">请先登录</div></a>
             </div>
+            <div class="textareaRebox" v-if="textarea3">
+              <div class="loginCheck">你不是学员不能留言！</div>
+            </div>
             <p><b>当前日期</b>:<span>{{time}}</span></p>
-            <p><button>提交</button></p>
+            <p><input type="submit" id="submit" value ="提交" disabled='disabled' /></p>
           </form>
         </div>
       </div>
@@ -76,87 +83,121 @@ export default {
   data () {
     return {
       heartInfo: [],
+      heartData: [],
       time: '',
-      messageConut: Number,
+      messageConut: 0,
       messageFlag: false,
       textarea1: true,
-      textarea2: false
+      textarea2: false,
+      textarea3: false,
+      pageSize: 30,
+      user: null
     }
   },
   mounted () {
     this.handleMessage()
-    var myDate = new Date()
-    this.time = myDate.toLocaleDateString()
-    this.subDate()
+    this.checkLogin()
+    this.time = new Date().toLocaleDateString()
   },
   methods: {
     handleMessage () {
       this.$axios.get('/Edu-ssm/getStudentThink.do').then(this.handleData)
-      // this.$axios({
-      //   method: 'post',
-      //   url: '/Edu-ssm/insertMessage.do',
-      //   data: {}})
     },
     checkLogin () {
       // this.textarea1 = false
       // this.textarea2 = true
+      this.$axios.get('/Edu-ssm/getLoginUser.do').then(this.loginStatus)
     },
+    // 获取学员心声的留言版
     handleData (res) {
       if (res.status === 200) {
         res = res.data
-        console.log(res)
         this.messageConut = res.length
-        if (res.length > 15) {
-          this.messageFlag = true
-        }
         for (let i in res) {
-          for (let j in JSON.parse(res[i].json)) {
-            this.heartInfo.push(JSON.parse(res[i].json)[j])
+          this.heartInfo.push(res[i])
+        }
+      } else {
+        alert('请求失败，即将跳转到刚才的页面')
+        this.$router.go('/index.htm/eduHeart')
+      }
+    },
+    // 判断登录状态
+    loginStatus (res) {
+      if (res.status === 200) {
+        console.log(res)
+        res = res.data[0]
+        if (res == null) {
+          console.log('您还未登录!')
+        } else {
+          this.GLOBAL.userName = res.user_name
+          if (res.role_id === 2) {
+            this.user = res.user_name
+            console.log('欢迎您' + this.user)
+          } else {
+            this.textarea1 = false
+            this.textarea2 = false
+            this.textarea3 = true
           }
         }
       } else {
         alert('请求失败，即将跳转到刚才的页面')
-        this.$router.go('/')
+        this.$router.go('/index.html/eduHeart')
       }
     },
-    subDate () {
-      for (let i = 0; i < this.heartInfo.length; i++) {
-        this.heartInfo[i].data = this.heartInfo[i].data.substr(0, this.heartInfo[i].length - 2)
+    checkUser () {
+      if (this.user == null) {
+        this.textarea1 = false
+        this.textarea2 = true
+      } else {
+        document.getElementById('submit').disabled = false
+      }
+    },
+    getTableData () {
+      this.heartInfo = this.heartInfo.slice((this.pageIndex - 1) * this.pageSize, (this.pageIndex) * this.pageSize)
+    },
+    pageChange (pageIndex) {
+      this.pageIndex = pageIndex
+      this.getTableData()
+      console.log(pageIndex)
+    },
+    pageSizeChange (pageSize) {
+      this.pageIndex = 1
+      this.pageSize = pageSize
+      this.getTableData()
+    },
+    checkMessage () {
+      var message = document.getElementsByTagName('textarea')[0].value
+      if (message === '' || message.includes('<html>')) {
+        alert('留言格式错误！')
+        return false
+      } else {
+        this.$refs.body.style.height = this.$refs.body.style.height + 150 + 'px'
+        return true
       }
     }
-    // 发送POST请求
-    // sendData () {
-    //   this.$axios({
-    //     method: 'post',
-    //     url: '/insertMessage.do',
-    //     data: {
-    //       'name': '张三',
-    //       'content': '这是我的心声心声啊心声啊',
-    //       'time': this.time
-    //     }
-    //   }).then((res) => {
-    //     console.log(res.data)
-    //   })
-    // }
   }
 }
 </script>
 
-<style>
+<style scoped>
 * {
   padding: 0;
   margin: 0;
 }
+v-pagination {
+  position: relative;
+  right: 0;
+}
 .body {
   position: relative;
-  height:3095px;
+  height: 5000px;
   width: 100%;
 }
 .heartPage {
             position: absolute;
             width: 100%;
-            height: 1500px;
-            top: 1160px;
+            top: 1190px;
+            height: 2000px;
             z-index: 2;
         }
             .heartTitle {
@@ -250,6 +291,11 @@ export default {
                   right: 40px;
                   cursor: pointer;
                 }
+                .paginationPage {
+                  margin: 0 auto;
+                  width: 500px;
+                  height: 50px;
+                }
             .message-board {
               width: 1300px;
               height: 500px;
@@ -275,7 +321,7 @@ export default {
             .textareaRebox{
               border: 1px solid black;
               width: 1340px;
-              height: 340px;
+              height: 300px;
               font-size: 20px;
               line-height: 20px;
               font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -292,7 +338,7 @@ export default {
                 text-align: center;
                 line-height: 200px;
               }
-            .message-board button {
+            .message-board #submit {
               width: 80px;
               height: 60px;
               border: none;

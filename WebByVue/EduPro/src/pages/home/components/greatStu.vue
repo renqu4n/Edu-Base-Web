@@ -235,6 +235,7 @@ export default {
 .picStu {
   width: 100%;
   height: 674px;
+  margin-top: 200px;
 }
 .picTable {
   margin: 0 auto;

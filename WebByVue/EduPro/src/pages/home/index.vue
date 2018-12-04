@@ -42,7 +42,7 @@ export default {
   padding: 0;
 }
 .body {
-  height: 2603px;
+  height: 2613px;
   width: 100%;
   /* position: flex; */
 }

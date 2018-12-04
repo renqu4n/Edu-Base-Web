@@ -127,7 +127,7 @@ export default {
             }
             .teacher {
                 vertical-align: middle;
-                width: 330px;
+                width: 325px;
                 height: 584px;
                 box-sizing: border-box;
                 float: left;
