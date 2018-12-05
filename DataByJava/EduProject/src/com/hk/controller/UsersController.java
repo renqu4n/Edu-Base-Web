@@ -265,4 +265,63 @@ public class UsersController {
 		
 	}
 	
+	
+	@RequestMapping(value="/userShow.do")
+	public String userShow(HttpServletRequest request,HttpServletResponse response,Page page) {
+
+		int currentPage = 1;
+		int pageCount = 10;
+		
+		
+		String c = request.getParameter("currentPage");
+		if (c != null) {
+			currentPage = Integer.valueOf(c);
+		}
+		int start = (currentPage - 1) * pageCount;
+		
+		page.setPageCount(pageCount);
+		page.setStart(start);
+		List<User> users = service.getAllUsers(page);
+		int  userCount = service.selectUserCount();
+		System.out.println(users);
+		System.out.println(userCount);
+		
+		//int pageCount = page.getPageCount();
+		 int   totalPageCount = userCount / pageCount;
+			if(userCount % pageCount != 0) {
+				totalPageCount = totalPageCount + 1;
+			}
+		Map<String, Object> pages = new HashMap<String, Object>();
+		
+		pages.put("users", users);
+		pages.put("totalPageCount",totalPageCount);
+		pages.put("userCount",userCount);
+		pages.put("pageCount",pageCount);
+		
+        request.setAttribute("pages", pages);
+		request.setAttribute("currentPage", currentPage);
+        
+        
+		
+		return "forward:/userManage.jsp";
+	}
+	
+	
+	@RequestMapping(value="/deleteUser.do")
+	public void deleteUser(HttpServletRequest request,HttpServletResponse response) throws IOException {
+		
+		String type = request.getParameter("method");
+		if ("delete".equals(type)) {
+		String key = request.getParameter("key");
+		
+		service.deleteUser(Integer.parseInt(key));
+
+		}
+	
+		response.sendRedirect("userShow.do");
+	
+	}
+	
+	
+	
 }

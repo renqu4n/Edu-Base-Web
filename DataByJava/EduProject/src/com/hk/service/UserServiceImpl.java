@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.hk.bean.News;
 import com.hk.bean.Page;
 import com.hk.bean.User;
 import com.hk.dao.UserDao;
@@ -93,6 +94,24 @@ public class UserServiceImpl implements UserService{
 		// TODO Auto-generated method stub
 		Boolean r = dao.updateUserPassword(user);
 		return r;
+	}
+
+	@Override
+	public void deleteUser(int key) {
+		// TODO Auto-generated method stub
+		dao.deleteUser(key);
+	}
+
+	@Override
+	public List<User> getAllUsers(Page page) {
+		// TODO Auto-generated method stub
+		return dao.getAllUsers(page);
+	}
+
+	@Override
+	public int selectUserCount() {
+		// TODO Auto-generated method stub
+		return dao.selectUserCount();
 	}
 
 }

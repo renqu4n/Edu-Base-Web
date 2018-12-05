@@ -2,6 +2,7 @@ package com.hk.dao;
 
 import java.util.List;
 
+import com.hk.bean.News;
 import com.hk.bean.Page;
 import com.hk.bean.User;
 
@@ -18,4 +19,8 @@ public interface UserDao {
 	public int selectTeachCount();
 	public  User selectUserByEmail(User user);
 	public Boolean updateUserPassword(User user);
+	
+	public void deleteUser(int key);
+	public List<User> getAllUsers(Page page);
+	public int selectUserCount();
 }
