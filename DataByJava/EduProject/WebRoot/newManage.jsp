@@ -184,6 +184,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="page-sidebar nav-collapse collapse">
             <!-- Begin SIDEBAR MENU -->
             <!-- BEGIN SIDEBAR MENU -->
+            <!-- 获取菜单 -->
             <ul class="page-sidebar-menu">
                 <li>
                     <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
@@ -191,92 +192,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
                 </li>
                 
-                <li onclick = "f('sub_menu_1')">
-                    <a href="javascript:;">
-                        <i class="icon-comments"></i>
-                        <span class="title" >学员管理</span>
-                        <span class="arrow "></span>
-                    </a>
-                    <ul class="sub-menu" id="sub_menu_1">
-                        <li>
-                            <a href="studentShow.do">学员管理</a>
-                            
-                            <a href="addStudents.jsp">添加学员</a>
-                            
-                        </li>
-                    </ul>
-                </li>
-                <li onclick="f('sub_menu_2')">
-                    <a href="javascript:;">
-                        <i class="icon-comments"></i>
-                        <span class="title">教师管理</span>
-                        <span class="arrow "></span>
-                    </a>
-                    <ul class="sub-menu" id="sub_menu_2">
-                        <li>
-                            
-                            <a href="teachShow.do">教师管理</a>
-                            <a href="addTeacher.jsp">添加教师</a>
-                            
-                        </li>
-                    </ul>
-                </li>
-
-                <li onclick = "f('sub_menu_3')">
-                    <a href="#">
-                        <i class="icon-home"></i>
-                        <span class="title">课程管理</span>
-                        <span class="arrow "></span>
-                    </a>
-                    <ul class="sub-menu" id="sub_menu_3">
-                        <li>
-                            <a href="courseShow.do">课程管理</a>
-                            <a href="addCourse.jsp">添加课程</a>
-                            
-                            
-                        </li>
-                    </ul>
-                </li>
-                <!--  <li><a href="">360全景</a></li> -->
-                <li onclick = "f('sub_menu_4')">
-                    <a href="javascript:;">
-                        <i class="icon-bullhorn"></i>
-                        <span class="title">新闻管理</span>
-                        <span class="arrow "></span>
-                    </a>
-                    <ul class="sub-menu" id="sub_menu_4">
-                        <li>
-                            <a href="newShow.do">新闻管理</a>
-                            <a href="addnew.jsp">添加新闻</a>
-                            
-                        </li>
-                    </ul>
-                </li>
-                
-                <li onclick = "f('sub_menu_5')">
-                    <a href="javascript:;">
-                        <i class="icon-comments"></i>
-                        <span class="title">角色管理</span>
-                        <span class="arrow "></span>
-                    </a>
-                    <ul class="sub-menu" id="sub_menu_5">
-                        <li>
-                            <a href="roleShow.do">角色管理</a>
-                            <a href="addRole.jsp">添加角色</a>
-                            
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <i class="icon-comments"></i>
-                        <span class="title">留言管理</span>
-                        
-                    </a>
-                    
-                </li>
-                
-            </ul>
+			<c:forEach items="${user.menus}" var="menu">
+			
+			<li >
+			<a href="javascript:;">
+                <i class="icon-comments"></i>
+                <span class="title">${menu.name }</span>
+                <span class="arrow "></span></a>
+                <ul class="sub-menu" ><li>
+			<c:forEach items="${menu.children}" var="child">
+			
+			<a href="${child.url}">${child.name }</a>
+			</c:forEach>
+			</li></ul></li>
+			</c:forEach>
+			</ul>
             
             <!-- END SIDEBAR MENU -->
       	</div>
