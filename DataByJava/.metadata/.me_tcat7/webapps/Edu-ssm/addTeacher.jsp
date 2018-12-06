@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -136,7 +137,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href=""><i class="icon-lock"></i> 修改密码</a></li>
-                            <li><a href=""><i class="icon-key"></i> 退出</a></li>
+                            <li><a href="outLogin.do"><i class="icon-key"></i> 退出</a></li>
                         </ul>
                     </li>
                     <!-- END USER LOGIN DROPDOWN -->
@@ -153,6 +154,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="page-sidebar nav-collapse collapse">
             <!-- Begin SIDEBAR MENU -->
             <!-- BEGIN SIDEBAR MENU -->
+            <!-- 获取菜单 -->
             <ul class="page-sidebar-menu">
                 <li>
                     <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
@@ -160,94 +162,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
                 </li>
                 
-                <li>
-                    <a href="javascript:;">
-                        <i class="icon-comments"></i>
-                        <span class="title">学员管理</span>
-                        <span class="arrow "></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="studentShow.do">学员管理</a>
-                            
-                            <a href="addStudents.jsp">添加学员</a>
-                            
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <i class="icon-comments"></i>
-                        <span class="title">教师管理</span>
-                        <span class="arrow "></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            
-                            <a href="teachShow.do">教师管理</a>
-                            <a href="addTeacher.jsp">添加教师</a>
-                            
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="">
-                        <i class="icon-home"></i>
-                        <span class="title">课程管理</span>
-                        <span class="arrow "></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="courseShow.do">课程管理</a>
-                            <a href="addCourse.jsp">添加课程</a>
-                            
-                            
-                        </li>
-                    </ul>
-                </li>
-                <!--  <li><a href="">360全景</a></li> -->
-                <li>
-                    <a href="">
-                        <i class="icon-bullhorn"></i>
-                        <span class="title">新闻管理</span>
-                        <span class="arrow "></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="newShow.do">新闻管理</a>
-                            <a href="addnew.jsp">添加新闻</a>
-                            
-                        </li>
-                    </ul>
-                </li>
-                
-                <li>
-                    <a href="javascript:;">
-                        <i class="icon-comments"></i>
-                        <span class="title">角色管理</span>
-                        <span class="arrow "></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="roleShow.do">角色管理</a>
-                            <a href="addRole.jsp">添加角色</a>
-                            
-                        </li>
-                        
-                    </ul>
-                </li>
-                    <li>
-                    <a href="messageShow.do">
-                        <i class="icon-comments"></i>
-                        <span class="title">留言管理</span>
-                        
-                    </a>
-                    
-                </li>
-                 
-                
-            </ul>
+			<c:forEach items="${user.menus}" var="menu">
+			
+			<li >
+			<a href="javascript:;">
+                <i class="icon-comments"></i>
+                <span class="title">${menu.name }</span>
+                <span class="arrow "></span></a>
+                <ul class="sub-menu" ><li>
+			<c:forEach items="${menu.children}" var="child">
+			
+			<a href="${child.url}">${child.name }</a>
+			</c:forEach>
+			</li></ul></li>
+			</c:forEach>
+			</ul>
             
             <!-- END SIDEBAR MENU -->
         </div>
@@ -295,7 +224,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             </ul> -->
                             <!-- BEGIN FORM-->
                             <div class="savewebsite">
-                                <button onclick="savewebsite()" class="btn blue "><i class="icon-ok"></i>发布</button>
+                                <button onclick="savewebsite()" class="btn blue "><a href="index.html">首页</a></button>
                                 <a class=" btn yellow hide alertdome" data-toggle="modal" href="#static">View Demo</a>
                             </div>
                             <!-- END FORM-->

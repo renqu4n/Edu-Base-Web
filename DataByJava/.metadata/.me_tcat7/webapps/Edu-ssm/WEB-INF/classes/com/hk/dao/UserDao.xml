@@ -65,5 +65,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		update user set user_password = #{user_password}
 		where user_name= #{user_name} and user_email= #{user_email}
 	</update>
+	
+	
+	
+	
+	<select id="getAllUsers" resultType="User"  parameterType="int">
+    <!-- mysql 的分页查询语句-->
+    <!--firstIndex pageSize是Page类的属性 -->
+        SELECT * FROM user   LIMIT #{start},#{pageCount}
+    </select>
+    <select id="selectUserCount" resultType="int">
+    <!-- 查询总记录数-->
+        select count(id) from user where role_id = 0
+    </select>
+    
+    
+    <delete id="deleteUser">
+		delete from  user where id=#{0}
+	</delete>
 
 </mapper>
