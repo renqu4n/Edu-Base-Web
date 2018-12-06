@@ -50,4 +50,11 @@ public class RoleServiceImpl implements RoleService {
 		return dao.selectRoleCount();
 	}
 
+
+	@Override
+	public List<Role> getAllRoles() {
+		// TODO Auto-generated method stub
+		return dao.getAllRole();
+	}
+
 }

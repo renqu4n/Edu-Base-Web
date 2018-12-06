@@ -15,4 +15,6 @@ public interface RoleService {
 	public void deleteRole(int key);
 	public List<News> getAllRoles(Page page);
 	public int selectRoleCount();
+	
+	public List<Role> getAllRoles();
 }

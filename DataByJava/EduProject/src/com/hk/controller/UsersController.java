@@ -26,21 +26,26 @@ public class UsersController {
 	
 	
 	@RequestMapping(value="/addStudent.do")
-	public String addStudent(HttpServletRequest request,HttpServletResponse response,User user) {
-
-		User  is = service.selectUser(user);
+	public String addStudent(HttpServletRequest request,HttpServletResponse response) {
+		int id=Integer.parseInt(request.getParameter("id"));
+		String name=request.getParameter("user_name");
+		
+		User  is = service.selectUser(id,name);
 		System.out.println(is);
 	if (is!=null) {
 		if (is.getRole_id()!=2) {
 			service.updateStudent(is);
 			request.setAttribute("message", "添加成功-------");
 
-		}
+			}else{
+				request.setAttribute("message", "该学员已存在-------！！！");
+			}
+		}else {
+			request.setAttribute("message", "该学员不是普通用户-------！！！");
 		
-	} else {
-		request.setAttribute("message", "该学员不是普通用户-------！！！");
+	} 
 		
-	}
+	
 		
 		
 		
@@ -49,15 +54,19 @@ public class UsersController {
 	}
 	
 	@RequestMapping(value="/addTeacher.do")
-	public String addTeacher(HttpServletRequest request,HttpServletResponse response,User user) {
-
-		User  is = service.selectUser(user);
+	public String addTeacher(HttpServletRequest request,HttpServletResponse response) {
+		int id=Integer.parseInt(request.getParameter("id"));
+		String name=request.getParameter("user_name");
+		
+		User  is = service.selectUser(id,name);
 		System.out.println(is);
 	if (is!=null) {
 		if (is.getRole_id()!=3) {
 			service.updateTeacher(is);
 			request.setAttribute("message", "添加成功-------");
 
+		}else{
+			request.setAttribute("message", "该教师已存在-------！！！");
 		}
 		
 	} else {
