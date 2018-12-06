@@ -261,6 +261,8 @@ public class UsersController {
 	@ResponseBody
 	public String getLoginUser(HttpServletRequest request,HttpServletResponse response,HttpSession session) {
 		User user = (User) session.getAttribute("user");
+		
+		System.out.println("第二次请求用户");
 		if (user!=null) {
 			System.out.println("登录用户为：");
 			System.out.println(user);
@@ -268,9 +270,9 @@ public class UsersController {
 			System.out.println(LoginUser);
 			return LoginUser;
 		} else {
-			
+			return null;
 		}
-		return null;
+		
 		
 	}
 	
@@ -330,7 +332,20 @@ public class UsersController {
 		response.sendRedirect("userShow.do");
 	
 	}
+	//注销方法
+		@RequestMapping(value="/outLogin.do")
+		public String outLogin(HttpSession session,User user){
+			//通过session.invalidate()方法来注销当前的session
+			System.out.println("----------------正在注销-------------------------");
+			session.removeAttribute("user");
+			session.invalidate();
+			System.out.println(user);
+			System.out.println("信息清空了------------------------------");
+			
+			return "forward:/index.html";
+			
+		}
 	
 	
-	
+		
 }

@@ -19,7 +19,7 @@
           <router-link to="/eduHeart"><li class="header-li"><a><span>学员心声</span></a></li></router-link>
           <li class="header-li" v-if="login"><a href="login.html"><span>登录</span></a></li>
           <li class="header-li" v-if="loginStatus">
-            <span>欢迎你<a class="userName">{{user}}</a></span>
+            <span>欢迎你<a class="userName" alt="点击名字注销" href="outLogin.do">{{user}}</a></span>
           </li>
         </ul>
 
@@ -46,6 +46,7 @@ export default {
   },
   mounted () {
     // 控制当屏幕滚动超过90px时，隐藏菜单栏
+    this.clearAllCookie()
     this.checkLogin()
     window.addEventListener('scroll', () => {
       this.scrollTop = document.documentElement.scrollTop
@@ -61,14 +62,22 @@ export default {
     this.userName = this.$global.user
   },
   methods: {
+    // 清空cookie
+    clearAllCookie () {
+      var keys = document.cookie.match(/[^ =;]+(?=\=)/g)
+      if (keys) {
+        for (var i = keys.length; i--;) { document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString() }
+      }
+    },
+    // 获取用户登录名
     checkLogin () {
       this.$axios.get('/Edu-ssm/getLoginUser.do').then(this.getName)
     },
+    // 获取登录的用户名
     getName (res) {
       if (res.status === 200) {
         res = res.data[0]
         if (res == null) {
-
         } else {
           this.user = res.user_name
           this.login = false
@@ -77,6 +86,9 @@ export default {
       } else {
         alert('请求失败！即将返回上个页面！')
       }
+    },
+    outLogin () {
+      this.$axios.get('/Edu-ssm/outLogin.do').then(this.$router.push({path: `/`}))
     },
     // 隐藏按钮、显示导航栏
     hiddenBtn () {

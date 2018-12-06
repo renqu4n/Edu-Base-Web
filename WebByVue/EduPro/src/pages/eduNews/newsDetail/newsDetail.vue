@@ -39,7 +39,7 @@ export default {
   name: 'eduNewsDetail',
   data () {
     return {
-      newsDetail: Object,
+      newsDetail: {},
       newsId: Number
     }
   },
@@ -55,7 +55,8 @@ export default {
     handleData (res) {
       if (res.status === 200) {
         res = res.data
-        this.newsDetail = res[--this.newsId]
+        console.log(this.newsId)
+        this.newsDetail = res[this.newsId - 32]
       } else {
         alert('请求失败，即将跳转到刚才的页面')
         this.$router.go('/eduNews')
@@ -75,9 +76,10 @@ export default {
 * {
     padding: 0;
     margin: 0;
+    text-decoration: none;
 }
     .body {
-        height:2065px;
+        height:2200px;
         width: 100%;
     }
         .newsPage {
@@ -147,5 +149,8 @@ export default {
             }
             .content {
                 line-height: 30px;
+                white-space: normal;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 </style>

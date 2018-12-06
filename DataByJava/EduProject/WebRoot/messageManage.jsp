@@ -167,7 +167,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href=""><i class="icon-lock"></i> 修改密码</a></li>
-                            <li><a href=""><i class="icon-key"></i> 退出</a></li>
+                            <li><a href="outLogin.do"><i class="icon-key"></i> 退出</a></li>
                         </ul>
                     </li>
                     <!-- END USER LOGIN DROPDOWN -->
