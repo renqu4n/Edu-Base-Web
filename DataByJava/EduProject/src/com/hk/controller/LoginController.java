@@ -13,10 +13,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.hk.bean.Menu;
+import com.hk.bean.Role;
 import com.hk.bean.Url;
 import com.hk.bean.User;
 import com.hk.service.LoginService;
 import com.hk.service.MenuService;
+import com.hk.service.RoleService;
 import com.hk.service.UrlService;
 
 
@@ -28,7 +30,8 @@ public class LoginController{
 	private UrlService Urlservice;
 	@Autowired
 	private MenuService menuService;
-
+	@Autowired
+	private RoleService roleservice;
 
 	@RequestMapping(value="/regist.do")
 	public String regist(HttpServletRequest request,HttpServletResponse response,HttpSession session,User user) throws IOException{
@@ -93,6 +96,8 @@ public class LoginController{
 			users.setMenus(menuService.showMenu(users.getRole_id()));
 			System.out.println(users);
 			request.setAttribute("user", users);
+			//List<Role> roles = roleservice.getAllRoles();
+			//request.setAttribute("roles", roles);
 			//request.getRequestDispatcher("/WEB-INF/jsp/back_manager.jsp").forward(request, response);
 			int   rid=users.getRole_id();
 			if (rid==1||rid==4) {

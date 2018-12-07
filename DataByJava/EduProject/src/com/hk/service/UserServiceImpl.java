@@ -30,9 +30,9 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public User selectUser(User user) {
+	public User selectUser(int id,String name) {
 		
-		return dao.selectUser(user);
+		return dao.selectUser(id,name);
 	}
 
 	@Override

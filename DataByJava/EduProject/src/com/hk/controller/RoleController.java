@@ -7,6 +7,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -44,7 +45,7 @@ public class RoleController {
 	}
 	
 	@RequestMapping(value="/roleShow.do")
-	public String roleShow(HttpServletRequest request,HttpServletResponse response,Page page) {
+	public String roleShow(HttpServletRequest request,HttpServletResponse response,Page page,HttpSession session) {
 
 		int currentPage = 1;
 		int pageCount = 10;
@@ -62,7 +63,7 @@ public class RoleController {
 		int  RoleCount = service.selectRoleCount();
 		System.out.println(Roles);
 		System.out.println(RoleCount);
-		
+		//session.setAttribute("Roles", Roles);
 		//int pageCount = page.getPageCount();
 		 int   totalPageCount = RoleCount / pageCount;
 			if(RoleCount % pageCount != 0) {

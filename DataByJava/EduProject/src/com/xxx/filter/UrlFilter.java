@@ -37,7 +37,7 @@ public class UrlFilter implements Filter {
 			
 		}else{
 			//if(uri.equals("/Edu-ssm/regist")||uri.equals("/Edu-ssm/regist.jsp")||uri.equals("/Edu-ssm/index.jsp")||uri.equals("/Edu-ssm/index")&&!uri.equals("/Edu-ssm/studentShow.do")&&!uri.equals("/Edu-ssm/teachShow.do")&&!uri.equals("/Edu-ssm/courseShow.do")&&!uri.equals("/Edu-ssm/newShow.do")&&!uri.equals("/Edu-ssm/roleShow.do")&&!uri.equals("/Edu-ssm/messageShow.do")){
-			if(uri.endsWith(".do")&&!uri.equals("/Edu-ssm/userShow.do")&&!uri.equals("/Edu-ssm/studentShow.do")&&!uri.equals("/Edu-ssm/teachShow.do")&&!uri.equals("/Edu-ssm/courseShow.do")&&!uri.equals("/Edu-ssm/newShow.do")&&!uri.equals("/Edu-ssm/roleShow.do")&&!uri.equals("/Edu-ssm/messageShow.do")){
+			if(uri.endsWith(".do")&&!uri.equals("/Edu-ssm/singleUserPerManager.do")&&!uri.equals("/Edu-ssm/permissionManager.do")&&!uri.equals("/Edu-ssm/userShow.do")&&!uri.equals("/Edu-ssm/studentShow.do")&&!uri.equals("/Edu-ssm/teachShow.do")&&!uri.equals("/Edu-ssm/courseShow.do")&&!uri.equals("/Edu-ssm/newShow.do")&&!uri.equals("/Edu-ssm/roleShow.do")&&!uri.equals("/Edu-ssm/messageShow.do")){
 				
 			filterchain.doFilter(req, res);
 			}else{
