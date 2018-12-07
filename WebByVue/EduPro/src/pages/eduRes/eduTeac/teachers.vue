@@ -4,7 +4,7 @@
         <div class="body">
             <div class="teacPage">
                 <div class="teacTitle">
-                    <p>业界名师 卓尔不凡</p>
+                    <p>业界名师🎓️卓尔不凡</p>
                     <span>互联网一线大咖亲授 祝您圆梦IT</span>
                 </div>
 

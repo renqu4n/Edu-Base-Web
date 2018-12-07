@@ -3,7 +3,7 @@
     <div class="wrapper" >
 
         <div class="titleCoo">
-            <p>内推合作机构 助力学员就业</p>
+            <p>内推合作机构👍助力学员就业</p>
             <span>Cooperation enterprise</span>
         </div>
         <div class="picCoo">

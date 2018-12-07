@@ -3,7 +3,7 @@
     <!-- 头部 -->
     <holder style="position:absolute;z-index:3;"></holder>
     <div class="body">
-      <swiper style="position:absolute;z-index:1;"></swiper>
+      <a href="https://ke.qq.com/course/list?mt=1001&st=2004"></a><swiper style="position:absolute;z-index:1;"></swiper></a>
       <student></student>
       <cooperation></cooperation>
     </div>

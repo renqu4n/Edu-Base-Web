@@ -45,6 +45,7 @@ export default {
     user: String
   },
   mounted () {
+    // window.location.reload(true)
     // 控制当屏幕滚动超过90px时，隐藏菜单栏
     this.clearAllCookie()
     this.checkLogin()
@@ -64,13 +65,14 @@ export default {
   methods: {
     // 清空cookie
     clearAllCookie () {
-      var keys = document.cookie.match(/[^ =;]+(?=\=)/g)
+      var keys = document.cookie.match(/[^ =;]+(?==)/g)
       if (keys) {
         for (var i = keys.length; i--;) { document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString() }
       }
     },
     // 获取用户登录名
     checkLogin () {
+      // location.reload(true)
       this.$axios.get('/Edu-ssm/getLoginUser.do').then(this.getName)
     },
     // 获取登录的用户名
@@ -88,7 +90,12 @@ export default {
       }
     },
     outLogin () {
-      this.$axios.get('/Edu-ssm/outLogin.do').then(this.$router.push({path: `/`}))
+      // this.$axios.get('/Edu-ssm/outLogin.do').then(this.$router.push({path: `/`}))
+      this.$axios({
+        method: 'GET',
+        URL: '/Edu-ssm/outLogin.do',
+        cache: false
+      })
     },
     // 隐藏按钮、显示导航栏
     hiddenBtn () {
