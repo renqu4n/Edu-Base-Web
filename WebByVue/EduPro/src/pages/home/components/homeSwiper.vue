@@ -21,14 +21,11 @@ export default {
   name: 'homeSwiper',
   data () {
     return {
-      list: [{
+      list: [ {
         'id': '1',
-        'imgUrl': 'http://p6alxlphh.bkt.clouddn.com/banner2.png'
-      }, {
-        'id': '2',
         'imgUrl': 'http://p6alxlphh.bkt.clouddn.com/banner1.png'
       }, {
-        'id': '3',
+        'id': '2',
         'imgUrl': 'http://p6alxlphh.bkt.clouddn.com/banner3.png'
       }],
       swiperOption: {

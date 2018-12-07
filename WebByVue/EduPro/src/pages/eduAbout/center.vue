@@ -4,9 +4,9 @@
         <div class="body">
           <div class="centerPage">
             <div class="centerTitle">
-                    <p>XX教育</p>
+                    <p>⭐🌙教育</p>
                     <span>
-                      XX的初衷是为了能让每一位学员对于人生做好充足的准备，以更好的姿态成功入职高薪企业。
+                        星月的初衷是为了能让每一位学员对于人生做好充足的准备，以更好的姿态成功入职高薪企业。
                       <p>创造价值 用心服务 保障学员 持久发展</p>
                     </span>
             </div>
@@ -40,10 +40,10 @@
                   <img src="../../assets/about4.png" alt="">
                 </div>
                 <div class="center-post-intro">
-                  <p>总想给你最好的</p>
+                  <p>总想给你最好的👏</p>
                   <p>如果一个同学来到了这里，走时只带走了技能，我们就不算成功。</p>
-                  <p>在这里，你不仅可以学到技术，更能提升个人修养，更加透彻的了解世界，进一步寻求自己的光荣和梦想。</p>
-                  <p>虽然，光荣并不容易抵达。但，希望通过我们的努力，能帮你少走些弯路。在未来的人生轨迹中更快更好的找到属于自己的生活方式，这或许就是我们送给你最珍贵的礼物。</p>
+                  <p>在这里，你不仅可以学到技术，更能提升个人修养，更加透彻的了解世界🌏️ ，进一步寻求自己的光荣和梦想。</p>
+                  <p>虽然，光荣并不容易抵达。但，希望通过我们的努力，能帮你少走些弯路。在未来的人生轨迹中更快更好的找到属于自己的生活方式，这或许就是我们送给你最珍贵的礼物🎁️。</p>
                 </div>
               </div>
             </div>
@@ -51,22 +51,22 @@
               <div class="center-join-wrapper">
                 <div class="center-join-title">
                   <p>JOIN US</p>
-                  <p>热爱技术 热爱分享</p>
+                  <p>热爱技术🌪热爱分享</p>
                 </div>
                 <div class="center-join-content">
                   <div class="center-join-content-left">
-                    <p>XXX技术岗位</p>
+                    <p>Web前端岗位</p>
                     <p class="content-left-detail">岗位要求</p>
                     <p class="content-left-detail">1.熟练使用HTML，CSS，JavaScript、jQuery应用和web开发。</p>
                     <p class="content-left-detail">2.有CSS3、HTML5，GITHUB等前端实践经验，了解react ,redux ,vue, vuex, angularJS一种。</p>
                     <p class="content-left-detail">3.会使用至少一种前端自动化构建工具webpack，fis，gulp等。</p>
                   </div>
                   <div class="center-join-content-right">
-                    <p>XXX技术岗位</p>
+                    <p>Java技术岗位</p>
                     <p class="content-left-detail">岗位要求</p>
-                    <p class="content-left-detail">1.熟练使用HTML，CSS，JavaScript、jQuery应用和web开发。</p>
-                    <p class="content-left-detail">2.有CSS3、HTML5，GITHUB等前端实践经验，了解react ,redux ,vue, vuex, angularJS一种。</p>
-                    <p class="content-left-detail">3.会使用至少一种前端自动化构建工具webpack，fis，gulp等。</p>
+                    <p class="content-left-detail">1.熟练使用java，spring、mybatis、springMVC和git开发。</p>
+                    <p class="content-left-detail">2.有jsp等前端实践经。</p>
+                    <p class="content-left-detail">3.会使用至少一种后端自动化构建工具webpack，fis，gulp等。</p>
                   </div>
                 </div>
               </div>

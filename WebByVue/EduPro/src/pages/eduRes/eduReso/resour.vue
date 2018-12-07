@@ -3,12 +3,12 @@
     <holder></holder>
     <div class="body">
       <div class="resTitle">
-                    <p>从0到1的蜕变</p>
+                    <p>从0到1的蜕变🌈</p>
                     <span>在这里，你不止学到知识</span>
       </div>
       <div class="webResPage" z-index=1>
         <div class="webTitle">
-          <p>web前端课程</p>
+          <p>web前端课程🎞️</p>
           <div>
             <img src="http://p6alxlphh.bkt.clouddn.com/hand.png">
           </div>
@@ -40,7 +40,7 @@
         <div class="javaPort">
           <p>COMMING SOON</p>
           <p>更用心的筹备 只为了让你学到更优质的课程</p>
-          <p>JAVA课程</p>
+          <p>JAVA课程☕</p>
         </div>
         <div class="webTitle" style="margin-top:118px;">
           <p>基础练习题</p>
@@ -75,7 +75,7 @@
       </div>
       <div class="resContact">
         <div class="contactTitle">
-                   <p>任何疑问，请联系我们</p>
+                   <p>任何疑问📞️请联系我们</p>
                     <p>Counseling course</p>
                     <span></span>
         </div>

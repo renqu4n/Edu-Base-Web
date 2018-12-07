@@ -12,6 +12,7 @@
                     <div class="newsHome">
                         <router-link to="/eduNews"><a>首页</a></router-link
                         >
+                        >
                         <a>新闻资讯</a>
 
                     </div>

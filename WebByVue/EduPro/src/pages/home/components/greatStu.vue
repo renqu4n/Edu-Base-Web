@@ -13,8 +13,8 @@
     </div>
     <!-- 正常显示层 -->
     <div class="titleStu">
-        <p>优秀学员俱乐部</p>
-        <span>部分xx-xxW年薪学员</span>
+        <p>优秀学员💪俱乐部</p>
+        <span>部分20-40W年薪学员</span>
     </div>
     <div class="picStu">
         <ul class="picTable" >

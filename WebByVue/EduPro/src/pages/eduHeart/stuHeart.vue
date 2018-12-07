@@ -7,7 +7,7 @@
       <div class="heartPage">
         <div class="heartTitle">
           <p>学员心声</p>
-          <span>桃李不言，下自成蹊</span>
+          <span>桃李不言🎐️下自成蹊</span>
         </div>
         <div class="heartTable">
           <h2>{{messageConut}}条留言</h2>
@@ -44,7 +44,7 @@
         </div> -->
         <div class="heartTitle" style="margin-top:100px;">
           <p>留言板</p>
-          <span>赠人玫瑰，手有余香</span>
+          <span>赠人玫瑰🌹️手有余香</span>
         </div>
         <div class="message-board">
           <!-- 留言功能 -->
