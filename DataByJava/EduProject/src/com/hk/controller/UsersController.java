@@ -324,7 +324,7 @@ public class UsersController {
 	
 	}
 	//注销方法
-		@RequestMapping(value="/outLogin.do")
+		@RequestMapping("/outLogin.do")
 		public String outLogin(HttpSession session,User user){
 			//通过session.invalidate()方法来注销当前的session
 			System.out.println("----------------正在注销-------------------------");
@@ -333,7 +333,7 @@ public class UsersController {
 			System.out.println(user);
 			System.out.println("信息清空了------------------------------");
 			
-			return "forward:/index.html";
+			return "redirect:/index.html";
 			
 		}
 	
