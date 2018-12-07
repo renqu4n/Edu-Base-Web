@@ -9,7 +9,7 @@ import com.hk.bean.User;
 public interface UserDao {
 	public  Boolean addStudent(User user);
 	public  User selectTeacher(User user);
-	public  User selectUser(int id,String name);
+	public  List<User> selectUser(String name);
 	public  void updateStudent(User user);
 	public  void updateTeacher(User user);
 	public List<User> getAllStudent(Page page);

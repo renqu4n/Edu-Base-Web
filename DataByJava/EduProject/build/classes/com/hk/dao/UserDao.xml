@@ -11,7 +11,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
 		<select id="selectUser" resultType="User">
-		select * from user where  id= #{0} and user_name = #{1}
+		select * from user where user_name like CONCAT('%',#{0},'%') 
 	</select>
 	
 	<select id="selectTeacher" resultType="User">
