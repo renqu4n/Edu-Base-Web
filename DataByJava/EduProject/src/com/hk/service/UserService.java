@@ -26,5 +26,8 @@ public interface UserService {
 	public List<User> getAllUsers(Page page);
 	public int selectUserCount();
 	
+	public  User selectUserByNameEmail(String name);
+	
+	public boolean updataUserRole(int id,int role_id);
 	
 }

@@ -59,12 +59,42 @@ public class PermissionController {
 	@RequestMapping(value="/updateUserPermission.do")
 	public String updateUserPermission(HttpServletRequest request,HttpServletResponse response) {
 		
+		String nameAndEmail = request.getParameter("user_name");
+		User is = userservice.selectUserByNameEmail(nameAndEmail);
+		if (is!=null) {
+			int radio = Integer.parseInt(request.getParameter("role"));
+			System.out.println(radio);
+			if (radio==0) {
+				
+				request.setAttribute("message", "请为该用户选择要改变的角色-------！！！");
+			} else {
+				if (radio==is.getRole_id()) {
+					request.setAttribute("message", "请选择与用户角色不一样的角色-------！！！");
+					
+				} else {
+					
+					//修改用户的角色，两个参数，一个为用户id，另一个为角色id，即radio
+				boolean issuccss = userservice.updataUserRole(is.getId(), radio);
+				if (issuccss) {
+					request.setAttribute("message", "修改用户角色成功-------！！！");
+					
+				} else {
+					request.setAttribute("message", "修改用户角色失败-------！！！");
+
+				}
+				
+				}
+				
+				
+			}
+			
+			
+		} else {
+			
+			request.setAttribute("message", "该用户不存在-------！！！");
+		}
 		
 		
-		
-		
-		String radio = request.getParameter("role");
-		System.out.println(radio);
 		
 		
 		

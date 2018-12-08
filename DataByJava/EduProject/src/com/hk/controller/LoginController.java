@@ -89,13 +89,15 @@ public class LoginController{
 			users.getRole_id();
 			users.setUrls(Urlservice.selByRid(users.getRole_id()));
 			session.setAttribute("allurl",allurl);
-			session.setAttribute("user", users);
+			
 			
 			System.out.println(allurl);
 			
 			users.setMenus(menuService.showMenu(users.getRole_id()));
 			System.out.println(users);
-			request.setAttribute("user", users);
+			session.setAttribute("user", users);
+			
+			//request.setAttribute("user", loginUser);
 			//List<Role> roles = roleservice.getAllRoles();
 			//request.setAttribute("roles", roles);
 			//request.getRequestDispatcher("/WEB-INF/jsp/back_manager.jsp").forward(request, response);

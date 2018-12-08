@@ -268,7 +268,7 @@
 							<!-- <div style="margin-top: -74px;width:359px;height: 60px;position:absolute;top:282px;left: 503px"><select id="myselect" style="width: 360px;height: 30px">
 							</select></div> -->
 							<li><label>教师名字</label>
-							<input list="myselect" oninput="mytest()" id="select" name="user_name" type="text" class="dfinput"  required/><i>请输入普通用户的名字</i></li>
+							<input list="myselect" oninput="mytest()" id="select" name="user_name" type="text" class="dfinput"  required/><i>请输入用户名和邮箱</i></li>
 							<datalist id="myselect" ></datalist>
 							<li><label>&nbsp;</label> <input name="" type="submit"
 								class="btn" value="确认保存" /></li>
@@ -277,14 +277,11 @@
 				</div>
 
 
-				<h3>提示</h3>
-				<h5>主体js文件地址：public/media/js/website.js</h5>
-				<h5>
-					上传图片形式以单击形式上传，图片php控制器:Website.php More Templates <a
-						href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
-					- Collect from <a href="http://www.cssmoban.com/" title="网页模板"
-						target="_blank">网页模板</a>
-				</h5>
+				<div style="margin-top:300px;text-align: center">
+                <h3>提示</h3>
+                <h5>主体js文件地址：public/media/js/website.js</h5>
+                <h5>上传图片形式以单击形式上传，图片php控制器:Website.php More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></h5>
+            	</div>
 			</div>
 			<!-- END PAGE CONTAINER-->
 		</div>
@@ -432,7 +429,7 @@
 			    	}
 			    	
 			    	var like=_this.val()
-			$.post("addTeacher.do",{like:like}, function(data) {
+			$.post("likeByName.do",{like:like}, function(data) {
 				var _data=eval(data);
 				console.log(_data)
 				var select = $("#myselect");

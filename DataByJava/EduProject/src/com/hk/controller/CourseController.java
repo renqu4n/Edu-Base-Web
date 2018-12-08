@@ -1,13 +1,13 @@
 package com.hk.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,9 +30,13 @@ public class CourseController {
 	
 	
 	@RequestMapping(value="/addCourse.do")
-	public String addStudent(HttpServletRequest request,HttpServletResponse response,Course course,int teacher_id,User user) {
+	public String addStudent(HttpServletRequest request,HttpServletResponse response,Course course,int teacher_id,HttpSession session) {
+		User user = new User();
 		user.setId(teacher_id);
-
+		User loginUser = (User) session.getAttribute("user");
+		System.out.println("看看session的值");
+		System.out.println(loginUser);
+		//request.setAttribute("user", loginUser);
 		User  isTeacher = Userservice.selectTeacher(user);
 		if (isTeacher.getRole_id()==3) {
 			boolean  is = service.insertCourse(course);

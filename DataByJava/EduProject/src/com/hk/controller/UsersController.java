@@ -26,13 +26,13 @@ public class UsersController {
 	@Autowired
 	private UserService service;
 
-	/*@RequestMapping(value = "/addStudent.do")
+	@RequestMapping(value = "/addStudent.do")
 	public String addStudent(HttpServletRequest request,
 			HttpServletResponse response) {
-		int id = Integer.parseInt(request.getParameter("id"));
-		String name = request.getParameter("user_name");
+		
+		String nameAndEmail = request.getParameter("user_name");
 
-		User is = service.selectUser(id, name);
+		User is = service.selectUserByNameEmail(nameAndEmail);
 		System.out.println(is);
 		if (is != null) {
 			if (is.getRole_id() != 2) {
@@ -48,21 +48,34 @@ public class UsersController {
 		}
 
 		return "addStudents";
-	}*/
+	}
 
-	@RequestMapping(value = "/addTeacher.do")
+	@RequestMapping(value = "/likeByName.do", produces = "text/html;charset=UTF-8")
 	@ResponseBody
-	public String addTeacher(HttpServletRequest request,
+	public String likeByName(HttpServletRequest request,
 			HttpServletResponse response) {
 		
 		String name = request.getParameter("like");
-		System.out.println("匹配名字"+name);
+		
 		List<User> user = service.selectUser(name);
 
-		System.out.println(user);
 		
 		String wf = Json.toJSONString(user);
-		/*if (is != null) {
+		
+
+		return wf;
+	}
+	
+	
+	@RequestMapping(value = "/addTeacher.do")
+	public String addTeacher(HttpServletRequest request,
+			HttpServletResponse response) {
+		
+		String nameAndEmail = request.getParameter("user_name");
+		User is = service.selectUserByNameEmail(nameAndEmail);
+		System.out.println("添加教师的用户为：");
+		System.out.println(is);
+		if (is != null) {
 			if (is.getRole_id() != 3) {
 				service.updateTeacher(is);
 				request.setAttribute("message", "添加成功-------");
@@ -74,9 +87,9 @@ public class UsersController {
 		} else {
 			request.setAttribute("message", "该教师不是普通用户-------！！！");
 
-		}*/
+		}
 
-		return wf;
+		return "addTeacher";
 	}
 
 	@RequestMapping(value = "/studentShow.do")
@@ -224,8 +237,8 @@ public class UsersController {
 
 	@RequestMapping(value = "/updateUserPassword.do")
 	public String updateUserPassword(HttpServletRequest request,
-			HttpServletResponse response, User user) {
-
+			HttpServletResponse response) {
+		User user = new User();
 		System.out.println(user);
 		Boolean is = service.updateUserPassword(user);
 		if (is) {
@@ -237,7 +250,7 @@ public class UsersController {
 
 		}
 
-		return "updatePassword";
+		return "back_manager";
 	}
 
 	@RequestMapping(value = "/getLoginUser.do", produces = "text/html;charset=UTF-8")
@@ -312,7 +325,7 @@ public class UsersController {
 		response.sendRedirect("userShow.do");
 
 	}
-<<<<<<< HEAD
+
 
 	// 注销方法
 	@RequestMapping(value = "/outLogin.do")
@@ -338,20 +351,7 @@ public class UsersController {
 			wf.setName("qwd" + like);
 			wf.setPhone("23234  "+i);
 			wfs.add(wf);
-=======
-	//注销方法
-		@RequestMapping("/outLogin.do")
-		public String outLogin(HttpSession session,User user){
-			//通过session.invalidate()方法来注销当前的session
-			System.out.println("----------------正在注销-------------------------");
-			session.removeAttribute("user");
-			session.invalidate();
-			System.out.println(user);
-			System.out.println("信息清空了------------------------------");
-			
-			return "redirect:/index.html";
-			
->>>>>>> a18d959bc34b5b6233efbea07ed94cf1d4d21c1e
+
 		}
 		String wf = Json.toJSONString(wfs);
 		System.out.println(wf);
