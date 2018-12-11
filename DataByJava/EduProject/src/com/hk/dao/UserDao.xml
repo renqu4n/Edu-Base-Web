@@ -83,5 +83,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <delete id="deleteUser">
 		delete from  user where id=#{0}
 	</delete>
+	
+	
+	<select id="selectUserByNameEmail" resultType="User">
+ 
+        select * from user where #{0} like CONCAT(user_name,'%',user_email)
+    </select>
+    
+    
+    <update id="updataUserRole">
+		update user set role_id = #{1}
+		where id = #{0}
+	</update>
 
 </mapper>

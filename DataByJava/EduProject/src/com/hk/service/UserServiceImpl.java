@@ -114,4 +114,16 @@ public class UserServiceImpl implements UserService{
 		return dao.selectUserCount();
 	}
 
+	@Override
+	public User selectUserByNameEmail(String name) {
+		// TODO Auto-generated method stub
+		return dao.selectUserByNameEmail(name);
+	}
+
+	@Override
+	public boolean updataUserRole(int id, int role_id) {
+		Boolean r = dao.updataUserRole(id, role_id);
+		return r;
+	}
+
 }

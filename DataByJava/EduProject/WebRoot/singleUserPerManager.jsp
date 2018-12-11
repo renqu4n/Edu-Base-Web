@@ -281,12 +281,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <ul class="forminfo">
                 <p style="color:red;margin-left:200px">${message}</p>
                 
-                <li><label>用户名字</label><input name="user_name" type="text" class="dfinput" /><i>请输入普通用户的名字</i></li>
-                <li><label>用户ID</label><input name="id" type="text" class="dfinput" /><i>请输入普通用户的ID</i></li>
-                <li>
+                <li><label>用户名字</label>
+							<input list="myselect" oninput="mytest()" id="select" name="user_name" type="text" class="dfinput"  required/><i>请输入用户名和邮箱</i></li>
+							<datalist id="myselect" ></datalist>
                 <table>
-                
-        
         		<tr>
         		<c:forEach items="${roles}" var="role">
         		<td width="120" height="50"><input name="role" value="${role.id}"  type="radio" style=""/>${role.name}</td>
@@ -302,10 +300,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </form>
                 </div>
                 
-                
+                <div style="margin-top:200px;text-align: center">
                 <h3>提示</h3>
                 <h5>主体js文件地址：public/media/js/website.js</h5>
                 <h5>上传图片形式以单击形式上传，图片php控制器:Website.php More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></h5>
+            </div>
             </div>
             <!-- END PAGE CONTAINER-->
         </div>
@@ -428,6 +427,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         });
 
     }
+    
+    
+    function mytest() {
+			var _this = $("#select");
+			    	if(_this.val().length<2){
+			    		return;
+			    	}
+			    	
+			    	var like=_this.val()
+			$.post("likeByName.do",{like:like}, function(data) {
+				var _data=eval(data);
+				console.log(_data)
+				var select = $("#myselect");
+				var list = [ "xiaoming", "laowang", "xiazi", "aoasdad" ]
+				var str = "";
+				for ( var i = 0; i < _data.length; i++) {
+					str += "<option value='" + _data[i].user_name+"        备注："+_data[i].user_email+"'><option>"
+				}
+				select.html(str) 
+			})
+
+		}
+    
     </script>
     <!-- END JAVASCRIPTS -->
 </body>
