@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 import VueQuillEditor from 'vue-quill-editor'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
@@ -17,6 +19,7 @@ import {
 } from 'vue-easytable'
 // 注册一个全局变量，通过this.$global访问
 import global_ from './components/Global'
+Vue.use(ElementUI)
 Vue.prototype.$global = global_
 // 注册到全局
 Vue.component(VTable.name, VTable)

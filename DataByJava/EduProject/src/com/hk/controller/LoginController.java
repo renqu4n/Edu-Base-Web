@@ -107,7 +107,7 @@ public class LoginController{
 
 
 
-				return "forward:/index.html";
+				return "redirect:/index.html";
 
 			}
 		} else {
