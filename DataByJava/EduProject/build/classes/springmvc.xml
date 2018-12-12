@@ -1,85 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-
-<beans xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
-
-<!-- 配置springmvc到哪个包扫描注解 -->
-
-
-<context:component-scan base-package="com.hk.controller"/>
-
-<context:component-scan base-package="com.hk.service"/>
-
-<!-- 视图解析器 -->
-
-
-
-<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-
-<property value="" name="prefix"/>
-
-<property value=".jsp" name="suffix"/>
-
-</bean>
-
-<!-- 配置数据源 -->
-
-
-
-<bean class="com.mchange.v2.c3p0.ComboPooledDataSource" id="dataSource">
-
-<property value="com.mysql.jdbc.Driver" name="driverClass"/>
-
-<property value="jdbc:mysql:///myssm" name="jdbcUrl"/>
-
-<property value="root" name="user"/>
-
-<property value="123456" name="password"/>
-
-</bean>
-
-<!-- 配置SqlSessionFactoryBean，用于创建SqlSessionFactory 通过SqlSessionFactory可以获取sqlSession，因此需要将数据源的信息配置给SqlSessionFactoryBean -->
-
-
-
-<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
-
-<!-- 数据源 -->
-
-
-<property name="dataSource" ref="dataSource"/>
-
-<!-- mybatis -->
-
-
-<property value="classpath:mybatis.xml" name="configLocation"/>
-
-</bean>
-
-<!-- 配置扫描器，用于扫描映射文件mapper ，创建dao -->
-
-
-
-<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" id="mapper">
-
-<property value="sqlSessionFactory" name="sqlSessionFactoryBeanName"/>
-
-<property value="com.hk.dao" name="basePackage"/>
-
-</bean>
-
-<!-- 配置service -->
-
-
-<!-- <bean id="stuService" class="com.hk.service.StudentServiceImpl"><property name="dao" ref="studentDao"></property></bean> -->
-
-
-<!--注解的驱动 -->
-
-
-<mvc:annotation-driven/>
-
-=======
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -108,7 +27,7 @@
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
 		<property name="jdbcUrl" value="jdbc:mysql:///myssm"></property>
 		<property name="user" value="root"></property>
-		<property name="password" value="wenqin5201314"></property>
+		<property name="password" value=""></property>
 	</bean>
 	
 	<!-- 配置SqlSessionFactoryBean，用于创建SqlSessionFactory 
@@ -135,5 +54,4 @@
 		
 		<!--注解的驱动  -->
 	<mvc:annotation-driven></mvc:annotation-driven>
->>>>>>> befd355fae45f35c91c3af7dc4125a9d138478f6
 </beans>

@@ -1,0 +1,42 @@
+package com.hk.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hk.bean.News;
+import com.hk.bean.Page;
+import com.hk.dao.MessageDao;
+
+@Service
+public class MessageServiceImpl implements MessageService {
+	@Autowired
+	private MessageDao dao;
+
+	@Override
+	public void deleteMessage(int key) {
+		dao.deleteMessage(key);
+		
+	}
+  @Override
+public int updateMessageCount(int key) {
+	// TODO Auto-generated method stub
+	dao.updateMessage(key);
+}
+	@Override
+	public List<News> getAllMessages(Page page) {
+		// TODO Auto-generated method stub
+		return dao.getAllMessages(page);
+	}
+
+	@Override
+	public int selectMessageCount() {
+		// TODO Auto-generated method stub
+		return dao.selectMessageCount();
+	}
+	
+
+
+
+}

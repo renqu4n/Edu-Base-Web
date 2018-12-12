@@ -325,10 +325,6 @@ public class UsersController {
 		response.sendRedirect("userShow.do");
 
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> befd355fae45f35c91c3af7dc4125a9d138478f6
 
 	// 注销方法
 	@RequestMapping(value = "/outLogin.do")
@@ -344,36 +340,6 @@ public class UsersController {
 
 	}
 
-<<<<<<< HEAD
-//	@RequestMapping(value = "/test.do")
-//	@ResponseBody
-//	public String test(HttpServletRequest request) {
-//		List<Wf> wfs = new ArrayList<Wf>();
-//		String like=request.getParameter("like");
-//		for (int i = 0; i < 10; i++) {
-//			Wf wf = new Wf();
-//			wf.setName("qwd" + like);
-//			wf.setPhone("23234  "+i);
-//			wfs.add(wf);
-//	//注销方法
-//		@RequestMapping("/outLogin.do")
-//		public String outLogin(HttpSession session,User user){
-//			//通过session.invalidate()方法来注销当前的session
-//			System.out.println("----------------正在注销-------------------------");
-//			session.removeAttribute("user");
-//			session.invalidate();
-//			System.out.println(user);
-//			System.out.println("信息清空了------------------------------");
-//			
-//			return "redirect:/index.html";
-//			
-//		}
-//		String wf = Json.toJSONString(wfs);
-//		System.out.println(wf);
-//		return wf;
-//
-//	}
-=======
 	@RequestMapping(value = "/test.do")
 	@ResponseBody
 	public String test(HttpServletRequest request) {
@@ -391,8 +357,6 @@ public class UsersController {
 		return wf;
 
 	}
->>>>>>> befd355fae45f35c91c3af7dc4125a9d138478f6
-	
 	
 	
 

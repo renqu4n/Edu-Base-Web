@@ -14,4 +14,5 @@ public interface MessageService {
 	public void deleteMessage(int key);
 	public List<News> getAllMessages(Page page);
 	public int selectMessageCount();
+	public void updateMessage(int key);
 }
