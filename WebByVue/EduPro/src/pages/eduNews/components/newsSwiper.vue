@@ -47,6 +47,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+}
 .wrapper >>> .swiper-pagination-bullet-active {
     background: #fff !important;
 }

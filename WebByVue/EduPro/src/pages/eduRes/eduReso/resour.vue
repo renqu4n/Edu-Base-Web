@@ -191,7 +191,7 @@ export default {
   },
   methods: {
     toVideo (id) {
-      this.$router.push({path: `/eduRes/eduReso/eduVideo${id}`})
+      this.$router.push({path: `/eduRes/eduReso/eduVideo:${id}`})
     },
     handleCourse () {
       this.$axios.get('/Edu-ssm/coshow/courseshow.do').then(this.handleData)

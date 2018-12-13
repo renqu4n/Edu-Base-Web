@@ -62,7 +62,7 @@ export default {
     width: 100%;
     overflow: hidden;
     background: #eee;
-    margin-top: 90px;
+    /* margin-top: 90px; */
 }
     .swiper-img {
         width: 100%;

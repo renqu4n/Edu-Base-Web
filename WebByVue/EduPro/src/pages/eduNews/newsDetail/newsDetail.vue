@@ -2,7 +2,7 @@
     <div>
         <holder style="position:absolute;z-index:3;"></holder>
         <div class="body">
-            <swiper style="position:absolute;z-index:1;"></swiper>
+            <!-- <swiper style="position:absolute;z-index:1;"></swiper> -->
             <div class="newsPage">
                 <div class="newsTitle">
                     <p>新闻中心</p>
@@ -79,15 +79,16 @@ export default {
     text-decoration: none;
 }
     .body {
-        height:2200px;
+        /* min-height:1000px; */
+        position: relative;
         width: 100%;
-        display: flex;
+        overflow: hidden;
     }
         .newsPage {
-            position: absolute;
+            /* position: relative; */
             width: 100%;
-            height: 500px;
-            top: 580px;
+            /* min-height: 500px; */
+            /* margin-top: 570px; */
             z-index: 2;
         }
             .newsTitle {
@@ -114,7 +115,7 @@ export default {
             .newsTable {
                 margin: 20px auto;
                 width: 1225px;
-                height: 648px;
+                /* height: 648px; */
                 /* background: lightgreen; */
                 position: relative;
 
@@ -149,6 +150,8 @@ export default {
                 width: 50px;
             }
             .content {
+                overflow: auto;
+                zoom: 1;
                 line-height: 30px;
                 white-space: normal;
                 overflow: hidden;

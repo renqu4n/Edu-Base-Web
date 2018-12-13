@@ -1,66 +1,57 @@
 <template>
     <div>
     <holder style="position:absolute;z-index:3;" :user='user'></holder>
-    <div class="body" ref="body">
-      <swiper style="position:absolute;z-index:1;">
-      </swiper>
-      <div class="heartPage">
-        <div class="heartTitle">
-          <p>学员心声</p>
-          <span>桃李不言🎐️下自成蹊</span>
-        </div>
-        <div class="heartTable">
-          <h2>{{messageConut}}条留言</h2>
-          <div class="heartWrapper">
-            <div class="heartItem" v-for="item of heartInfo" :key="item.mid">
-              <div class="heartUser">
-                <a href="">
-                  <img src="http://tx.tianyaui.com/logo/small/132409785" alt="">
-                  <span>{{item.user_name}}</span>
-                </a>
-                &nbsp;{{item.data}}
-              </div>
-              <div class="heartContent">
-                {{item.message_content}}
-              </div>
-              <div class="heartCtr">
-                <span>
-                  <i class="heartStar"></i>
-                  <a href="">举报</a>
-                </span>
-              </div>
+      <!-- <swiper style="position:absolute;z-index:1;">
+      </swiper> -->
+    <div class="heartPage">
+      <div class="heartTitle">
+            <p>学员心声</p>
+            <span>桃李不言🎐️下自成蹊</span>
+      </div>
+      <div class="heartTable">
+        <h2>{{messageConut}}条留言</h2>
+        <div class="heartWrapper">
+          <div class="heartItem" v-for="item of heartInfo" :key="item.mid">
+            <div class="heartUser">
+              <a href="">
+                <img src="http://tx.tianyaui.com/logo/small/132409785" alt="">
+                <span>{{item.user_name}}</span>
+              </a>
+              &nbsp;{{item.data}}
+            </div>
+            <div class="heartContent">
+              {{item.message_content}}
+            </div>
+            <div class="heartCtr">
+              <span>
+                <i class="heartStar"></i>
+                <a href="">举报</a>
+              </span>
             </div>
           </div>
-          <div class="paginationPage">
-          <v-pagination  @page-change="pageChange" @page-size-change="pageSizeChange" :total='messageConut' :page-size="pageSize"></v-pagination>
+        </div>
+        <div class="paginationPage">
+        <v-pagination  @page-change="pageChange" @page-size-change="pageSizeChange" :total='messageConut' :page-size="pageSize"></v-pagination>
+        </div>
+      </div>
+      <div class="heartTitle" style="margin-top:200px;">
+        <p>留言板</p>
+        <span>赠人玫瑰🌹️手有余香</span>
+      </div>
+      <div class="message-board">
+        <!-- 留言功能 -->
+        <form action="insertMessage.do" method="post" @submit="checkMessage">
+          <p>留下你的心声(留言会经过我们审核哦!)</p>
+          <textarea v-if="textarea1"  name="input" @click="checkUser"></textarea>
+          <div class="textareaRebox" v-if="textarea2">
+            <a href="login.html"><div class="loginCheck">请先登录</div></a>
           </div>
-        </div>
-
-        <!-- <div class="heartMenu" v-if="messageFlag">
-            <span class="heartIndex">1</span>
-            <router-link to="/heartSecond"><a href="newsSecond" title="第二页">2</a></router-link>
-            <router-link to="/heartSecond"><a href="newsSecond" title="下一页">下一页</a></router-link>
-            <router-link to="/heartSecond"><a href="newsSecond" title="最后一页">最后</a></router-link>
-        </div> -->
-        <div class="heartTitle" style="margin-top:100px;">
-          <p>留言板</p>
-          <span>赠人玫瑰🌹️手有余香</span>
-        </div>
-        <div class="message-board">
-          <!-- 留言功能 -->
-          <form action="insertMessage.do" method="post" @submit="checkMessage">
-            <p>留下你的心声(留言会经过我们审核哦!)</p>
-            <textarea v-if="textarea1"  name="input" @click="checkUser"></textarea>
-            <div class="textareaRebox" v-if="textarea2">
-              <a href="login.html"><div class="loginCheck">请先登录</div></a>
-            </div>
-            <div class="textareaRebox" v-if="textarea3">
-              <div class="loginCheck">你不是学员不能留言！</div>
-            </div>
-            <p><b>当前日期</b>:<span>{{time}}</span></p>
-            <p><input type="submit" id="submit" value ="提交" disabled='disabled' /></p>
-          </form>
-        </div>
+          <div class="textareaRebox" v-if="textarea3">
+            <div class="loginCheck">你不是学员不能留言！</div>
+          </div>
+          <p><b>当前日期</b>:<span>{{time}}</span></p>
+          <p><input type="submit" id="submit" value ="提交" disabled='disabled' /></p>
+        </form>
       </div>
     </div>
     <foot></foot>
@@ -188,26 +179,23 @@ export default {
   padding: 0;
   margin: 0;
 }
-v-pagination {
+/* v-pagination {
   position: relative;
   right: 0;
-}
+} */
 .body {
-  position: flex;
-  /* height: 0; */
-  width: 100%;
 }
-.heartPage {
-            position: absolute;
-            width: 100%;
-            top: 1190px;
-            /* height: 2000px; */
+        .heartPage {
+            /* width: 100%; */
+            /* height: 000px; */
             z-index: 2;
+            word-break: break-all;
+            word-wrap: break-word;
         }
             .heartTitle {
-                height: 170px;
-                width: 100%;
-                padding-top: 90px;
+                /* height: 170px; */
+                /* width: 100%; */
+                margin-top: 100px;
                 margin-bottom: 56px;
                 /* background: rebeccapurple; */
                 text-align: center;
@@ -217,20 +205,21 @@ v-pagination {
                 font-size: 20px;
                 color: #666;
             }
-            .heartTitle span::after {
+            .heartTitle span:after {
                 content: "";
                 display: block;
-                margin: 30px auto 0;
+                margin: 30px auto;
                 width: 20px;
                 height: 2px;
                 background: #be926f;
+                /* clear: both; */
             }
             .heartTable {
                   margin-bottom: 15px;
                   background-color: #eee;
                   border-radius: 5px;
                   padding: 15px 19px;
-                  max-width: 1300px;
+                  width: 1300px;
                   margin: 0 auto;
             }
               .heartTable h2 {
@@ -247,7 +236,7 @@ v-pagination {
               .heartItem {
                 padding: 20px 0 15px 64px;
                 border-bottom: 1px solid #888;
-                position: relative;
+                /* position: relative; */
               }
                 .heartUser {
                   color: #888;
@@ -298,11 +287,11 @@ v-pagination {
                 .paginationPage {
                   margin: 0 auto;
                   width: 500px;
-                  height: 50px;
+                  /* height: 50px; */
                 }
             .message-board {
               width: 1300px;
-              height: 500px;
+              /* height: 500px; */
               margin: 0 auto;
                 /* border: 1px solid black; */
             }
@@ -324,7 +313,7 @@ v-pagination {
             }
             .textareaRebox{
               border: 1px solid black;
-              width: 1340px;
+              width: 1300px;
               height: 300px;
               font-size: 20px;
               line-height: 20px;
