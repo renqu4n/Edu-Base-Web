@@ -255,7 +255,7 @@ img {
       .center-join-wrapper {
         padding-top: 100px;
         height: 800px;
-        background: url(http://p6alxlphh.bkt.clouddn.com/join.png) no-repeat;
+        background: #292929;
         background-size: cover;
       }
         .center-join-title {
@@ -274,7 +274,7 @@ img {
           width: 640px;
           margin: 65px auto 0;
           font-size: 20px;
-          color: #fff;
+          color: #eee;
         }
           .center-join-content-left {
                 float: left;

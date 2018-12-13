@@ -9,7 +9,13 @@ public class StudentsThink {
   private String message_content;
   private int student_id;
   private String data;
-
+  private int check;
+public int getCheck() {
+	return check;
+}
+public void setCheck(int check) {
+	this.check = check;
+}
 public int getStudent_id() {
 	return student_id;
 }

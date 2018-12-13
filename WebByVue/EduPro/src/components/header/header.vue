@@ -17,9 +17,18 @@
             </div>
           </li>
           <router-link to="/eduHeart"><li class="header-li"><a><span>学员心声</span></a></li></router-link>
-          <li class="header-li" v-if="login"><a href="login.html"><span>登录</span></a></li>
-          <li class="header-li" v-if="loginStatus">
-            <span>欢迎你<a class="userName" alt="点击名字注销" href="outLogin.do">{{user}}</a></span>
+          <li class="header-li" v-if="login"><a href="login.html"><span title="点击登录">登录</span><img src="../../assets/未登录.png" class="avatar1" title="你还没有登录哦"></a></li>
+          <li class="header-li" v-if="loginStatus"  @mouseover="showUser()" @mouseout="hiddenUser()">
+            <span>欢迎你，{{userName}}
+              <!-- 头像 -->
+              <img src="../../assets/登录.png" class="avatar2">
+            </span>
+            <!-- <a class="userName" alt="点击名字注销" href="outLogin.do"></a> -->
+            <ul class="userCenter" id="userCenter">
+              <li @click="openUpdatePwd()"><a><img src="../../assets/修改密码.png" alt=""><span>修改密码</span></a></li>
+              <li><a href="/Edu-ssm/back_manager.jsp"><img src="../../assets/后台.png" alt=""><span>回到后台</span></a></li>
+              <li @click="outLogin()"><img src="../../assets/退出.png" alt=""><span>注销</span></li>
+            </ul>
           </li>
         </ul>
 
@@ -36,9 +45,10 @@ export default {
     return {
       scrollTop: null,
       loginHtml: '',
-      loginStatus: false,
-      login: true,
-      userName: ''
+      loginStatus: false, // 默认为未登录
+      login: true, // 登录后为false
+      userCenter: false, // 用户下拉选项框
+      userName: '' // 用户名
     }
   },
   prop: {
@@ -47,8 +57,8 @@ export default {
   mounted () {
     // window.location.reload(true)
     // 控制当屏幕滚动超过90px时，隐藏菜单栏
-    this.clearAllCookie()
     this.checkLogin()
+    this.clearAllCookie()
     window.addEventListener('scroll', () => {
       this.scrollTop = document.documentElement.scrollTop
       // 控制滚动按钮的隐藏或显示
@@ -60,15 +70,11 @@ export default {
         this.hiddenBtn()
       }
     }, true)
-    this.userName = this.$global.user
   },
   methods: {
     // 清空cookie
     clearAllCookie () {
-      var keys = document.cookie.match(/[^ =;]+(?==)/g)
-      if (keys) {
-        for (var i = keys.length; i--;) { document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString() }
-      }
+
     },
     // 获取用户登录名
     checkLogin () {
@@ -79,23 +85,65 @@ export default {
     getName (res) {
       if (res.status === 200) {
         res = res.data[0]
+        console.log(res)
         if (res == null) {
         } else {
-          this.user = res.user_name
+          this.userName = res.user_name
           this.login = false
           this.loginStatus = true
+          // this.openLoginSuc()
         }
       } else {
         alert('请求失败！即将返回上个页面！')
       }
     },
-    outLogin () {
-      // this.$axios.get('/Edu-ssm/outLogin.do').then(this.$router.push({path: `/`}))
-      this.$axios({
-        method: 'GET',
-        URL: '/Edu-ssm/outLogin.do',
-        cache: false
+    // 登录成功后弹出欢迎框
+    // openLoginSuc () {
+    //   this.$notify({
+    //     title: '登录成功',
+    //     message: '欢迎回来,' + this.userName,
+    //     type: 'success',
+    //     position: 'bottom-right'
+    //   })
+    // },
+    // 弹出修改密码框
+    openUpdatePwd () {
+      this.$prompt('请输入旧密码', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        inputErrorMessage: '密码格式不正确'
+      }).then(({ value }) => {
+        this.$message({
+          type: 'success',
+          message: '修改密码成功'
+        })
+        this.$axios({
+          method: 'POST',
+          URL: '/Edu-ssm/updateUserPermission.do',
+          data: value
+        })
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '取消修改密码'
+        })
       })
+    },
+    outLogin () {
+      var choose = confirm('你确定要注销吗？')
+      if (choose === true) {
+        this.$axios.get('/Edu-ssm/outLogin.do').then(() => {
+          this.loginUser = false
+          window.location.reload()
+        })
+      } else {
+        this.$router.push('/')
+      }
+      // this.$axios({
+      //   method: 'GET',
+      //   URL: '/Edu-ssm/outLogin.do',
+      //   cache: false
+      // })
     },
     // 隐藏按钮、显示导航栏
     hiddenBtn () {
@@ -128,6 +176,14 @@ export default {
     },
     hiddenSelect () {
       this.$get('select').style.height = 0 + 'px'
+    },
+    showUser () {
+      // this.userCenter = true
+      this.$get('userCenter').style.opacity = 1
+    },
+    hiddenUser () {
+      // this.userCenter = false
+      this.$get('userCenter').style.opacity = 0
     }
   }
   // 监听登录名变化 ,
@@ -201,7 +257,9 @@ a {
           white-space: nowrap;
           color:#fff;
         }
-
+        /* .header-li:last-child::after {
+          display: none;
+        } */
         /* 这里是实现教学资源的下拉框 */
         /* start */
         .selected {
@@ -250,10 +308,9 @@ a {
           width: 100%;
           transition: width .4s;
         }
-        /* .header-li::after :hover {
-          width: 20px;
-          border-color: black;
-        } */
+        .header-li:nth-child(6)::after {
+          display: none;
+        }
         .header-li a {
           height: 100%;
           position: relative;
@@ -264,6 +321,23 @@ a {
         .header-li span {
           font-size: 16px;
           cursor: pointer;
+        }
+        #userCneter::after{
+          display: none;
+        }
+        /* 头像 */
+        .avatar1 {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          vertical-align: middle;
+          margin-left: 10px;
+        }
+        .avatar2 {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          vertical-align: middle;
         }
         .userName {
           color:honeydew;
@@ -287,5 +361,53 @@ a {
         border: 0;
         text-align: center
       }
-
+      .userCenter {
+        margin: 0;
+        padding: 0;
+        background:#222;
+        opacity: 0;
+        transition: opacity .4s;
+      }
+      .userCenter li {
+        width: 100%;
+        line-height: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+      .userCenter li a {
+        margin: 0;
+        padding: 0;
+      }
+      .userCenter li:hover{
+        background:#555;
+      }
+      .userCenter li:nth-child(1) img {
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+      }
+       .userCenter li:nth-child(1) span {
+         padding-left: 5px;
+         text-align: center
+       }
+      .userCenter li:nth-child(2) img {
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+        margin-left: 2px;
+      }
+       .userCenter li:nth-child(2) span {
+         padding-left: 7px;
+         text-align: center
+       }
+      .userCenter li:nth-child(3) img {
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+        margin-left: 2px;
+      }
+       .userCenter li:nth-child(3) span {
+         padding-left: 7px;
+         text-align: center
+       }
 </style>

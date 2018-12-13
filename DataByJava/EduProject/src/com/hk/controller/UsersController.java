@@ -326,7 +326,6 @@ public class UsersController {
 
 	}
 
-
 	// 注销方法
 	@RequestMapping(value = "/outLogin.do")
 	public String outLogin(HttpSession session, User user) {
@@ -337,7 +336,7 @@ public class UsersController {
 		System.out.println(user);
 		System.out.println("信息清空了------------------------------");
 
-		return "forward:/index.html";
+		return "redirect:/index.html";
 
 	}
 
@@ -358,7 +357,6 @@ public class UsersController {
 		return wf;
 
 	}
-	
 	
 	
 

@@ -49,7 +49,7 @@
         <div class="message-board">
           <!-- 留言功能 -->
           <form action="insertMessage.do" method="post" @submit="checkMessage">
-            <p>留下你的心声</p>
+            <p>留下你的心声(留言会经过我们审核哦!)</p>
             <textarea v-if="textarea1"  name="input" @click="checkUser"></textarea>
             <div class="textareaRebox" v-if="textarea2">
               <a href="login.html"><div class="loginCheck">请先登录</div></a>
@@ -112,10 +112,12 @@ export default {
     handleData (res) {
       if (res.status === 200) {
         res = res.data
-        this.messageConut = res.length
         for (let i in res) {
-          this.heartInfo.push(res[i])
+          if (res[i].check === 1) {
+            this.heartInfo.push(res[i])
+          }
         }
+        this.messageConut = this.heartInfo.length
       } else {
         alert('请求失败，即将跳转到刚才的页面')
         this.$router.go('/index.htm/eduHeart')
@@ -129,7 +131,6 @@ export default {
         if (res == null) {
           console.log('您还未登录!')
         } else {
-          this.$global.user = res.user_name
           if (res.role_id === 2) {
             this.user = res.user_name
             console.log('欢迎您' + this.user)
@@ -171,7 +172,10 @@ export default {
         alert('留言格式错误！')
         return false
       } else {
-        this.$refs.body.style.height = this.$refs.body.style.height + 150 + 'px'
+        this.$message({
+          type: 'success',
+          message: '留言成功!'
+        })
         return true
       }
     }
@@ -189,15 +193,15 @@ v-pagination {
   right: 0;
 }
 .body {
-  position: relative;
-  height: 5000px;
+  position: flex;
+  /* height: 0; */
   width: 100%;
 }
 .heartPage {
             position: absolute;
             width: 100%;
             top: 1190px;
-            height: 2000px;
+            /* height: 2000px; */
             z-index: 2;
         }
             .heartTitle {

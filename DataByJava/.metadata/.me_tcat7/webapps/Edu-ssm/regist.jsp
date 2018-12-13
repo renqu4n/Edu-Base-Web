@@ -43,7 +43,7 @@ function check(form) {
 </script>
 </head>
 <body>
-<a href=""><span style="color: white;font-size:20px;margin-left: 0.4%">首页</span></a>
+<a href="index.html"><span style="color: white;font-size:20px;margin-left: 0.4%">首页</span></a>
 <a href="login.html"><span style="color: white;font-size:20px;margin-left: 1%">登录</span></a>
 <!-- contact-form -->	
 <div class="message warning">

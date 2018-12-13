@@ -282,7 +282,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <table class="tablelist" style="margin: 10px auto" width="800">
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value="" /></th>
+        <th></th>
         <th>ID<i class="sort"><img src="images/px.gif" /></i></th>
         <th width="200">学员名称</th>
         <th width="200">学员心声</th>
@@ -298,7 +298,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <td width="200">${student.user_name}</td>
         <td width="200">${student.user_think}</td>
         <td width="200">${student.user_email}</td>
-        <td width="200"><a href="#" class="tablelink">查看</a>     
+        <td width="200">    
         <a href="deleteStudent.do?method=delete&key=${student.id}" class="tablelink"  onclick="return confirm('确认删除吗?')"> 删除</a></td>
         </tr> 
 		</c:forEach>

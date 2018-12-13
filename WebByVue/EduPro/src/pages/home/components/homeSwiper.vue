@@ -1,22 +1,13 @@
 <template>
-    <div class="wrapper">
-    <swiper :options="swiperOption" v-if="showSwiper" ref="swiper">
-        <!-- slides -->
-        <!-- <swiper-slide v-for="item of list" :key="item.id">
-            <img class="swiper-img" :src="item.imgUrl">
-        </swiper-slide>
-        <div class="swiper-pagination"  slot="pagination"></div> -->
-        <Slide v-for="item of list" :key="item.id">
-            <img :src="item.imgUrl" alt="">
-        </Slide>
-        <div class="swiper-pagination"  slot="pagination"></div>
-    </swiper>
-    </div>
+   <el-carousel :interval="5000" arrow="always" style="height:800px;width:100%;margin-top:90px">
+    <el-carousel-item v-for="item in list" :key="item.id" style="height:800px;width:100%">
+      <img :src="item.imgUrl" alt="">
+    </el-carousel-item>
+  </el-carousel>
 </template>
 
 <script>
 // import Swiper from 'vue-swiper'
-import { Swiper, Slide } from 'vue-swiper-component'
 export default {
   name: 'homeSwiper',
   data () {
@@ -27,38 +18,23 @@ export default {
       }, {
         'id': '2',
         'imgUrl': 'http://p6alxlphh.bkt.clouddn.com/banner3.png'
-      }],
-      swiperOption: {
-        pagination: '.swiper-pagination',
-        loop: true
-      }
-    }
-  },
-  components: {
-    Swiper,
-    Slide
-  },
-  computed: {
-    showSwiper () {
-      return this.list.length
+      }]
     }
   }
 }
 </script>
 
 <style scoped>
-.wrapper >>> .swiper-pagination-bullet-active {
-    background: #fff !important;
-}
+  .el-carousel__item img {
+    height: 800px;
+    margin: 0;
+  }
 
-.wrapper {
-    width: 100%;
-    overflow: hidden;
-    background: #eee;
-    margin-top: 90px;
-}
-    .swiper-img {
-        width: 100%;
-    }
+  .el-carousel__item:nth-child(2n) {
+    background-color: white
+  }
 
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: black
+  }
 </style>
