@@ -30,35 +30,44 @@ public class CourseController {
 	
 	
 	@RequestMapping(value="/addCourse.do")
-	public String addStudent(HttpServletRequest request,HttpServletResponse response,Course course,int teacher_id,HttpSession session) {
+	public String addStudent(HttpServletRequest request,HttpServletResponse response,Course course,HttpSession session) {
 		User user = new User();
-		user.setId(teacher_id);
+		
 		User loginUser = (User) session.getAttribute("user");
 		System.out.println("看看session的值");
 		System.out.println(loginUser);
 		//request.setAttribute("user", loginUser);
-		User  isTeacher = Userservice.selectTeacher(user);
-		if (isTeacher.getRole_id()==3) {
-			boolean  is = service.insertCourse(course);
-			System.out.println(is);
-			if (is) {
-				request.setAttribute("message", "添加成功-------");
+		
+		String nameAndEmail = request.getParameter("user_name");
+
+		User isTeacher = Userservice.selectUserByNameEmail(nameAndEmail);
+		
+		//User  isTeacher = Userservice.selectTeacher(user);
+		if (isTeacher!=null) {
+			if (isTeacher.getRole_id()==3) {
+				course.setTeacher_id(isTeacher.getId());
+				boolean  is = service.insertCourse(course);
+				System.out.println(is);
+				if (is) {
+					request.setAttribute("message", "添加成功-------");
+					
+				} else {
+					request.setAttribute("message", "添加失败-------！！！");
+				}
 				
 			} else {
-				request.setAttribute("message", "添加失败-------！！！");
-
+				request.setAttribute("message", "该用户不是教师-------！！");
 			}
+				
+			} else {
 			
-			
-			
-		} else {
-			
-			request.setAttribute("message", "该用户不是教师或该教师不存在-------！！");
+			request.setAttribute("message", "该教师不存在-------！！");
 		}
 
 
 		return "addCourse";
 	}
+		
 	
 	
 	@RequestMapping(value="/courseShow.do")

@@ -250,11 +250,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <form action="addCourse.do" method="post">
                 <ul class="forminfo">
                 <p style="color:red;margin-left:200px">${message}</p>
-                <li><label>课程名称</label><input name="course_name" type="text" class="dfinput" />
+                <li><label>课程名称</label><input name="course_name" type="text" class="dfinput" required/>
                 <i>名称不能超过30个字符</i></li>
-                <li><label>任课教师ID</label><input name="teacher_id" type="text" class="dfinput" /><i>请输入教师的ID</i></li>
+                
+                <li><label>教师名字</label>
+							<input list="myselect" oninput="mytest()" id="select" name="user_name" type="text" class="dfinput"  required/><i>请输入教师名字和邮箱</i></li>
+							<datalist id="myselect" ></datalist>
                 <li><label>课程介绍</label>
-                <textarea name="course_introduce" cols="" rows="" class="textinput"></textarea>
+                <textarea name="course_introduce" cols="" rows="" class="textinput" required></textarea>
                 </li>
                 <li><label>&nbsp;</label>
                 <input name="" type="submit" class="btn" value="确认保存"/>
@@ -389,6 +392,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         });
 
     }
+    
+    
+    
+    function mytest() {
+			var _this = $("#select");
+			    	if(_this.val().length<2){
+			    		return;
+			    	}
+			    	
+			    	var like=_this.val()
+			$.post("likeByName.do",{like:like}, function(data) {
+				var _data=eval(data);
+				console.log(_data)
+				var select = $("#myselect");
+				var list = [ "xiaoming", "laowang", "xiazi", "aoasdad" ]
+				var str = "";
+				for ( var i = 0; i < _data.length; i++) {
+					str += "<option value='" + _data[i].user_name+"        备注："+_data[i].user_email+"'><option>"
+				}
+				select.html(str) 
+			})
+
+		}
     </script>
     <!-- END JAVASCRIPTS -->
 </body>

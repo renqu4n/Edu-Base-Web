@@ -29,5 +29,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		delete from  role where id=#{0}
 	</delete>
 	
-
+	<select id="getAllRole" resultType="Role">
+		select * from role 
+	</select>
 </mapper>

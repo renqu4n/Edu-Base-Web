@@ -6,6 +6,13 @@ public class Message {
 	private String message_content;
 	private int role_id;
 	private int student_id;
+	private int check;
+	public int getCheck() {
+		return check;
+	}
+	public void setCheck(int check) {
+		this.check = check;
+	}
 	public int getId() {
 		return id;
 	}
@@ -33,7 +40,8 @@ public class Message {
 	@Override
 	public String toString() {
 		return "Message [id=" + id + ", message_content=" + message_content
-				+ ", role_id=" + role_id + ", student_id=" + student_id + "]";
+				+ ", role_id=" + role_id + ", student_id=" + student_id
+				+ ", check=" + check + "]";
 	}
 	
 	

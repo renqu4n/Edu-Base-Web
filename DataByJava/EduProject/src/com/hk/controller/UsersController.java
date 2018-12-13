@@ -340,6 +340,7 @@ public class UsersController {
 
 	}
 
+<<<<<<< HEAD
 //<<<<<<< HEAD
 //	@RequestMapping(value = "/test.do")
 //	@ResponseBody
@@ -370,6 +371,8 @@ public class UsersController {
 //
 //	}
 //=======
+=======
+>>>>>>> 975f5d58487ef06b482567476c8133bb73f58833
 	@RequestMapping(value = "/test.do")
 	@ResponseBody
 	public String test(HttpServletRequest request) {
@@ -387,8 +390,11 @@ public class UsersController {
 		return wf;
 
 	}
+<<<<<<< HEAD
 //>>>>>>> befd355fae45f35c91c3af7dc4125a9d138478f6
 	
+=======
+>>>>>>> 975f5d58487ef06b482567476c8133bb73f58833
 	
 	
 

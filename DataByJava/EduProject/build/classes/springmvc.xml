@@ -27,7 +27,11 @@
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
 		<property name="jdbcUrl" value="jdbc:mysql:///myssm"></property>
 		<property name="user" value="root"></property>
+<<<<<<< HEAD
 		<property name="password" value="123456"></property>
+=======
+		<property name="password" value=""></property>
+>>>>>>> 975f5d58487ef06b482567476c8133bb73f58833
 	</bean>
 	
 	<!-- 配置SqlSessionFactoryBean，用于创建SqlSessionFactory 

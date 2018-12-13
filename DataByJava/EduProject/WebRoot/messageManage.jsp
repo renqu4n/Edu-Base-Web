@@ -286,7 +286,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <th>ID<i class="sort"><img src="images/px.gif" /></i></th>
         <th width="200">留言内容</th>
         <th width="200">学生</th>
-        
+        <th width="200">审核（0未审核/1审核）</th>
         <th width="200">操作</th>
         </tr>
         </thead>
@@ -297,9 +297,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <td width="200">${Messages.id}</td>
         <td width="200">${Messages.message_content}</td>
         <td width="200">${Messages.student_id}</td>
-        
+        <td width="200">${Messages.check }</td>
         <td width="200">     
         <a href="deleteMessage.do?method=delete&key=${Messages.id}" class="tablelink"  onclick="return confirm('确认删除吗?')"> 删除</a></td>
+        <td width="200">     
+        <a href="updateMessage.do?method=update&key=${Messages.id}" class="tablelink"  onclick="return confirm('确认更改为已审核状态吗?')"> 审核通过</a></td>
         </tr> 
 		</c:forEach>
         </tbody> 

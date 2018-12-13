@@ -11,7 +11,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
 		<select id="selectUser" resultType="User">
-		select * from user where  id= #{id} and user_name = #{user_name}
+		select * from user where user_name like CONCAT('%',#{0},'%') 
 	</select>
 	
 	<select id="selectTeacher" resultType="User">
@@ -83,5 +83,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <delete id="deleteUser">
 		delete from  user where id=#{0}
 	</delete>
+	
+	
+	<select id="selectUserByNameEmail" resultType="User">
+ 
+        select * from user where #{0} like CONCAT(user_name,'%',user_email)
+    </select>
+    
+    
+    <update id="updataUserRole">
+		update user set role_id = #{1}
+		where id = #{0}
+	</update>
 
 </mapper>

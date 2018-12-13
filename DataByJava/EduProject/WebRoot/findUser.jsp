@@ -21,7 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script type="text/javascript">
 	function change(){
 		//切换验证码
-		document.getElementById("myimg").src="/Edu-ssm/checkcode?"+new Date().getTime();
+		document.getElementById("myimg").src="/Edu-ssm/CheckcodeServlet?"+new Date().getTime();
 	}
 </script>
 

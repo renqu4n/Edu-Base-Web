@@ -21,7 +21,7 @@ import com.hk.bean.User;
 public class SendEmailController {
 
 	@RequestMapping(value="/SendEmail.do")
-	public void SendEmail(HttpServletRequest request,HttpServletResponse response,User user) throws MessagingException {
+	public String SendEmail(HttpServletRequest request,HttpServletResponse response,User user) throws MessagingException {
 			System.out.println("这是发送邮件的用户：");
 		    System.out.println(user);
 			 Properties props = new Properties();  
@@ -57,8 +57,9 @@ public class SendEmailController {
 		        System.out.println(user.getUser_email());
 		        transport.sendMessage(msg, new Address[] {new InternetAddress(user.getUser_email())});  
 		        // 关闭连接  
-		        transport.close();  
+		        transport.close(); 
+		        return "findUser";
 		    }  
 	
-	
+				
 }

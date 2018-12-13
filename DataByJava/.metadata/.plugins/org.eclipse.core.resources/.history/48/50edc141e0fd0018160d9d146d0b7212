@@ -1,0 +1,18 @@
+package com.hk.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.hk.bean.Course;
+import com.hk.bean.News;
+import com.hk.bean.Page;
+import com.hk.bean.User;
+
+public interface MessageService {
+	
+	
+	public void deleteMessage(int key);
+	public List<News> getAllMessages(Page page);
+	public int selectMessageCount();
+	public int updateMessageCount(int key);
+}
