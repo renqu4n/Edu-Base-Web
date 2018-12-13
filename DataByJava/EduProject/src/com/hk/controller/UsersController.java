@@ -325,10 +325,6 @@ public class UsersController {
 		response.sendRedirect("userShow.do");
 
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> befd355fae45f35c91c3af7dc4125a9d138478f6
 
 	// 注销方法
 	@RequestMapping(value = "/outLogin.do")
@@ -344,7 +340,7 @@ public class UsersController {
 
 	}
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //	@RequestMapping(value = "/test.do")
 //	@ResponseBody
 //	public String test(HttpServletRequest request) {
@@ -373,7 +369,7 @@ public class UsersController {
 //		return wf;
 //
 //	}
-=======
+//=======
 	@RequestMapping(value = "/test.do")
 	@ResponseBody
 	public String test(HttpServletRequest request) {
@@ -391,7 +387,7 @@ public class UsersController {
 		return wf;
 
 	}
->>>>>>> befd355fae45f35c91c3af7dc4125a9d138478f6
+//>>>>>>> befd355fae45f35c91c3af7dc4125a9d138478f6
 	
 	
 	

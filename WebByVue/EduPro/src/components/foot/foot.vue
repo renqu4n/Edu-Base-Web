@@ -62,6 +62,7 @@ a {
         width: 100%;
         min-width: 1903px;
         background: #222;
+        overflow: hidden;
     }
         .main-footer {
             padding-top:142px;

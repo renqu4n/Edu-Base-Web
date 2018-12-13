@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <!-- <div class="wrapper"> -->
     <div class="head head-show" id="headNav"  style="z-index:998">
       <div class="head-box" >
         <div class="logo">
@@ -35,7 +35,7 @@
       </div>
       <button id="menuBtn" class="menuBtn" @click="hiddenBtn()"  style="z-index:999">菜单</button>
     </div>
-  </div>
+  <!-- </div> -->
 </template>
 <script>
 
@@ -108,7 +108,7 @@ export default {
     // },
     // 弹出修改密码框
     openUpdatePwd () {
-      this.$prompt('请输入旧密码', '提示', {
+      this.$prompt('请输入旧密码', '修改密码', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         inputErrorMessage: '密码格式不正确'
