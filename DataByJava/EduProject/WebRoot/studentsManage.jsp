@@ -95,6 +95,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             }
 		
 	</script> -->
+	
+	<style type="text/css">
+	.table {
+		margin-top: 50px;
+		text-align: center;
+		
+		}
+
+	</style>
 
 </head>
 <!-- END HEAD -->
@@ -279,26 +288,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="rightinfo">
                 <div style="text-align:center ">
                 
-        <table class="tablelist" style="margin: 10px auto" width="800">
+        <table class="table" >
     	<thead>
     	<tr>
         <th></th>
-        <th>ID<i class="sort"><img src="images/px.gif" /></i></th>
-        <th width="200">学员名称</th>
-        <th width="200">学员心声</th>
-        <th width="200">邮箱地址</th>
-        <th width="200">操作</th>
+        <th>ID</th>
+        <th width="250">学员名称</th>
+        <th width="250">学员心声</th>
+        <th width="250">邮箱地址</th>
+        <th width="250">操作</th>
         </tr>
         </thead>
         <tbody>
 		<c:forEach items="${pages.student}" var="student">
         <tr>
-        <td><input name="" type="checkbox" value="" /></td>
-        <td width="200">${student.id}</td>
-        <td width="200">${student.user_name}</td>
-        <td width="200">${student.user_think}</td>
-        <td width="200">${student.user_email}</td>
-        <td width="200">    
+        <td></td>
+        <td width="250">${student.id}</td>
+        <td width="250">${student.user_name}</td>
+        <td width="250">${student.user_think}</td>
+        <td width="250">${student.user_email}</td>
+        <td width="250">    
         <a href="deleteStudent.do?method=delete&key=${student.id}" class="tablelink"  onclick="return confirm('确认删除吗?')"> 删除</a></td>
         </tr> 
 		</c:forEach>

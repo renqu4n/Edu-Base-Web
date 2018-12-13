@@ -95,6 +95,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             }
 		
 	</script> -->
+	
+		<style type="text/css">
+	.table {
+		margin-top: 50px;
+		text-align: center;
+		
+		}
+
+	</style>
 
 </head>
 <!-- END HEAD -->
@@ -279,26 +288,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="rightinfo">
                 <div style="text-align:center ">
                 
-        <table class="tablelist" style="margin: 10px auto" width="800">
+        <table class="table" >
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value="" /></th>
-        <th>ID<i class="sort"><img src="images/px.gif" /></i></th>
-        <th width="200">新闻标题</th>
-        <th width="200">新闻作者</th>
-        <th width="200">发布时间</th>
-        <th width="200">操作</th>
+        <th></th>
+        <th>ID</th>
+        <th width="250">新闻标题</th>
+        <th width="250">新闻作者</th>
+        <th width="250">发布时间</th>
+        <th width="250">操作</th>
         </tr>
         </thead>
         <tbody>
 		<c:forEach items="${pages.News}" var="News">
         <tr>
-        <td><input name="" type="checkbox" value="" /></td>
-        <td width="200">${News.id}</td>
-        <td width="200">${News.new_title}</td>
-        <td width="200">${News.new_author}</td>
-        <td width="200">${News.release_time}</td>
-        <td width="200">     
+        <td></td>
+        <td width="250">${News.id}</td>
+        <td width="250" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+">${News.new_title}</td>
+        <td width="250">${News.new_author}</td>
+        <td width="250">${News.release_time}</td>
+        <td width="250">     
         <a href="deleteNew.do?method=delete&key=${News.id}" class="tablelink"  onclick="return confirm('确认删除吗?')"> 删除</a></td>
         </tr> 
 		</c:forEach>

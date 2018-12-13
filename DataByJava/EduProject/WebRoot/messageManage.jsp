@@ -95,6 +95,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             }
 		
 	</script> -->
+	
+		<style type="text/css">
+	.table {
+		margin-top: 50px;
+		text-align: center;
+		}
+
+	</style>
 
 </head>
 <!-- END HEAD -->
@@ -279,23 +287,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="rightinfo">
                 <div style="text-align:center ">
                 
-        <table class="tablelist" style="margin: 10px auto" width="800">
+        <table class="table">
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value="" /></th>
-        <th>ID<i class="sort"><img src="images/px.gif" /></i></th>
+        <th></th>
+        <th>ID</th>
         <th width="200">留言内容</th>
         <th width="200">学生</th>
         <th width="200">审核（0未审核/1审核）</th>
         <th width="200">操作</th>
+        <th width="200">状态</th>
         </tr>
         </thead>
         <tbody>
 		<c:forEach items="${pages.Messages}" var="Messages">
         <tr>
-        <td><input name="" type="checkbox" value="" /></td>
+        <td></td>
         <td width="200">${Messages.id}</td>
-        <td width="200">${Messages.message_content}</td>
+        <td width="200" >${Messages.message_content}</td>
         <td width="200">${Messages.student_id}</td>
         <td width="200">${Messages.check }</td>
         <td width="200">     

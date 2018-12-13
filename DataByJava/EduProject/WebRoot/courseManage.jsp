@@ -95,6 +95,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             }
 		
 	</script>-->
+	
+	<style type="text/css">
+	.table {
+		margin-top: 50px;
+		text-align: center;
+		}
+
+	</style>
 
 </head>
 <!-- END HEAD -->
@@ -279,27 +287,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="rightinfo">
                 <div style="text-align:center ">
                 
-        <table class="tablelist" style="margin: 10px auto" width="900">
+        <table class="table" >
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value="" /></th>
-        <th>ID<i class="sort"><img src="images/px.gif" /></i></th>
-        <th width="225">课程名称</th>
-        <th width="225">任课教师</th>
+        <th></th>
+        <th>ID</th>
+        <th width="260">课程名称</th>
+        <th width="260">任课教师</th>
         
-        <th width="225">操作</th>
+        <th width="260">操作</th>
         </tr>
         </thead>
         <tbody>
 		<c:forEach items="${pages.courses}" var="course">
         <tr>
-        <td><input name="" type="checkbox" value="" /></td>
-        <td width="225">${course.id}</td>
-        <td width="225">${course.course_name}</td>
-        <td width="225">${course.teacher_id}</td>
+        <td></td>
+        <td width="260">${course.id}</td>
+        <td width="260" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+">${course.course_name}</td>
+        <td width="260">${course.teacher_id}</td>
         
-        <td width="225">     
-        <a href="deleteCourse.do?method=delete&key=${course.id}" class="tablelink"  onclick="return confirm('确认删除吗?')"> 删除</a></td>
+        <td width="260">     
+        <button type="button" class="btn btn-warning"><a href="deleteCourse.do?method=delete&key=${course.id}" class="tablelink"  onclick="return confirm('确认删除吗?')">删除</a></button></td>
         </tr> 
 		</c:forEach>
         </tbody> 

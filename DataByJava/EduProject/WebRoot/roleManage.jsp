@@ -12,6 +12,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 
+
+
 <head>
 
     <meta charset="utf-8" />
@@ -95,6 +97,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             }
 		
 	</script> -->
+	
+	<style type="text/css">
+	.table th {
+		margin-top: 50px;
+		text-align: center;
+		}
+
+	</style>
 
 </head>
 <!-- END HEAD -->
@@ -279,27 +289,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="rightinfo">
                 <div style="text-align:center ">
                 
-        <table class="tablelist" style="margin: 10px auto" width="800">
+        <table class="table" >
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value="" /></th>
-        <th>ID<i class="sort"><img src="images/px.gif" /></i></th>
+        
+        <th>ID</th>
         <th width="200">角色名称</th>
         <th width="200">角色描述</th>
-        
         <th width="200">操作</th>
         </tr>
         </thead>
         <tbody>
 		<c:forEach items="${pages.Roles}" var="Roles">
-        <tr>
-        <td><input name="" type="checkbox" value="" /></td>
+        <tr >
+        
         <td width="200">${Roles.id}</td>
         <td width="200">${Roles.name}</td>
         <td width="200">${Roles.role_descreption}</td>
-        
         <td width="200">     
-        <a href="deleteRole.do?method=delete&key=${Roles.id}" class="tablelink"  onclick="return confirm('确认删除吗?')"> 删除</a></td>
+        <button type="button" class="btn btn-warning"><a href="deleteRole.do?method=delete&key=${Roles.id}" class="tablelink"  onclick="return confirm('确认删除吗?')"> 删除</a></button></td>
         </tr> 
 		</c:forEach>
         </tbody> 
